@@ -1,2 +1,2 @@
 b
-"Center is ISXX, corners are ENXX, top & bottom are INXX, left & right are ESXX."
+"1wX IXTJ, 2wX EXFJ, 3wX EXTJ, 4wX IXFP, 5wX IXTP, 6wX XXXX, 7wX EXFP, 8wX EXTP, 9wX IXFJ."
