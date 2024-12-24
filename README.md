@@ -1,1 +1,1 @@
-Artificial Neural Network: enables weights to be derived from certain questions, which is summed minus the bias, and is considered a positive if that is > 0.
+Artificial Neural Network: enables weights to be derived from certain questions, which is summed minus the bias, and is considered a positive if that is > 0. If 3 or higher, use 80% or higher; if -3 or lower, use 20% or lower.
