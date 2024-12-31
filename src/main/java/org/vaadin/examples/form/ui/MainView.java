@@ -24,8 +24,6 @@ import com.vaadin.flow.data.binder.ValueContext;
 import com.vaadin.flow.data.validator.EmailValidator;
 import com.vaadin.flow.router.Route;
 
-//The backendservice and data class are in the <code>.data</code> package.
-
 @Route("")
 public class MainView extends VerticalLayout {
 
@@ -42,6 +40,15 @@ public class MainView extends VerticalLayout {
 
         TextArea message = new TextArea("Sales & Marketing EXXP, Finance & Accounting IXXJ, Technology IXXP, Operations EXXJ.");
 
+        TextField firstName = new TextField("First name");
+        TextField lastName = new TextField("Last name");
+        TextField username = new TextField("Username");
+
+        FormLayout formLayout = new FormLayout();
+        formLayout.add(firstName, lastName, username);
+        formLayout.setResponsiveSteps(new ResponsiveStep("0", 1), new ResponsiveStep("500px", 2));
+        formLayout.setColspan(username, 2);
+        
         FormLayout formLayout = new FormLayout(title, message);
 
         formLayout.setMaxWidth("500px");
@@ -60,21 +67,5 @@ public class MainView extends VerticalLayout {
         binder = new BeanValidationBinder<UserDetails>(UserDetails.class);
 
         binder.setStatusLabel(errorMessage);
-    }
-
-    private void showSuccess(UserDetails detailsBean) {
-        Notification notification = Notification.show("Data saved, welcome " + detailsBean.getHandle());
-        notification.addThemeVariants(NotificationVariant.LUMO_SUCCESS);
-    }
-
-    private ValidationResult validateHandle(String handle, ValueContext ctx) {
-
-        String errorMsg = service.validateHandle(handle);
-
-        if (errorMsg == null) {
-            return ValidationResult.ok();
-        }
-
-        return ValidationResult.error(errorMsg);
     }
 }
