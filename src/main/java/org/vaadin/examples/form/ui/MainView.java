@@ -38,40 +38,45 @@ public class MainView extends VerticalLayout {
 
         TextArea message = new TextArea("Pick a Business Function: Sales & Marketing, Finance & Accounting, Technology, Operations.");
 
-        Grid<Person> grid = new Grid<>(Person.class, false);
-        Editor<Person> editor = grid.getEditor();
+        Grid<Viewpoint> grid = new Grid<>(Viewpoint.class, false);
+        Editor<Viewpoint> editor = grid.getEditor();
         
-        Grid.Column<Person> firstNameColumn = grid.addColumn(Person::getFirstName).setHeader("First name").setWidth("120px").setFlexGrow(0);
-        Grid.Column<Person> lastNameColumn = grid.addColumn(Person::getLastName).setHeader("Last name").setWidth("120px").setFlexGrow(0);
-        Grid.Column<Person> emailColumn = grid.addColumn(Person::getEmail).setHeader("Email");
-        Grid.Column<Person> editColumn = grid.addComponentColumn(person -> {
+        Grid.Column<Viewpoint> congitiveColumn = grid.addColumn(Viewpoint::getCongitive).setHeader("Congitive").setWidth("120px").setFlexGrow(0);
+        Grid.Column<Viewpoint> affectiveColumn = grid.addColumn(Viewpoint::getAffective).setHeader("Affective").setWidth("120px").setFlexGrow(0);
+        Grid.Column<Viewpoint> instinctualColumn = grid.addColumn(Viewpoint::getInstinctual).setHeader("Instinctual");
+        Grid.Column<Viewpoint> miscColumn = grid.addComponentColumn(Viewpoint -> {
             Button editButton = new Button("Edit");
             editButton.addClickListener(e -> {
                 if (editor.isOpen())
                     editor.cancel();
-                grid.getEditor().editItem(person);
+                grid.getEditor().editItem(Viewpoint);
             });
             return editButton;
         }).setWidth("150px").setFlexGrow(0);
         
-        Binder<Person> binder = new Binder<>(Person.class);
+        Binder<Viewpoint> binder = new Binder<>(Viewpoint.class);
         editor.setBinder(binder);
         editor.setBuffered(true);
         
-        TextField firstNameField = new TextField();
+        TextField cognitiveField = new TextField();
         firstNameField.setWidthFull();
-        binder.forField(firstNameField).asRequired("First name must not be empty").withStatusLabel(firstNameValidationMessage).bind(Person::getFirstName, Person::setFirstName);
+        binder.forField(firstNameField).asRequired("Cognitive must not be empty").withStatusLabel(firstNameValidationMessage).bind(Viewpoint::getFirstName, Viewpoint::setFirstName);
         firstNameColumn.setEditorComponent(firstNameField);
         
-        TextField lastNameField = new TextField();
+        TextField affectiveField = new TextField();
         lastNameField.setWidthFull();
-        binder.forField(lastNameField).asRequired("Last name must not be empty").withStatusLabel(lastNameValidationMessage).bind(Person::getLastName, Person::setLastName);
+        binder.forField(lastNameField).asRequired("Affective name must not be empty").withStatusLabel(lastNameValidationMessage).bind(Viewpoint::getLastName, Viewpoint::setLastName);
         lastNameColumn.setEditorComponent(lastNameField);
+
+        TextField instinctualField = new TextField();
+        instinctualField.setWidthFull();
+        binder.forField(Field).asRequired("Instinctual must not be empty").withStatusLabel(firstNameValidationMessage).bind(Viewpoint::getInstinctual, Viewpoint::setInstinctual);
+        instinctualColumn.setEditorComponent(Field);
         
-        EmailField emailField = new EmailField();
-        emailField.setWidthFull();
-        binder.forField(emailField).asRequired("Email must not be empty").withValidator(new EmailValidator("Enter a valid email address")).withStatusLabel(emailValidationMessage).bind(Person::getEmail, Person::setEmail);
-        emailColumn.setEditorComponent(emailField);
+        TextField miscField = new TextField();
+        miscField.setWidthFull();
+        binder.forField(miscField).asRequired("Miscellaneous must not be empty").withStatusLabel(lastNameValidationMessage).bind(Viewpoint::getMisc, Viewpoint::setMisc);
+        miscColumn.setEditorComponent(miscField);
         
         Button saveButton = new Button("Save", e -> editor.save());
         Button cancelButton = new Button(VaadinIcon.CLOSE.create(), e -> editor.cancel());
