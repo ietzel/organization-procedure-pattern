@@ -40,7 +40,7 @@ public class MainView extends VerticalLayout {
 
         H3 title = new H3("Signup form");
 
-        TextArea message = new TextArea("1wX XSTJ, 2wX XNFJ, 3wX XNTJ, 4wX XSFP, 5wX XSTP, 6wX XXXX, 7wX XNFP, 8wX XNTP, 9wX XSFJ.");
+        TextArea message = new TextArea("Sales & Marketing EXXP, Finance & Accounting IXXJ, Technology IXXP, Operations EXXJ.");
 
         FormLayout formLayout = new FormLayout(title, message);
 
