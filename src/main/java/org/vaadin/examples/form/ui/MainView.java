@@ -54,8 +54,7 @@ public class MainView extends VerticalLayout {
         formLayout.setMaxWidth("500px");
         formLayout.getStyle().set("margin", "0 auto");
 
-        formLayout.setResponsiveSteps(new FormLayout.ResponsiveStep("0", 1, FormLayout.ResponsiveStep.LabelsPosition.TOP),
-                new FormLayout.ResponsiveStep("490px", 2, FormLayout.ResponsiveStep.LabelsPosition.TOP));
+        formLayout.setResponsiveSteps(new FormLayout.ResponsiveStep("0", 1, FormLayout.ResponsiveStep.LabelsPosition.TOP), new FormLayout.ResponsiveStep("490px", 2, FormLayout.ResponsiveStep.LabelsPosition.TOP));
 
         formLayout.setColspan(title, 2);
 
