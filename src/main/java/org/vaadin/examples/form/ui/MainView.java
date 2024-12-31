@@ -17,11 +17,7 @@ import com.vaadin.flow.component.notification.NotificationVariant;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.component.textfield.TextField;
-import com.vaadin.flow.data.binder.BeanValidationBinder;
-import com.vaadin.flow.data.binder.ValidationException;
-import com.vaadin.flow.data.binder.ValidationResult;
 import com.vaadin.flow.data.binder.ValueContext;
-import com.vaadin.flow.data.validator.EmailValidator;
 import com.vaadin.flow.router.Route;
 
 @Route("")
@@ -38,16 +34,49 @@ public class MainView extends VerticalLayout {
 
         H3 title = new H3("Signup form");
 
-        TextArea message = new TextArea("Sales & Marketing EXXP, Finance & Accounting IXXJ, Technology IXXP, Operations EXXJ.");
+        TextArea message = new TextArea("Pick a Business Function: Sales & Marketing, Finance & Accounting, Technology, Operations.");
 
-        TextField firstName = new TextField("First name");
-        TextField lastName = new TextField("Last name");
-        TextField username = new TextField("Username");
-
-        FormLayout formLayout = new FormLayout();
-        formLayout.add(firstName, lastName, username);
-        formLayout.setResponsiveSteps(new ResponsiveStep("0", 1), new ResponsiveStep("500px", 2));
-        formLayout.setColspan(username, 2);
+        Grid<Person> grid = new Grid<>(Person.class, false);
+        Editor<Person> editor = grid.getEditor();
+        
+        Grid.Column<Person> firstNameColumn = grid.addColumn(Person::getFirstName).setHeader("First name").setWidth("120px").setFlexGrow(0);
+        Grid.Column<Person> lastNameColumn = grid.addColumn(Person::getLastName).setHeader("Last name").setWidth("120px").setFlexGrow(0);
+        Grid.Column<Person> emailColumn = grid.addColumn(Person::getEmail).setHeader("Email");
+        Grid.Column<Person> editColumn = grid.addComponentColumn(person -> {
+            Button editButton = new Button("Edit");
+            editButton.addClickListener(e -> {
+                if (editor.isOpen())
+                    editor.cancel();
+                grid.getEditor().editItem(person);
+            });
+            return editButton;
+        }).setWidth("150px").setFlexGrow(0);
+        
+        Binder<Person> binder = new Binder<>(Person.class);
+        editor.setBinder(binder);
+        editor.setBuffered(true);
+        
+        TextField firstNameField = new TextField();
+        firstNameField.setWidthFull();
+        binder.forField(firstNameField).asRequired("First name must not be empty").withStatusLabel(firstNameValidationMessage).bind(Person::getFirstName, Person::setFirstName);
+        firstNameColumn.setEditorComponent(firstNameField);
+        
+        TextField lastNameField = new TextField();
+        lastNameField.setWidthFull();
+        binder.forField(lastNameField).asRequired("Last name must not be empty").withStatusLabel(lastNameValidationMessage).bind(Person::getLastName, Person::setLastName);
+        lastNameColumn.setEditorComponent(lastNameField);
+        
+        EmailField emailField = new EmailField();
+        emailField.setWidthFull();
+        binder.forField(emailField).asRequired("Email must not be empty").withValidator(new EmailValidator("Enter a valid email address")).withStatusLabel(emailValidationMessage).bind(Person::getEmail, Person::setEmail);
+        emailColumn.setEditorComponent(emailField);
+        
+        Button saveButton = new Button("Save", e -> editor.save());
+        Button cancelButton = new Button(VaadinIcon.CLOSE.create(), e -> editor.cancel());
+        cancelButton.addThemeVariants(ButtonVariant.LUMO_ICON, ButtonVariant.LUMO_ERROR);
+        HorizontalLayout actions = new HorizontalLayout(saveButton, cancelButton);
+        actions.setPadding(false);
+        editColumn.setEditorComponent(actions);
         
         FormLayout formLayout = new FormLayout(title, message);
 
@@ -57,9 +86,6 @@ public class MainView extends VerticalLayout {
         formLayout.setResponsiveSteps(new FormLayout.ResponsiveStep("0", 1, FormLayout.ResponsiveStep.LabelsPosition.TOP), new FormLayout.ResponsiveStep("490px", 2, FormLayout.ResponsiveStep.LabelsPosition.TOP));
 
         formLayout.setColspan(title, 2);
-
-        errorMessage.getStyle().set("color", "var(--lumo-error-text-color)");
-        errorMessage.getStyle().set("padding", "15px 0");
 
         add(formLayout);
         
