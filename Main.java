@@ -1,0 +1,151 @@
+import javafx.application.Application;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.geometry.Insets;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableColumn.CellEditEvent;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.stage.Stage;
+ 
+public class Main extends Application {
+ 
+    private final TableView<Viewpoint> table = new TableView<>();
+    private final ObservableList<Viewpoint> data = FXCollections.observableArrayList(
+        new Viewpoint("Michael", "Brown", "michael.brown@example.com")
+    );
+    final HBox hb = new HBox();
+ 
+    public static void main(String[] args) {
+        launch(args);
+    }
+ 
+    @Override
+    public void start(Stage stage) {
+        Scene scene = new Scene(new Group());
+        stage.setTitle("Data");
+        stage.setWidth(300);
+        stage.setHeight(500);
+ 
+        final Label label = new Label("Cognitive-Affective-Instinctual-Miscellaneous Empathy Matrix");
+        label.setFont(new Font("Arial", 20));
+ 
+        table.setEditable(true);
+ 
+        TableColumn<Viewpoint, String> firstNameCol = new TableColumn<>("First Name");
+        firstNameCol.setMinWidth(100);
+        firstNameCol.setCellValueFactory(new PropertyValueFactory<>("firstName"));
+        
+        firstNameCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        firstNameCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setFirstName(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> lastNameCol = new TableColumn<>("Last Name");
+        lastNameCol.setMinWidth(100);
+        lastNameCol.setCellValueFactory(new PropertyValueFactory<>("lastName"));
+       lastNameCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+       lastNameCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setLastName(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> emailCol = new TableColumn<>("Email");
+        emailCol.setMinWidth(200);
+        emailCol.setCellValueFactory(new PropertyValueFactory<>("email"));
+        emailCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        emailCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setEmail(t.getNewValue());
+            }
+        );
+ 
+        table.setItems(data);
+        table.getColumns().addAll(firstNameCol, lastNameCol, emailCol);
+ 
+        final TextField addFirstName = new TextField();
+        addFirstName.setPromptText("First Name");
+        addFirstName.setMaxWidth(firstNameCol.getPrefWidth());
+        final TextField addLastName = new TextField();
+        addLastName.setMaxWidth(lastNameCol.getPrefWidth());
+        addLastName.setPromptText("Last Name");
+        final TextField addEmail = new TextField();
+        addEmail.setMaxWidth(emailCol.getPrefWidth());
+        addEmail.setPromptText("Email");
+ 
+        final Button addButton = new Button("Add");
+        addButton.setOnAction((ActionEvent e) -> {
+            data.add(new Viewpoint(
+                    addFirstName.getText(),
+                    addLastName.getText(),
+                    addEmail.getText()));
+            addFirstName.clear();
+            addLastName.clear();
+            addEmail.clear();
+        });
+ 
+        hb.getChildren().addAll(addFirstName, addLastName, addEmail, addButton);
+        hb.setSpacing(3);
+ 
+        final VBox vbox = new VBox();
+        vbox.setSpacing(5);
+        vbox.setPadding(new Insets(10, 0, 0, 10));
+        vbox.getChildren().addAll(label, table, hb);
+ 
+        ((Group) scene.getRoot()).getChildren().addAll(vbox);
+ 
+        stage.setScene(scene);
+        stage.show();
+    }
+ 
+    public static class Viewpoint {
+ 
+        private final SimpleStringProperty firstName;
+        private final SimpleStringProperty lastName;
+        private final SimpleStringProperty email;
+ 
+        private Viewpoint(String fName, String lName, String email) {
+            this.firstName = new SimpleStringProperty(fName);
+            this.lastName = new SimpleStringProperty(lName);
+            this.email = new SimpleStringProperty(email);
+        }
+ 
+        public String getFirstName() {
+            return firstName.get();
+        }
+ 
+        public void setFirstName(String fName) {
+            firstName.set(fName);
+        }
+ 
+        public String getLastName() {
+            return lastName.get();
+        }
+ 
+        public void setLastName(String fName) {
+            lastName.set(fName);
+        }
+ 
+        public String getEmail() {
+            return email.get();
+        }
+ 
+        public void setEmail(String fName) {
+            email.set(fName);
+        }
+    }
+}
