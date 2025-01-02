@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 import javafx.application.Application;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -21,9 +24,35 @@ import javafx.stage.Stage;
  
 public class Main extends Application {
  
-    private final TableView<Viewpoint> table = new TableView<>();
+    private static final TableView<Viewpoint> table = new TableView<>();
     private final ObservableList<Viewpoint> data = FXCollections.observableArrayList(
-        new Viewpoint("Michael", "Brown", "michael.brown@example.com")
+        new Viewpoint("honesty", "5", "5", "5", "5"),
+        new Viewpoint("honesty/integrity/transparency", "5", "5", "5", "5"),
+        new Viewpoint("compassion/respect", "5", "5", "5", "5"),
+        new Viewpoint("responsibility/accountability", "5", "5", "5", "5"),
+        new Viewpoint("loyalty/trustworthiness", "5", "5", "5", "5"),
+        new Viewpoint("law-abiding", "5", "5", "5", "5"),
+        new Viewpoint("fairness", "5", "5", "5", "5"),
+        new Viewpoint("leadership", "5", "5", "5", "5"),
+        new Viewpoint("anti-discrimination", "5", "5", "5", "5"),
+        new Viewpoint("workplace health/safety/security", "5", "5", "5", "5"),
+        new Viewpoint("employee code of conduct & anti-harassment", "5", "5", "5", "5"),
+        new Viewpoint("attendance & vacation & time-off", "5", "5", "5", "5"),
+        new Viewpoint("employee complaint", "5", "5", "5", "5"),
+        new Viewpoint("work schedule & rest period", "5", "5", "5", "5"),
+        new Viewpoint("substance abuse", "5", "5", "5", "5"),
+        new Viewpoint("mobile device management", "5", "5", "5", "5"),
+        new Viewpoint("compensation and benefits", "5", "5", "5", "5"),
+        new Viewpoint("travel", "5", "5", "5", "5"),
+        new Viewpoint("inclement weather", "5", "5", "5", "5"),
+        new Viewpoint("remote work", "5", "5", "5", "5"),
+        new Viewpoint("conflict of interest", "5", "5", "5", "5"),
+        new Viewpoint("acceptable use", "5", "5", "5", "5"),
+        new Viewpoint("compensation", "5", "5", "5", "5"),
+        new Viewpoint("safety", "5", "5", "5", "5"),
+        new Viewpoint("relationships", "5", "5", "5", "5"),
+        new Viewpoint("skill discretion", "5", "5", "5", "5"),
+        new Viewpoint("prospects", "5", "5", "5", "5")
     );
     final HBox hb = new HBox();
  
@@ -34,71 +63,101 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
         Scene scene = new Scene(new Group());
-        stage.setTitle("Data");
-        stage.setWidth(300);
-        stage.setHeight(500);
+        stage.setTitle("Organizations Habit Guider");
+        stage.setWidth(500);
+        stage.setHeight(900);
  
         final Label label = new Label("Cognitive-Affective-Instinctual-Miscellaneous Empathy Matrix");
         label.setFont(new Font("Arial", 20));
  
         table.setEditable(true);
  
-        TableColumn<Viewpoint, String> firstNameCol = new TableColumn<>("First Name");
-        firstNameCol.setMinWidth(100);
-        firstNameCol.setCellValueFactory(new PropertyValueFactory<>("firstName"));
-        
-        firstNameCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        firstNameCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> factorCol = new TableColumn<>("Factor");
+        factorCol.setMinWidth(100);
+        factorCol.setCellValueFactory(new PropertyValueFactory<>("factor"));
+        factorCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        factorCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setFirstName(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setFactor(t.getNewValue());
             }
         );
  
-        TableColumn<Viewpoint, String> lastNameCol = new TableColumn<>("Last Name");
-        lastNameCol.setMinWidth(100);
-        lastNameCol.setCellValueFactory(new PropertyValueFactory<>("lastName"));
-       lastNameCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-       lastNameCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> cognitiveCol = new TableColumn<>("Cognitive");
+        cognitiveCol.setMinWidth(100);
+        cognitiveCol.setCellValueFactory(new PropertyValueFactory<>("cognitive"));
+        cognitiveCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        cognitiveCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setLastName(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setCognitive(t.getNewValue());
             }
         );
  
-        TableColumn<Viewpoint, String> emailCol = new TableColumn<>("Email");
-        emailCol.setMinWidth(200);
-        emailCol.setCellValueFactory(new PropertyValueFactory<>("email"));
-        emailCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        emailCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> affectiveCol = new TableColumn<>("Affective");
+        affectiveCol.setMinWidth(100);
+        affectiveCol.setCellValueFactory(new PropertyValueFactory<>("affective"));
+        affectiveCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        affectiveCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setEmail(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setAffective(t.getNewValue());
+            }
+        );
+
+        TableColumn<Viewpoint, String> instinctualCol = new TableColumn<>("Instinctual");
+        instinctualCol.setMinWidth(100);
+        instinctualCol.setCellValueFactory(new PropertyValueFactory<>("instinctual"));
+        instinctualCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        instinctualCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setInstinctual(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> miscellaneousCol = new TableColumn<>("Miscellaneous");
+        miscellaneousCol.setMinWidth(100);
+        miscellaneousCol.setCellValueFactory(new PropertyValueFactory<>("miscellaneous"));
+        miscellaneousCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        miscellaneousCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setMiscellaneous(t.getNewValue());
             }
         );
  
         table.setItems(data);
-        table.getColumns().addAll(firstNameCol, lastNameCol, emailCol);
+        table.getColumns().addAll(factorCol, cognitiveCol, affectiveCol, instinctualCol, miscellaneousCol);
  
-        final TextField addFirstName = new TextField();
-        addFirstName.setPromptText("First Name");
-        addFirstName.setMaxWidth(firstNameCol.getPrefWidth());
-        final TextField addLastName = new TextField();
-        addLastName.setMaxWidth(lastNameCol.getPrefWidth());
-        addLastName.setPromptText("Last Name");
-        final TextField addEmail = new TextField();
-        addEmail.setMaxWidth(emailCol.getPrefWidth());
-        addEmail.setPromptText("Email");
+        final TextField addFactor = new TextField();
+        addFactor.setPromptText("Factor");
+        addFactor.setMaxWidth(factorCol.getPrefWidth());
+        final TextField addCognitive = new TextField();
+        addCognitive.setMaxWidth(cognitiveCol.getPrefWidth());
+        addCognitive.setPromptText("Cognitive");
+        final TextField addAffective = new TextField();
+        addAffective.setMaxWidth(affectiveCol.getPrefWidth());
+        addAffective.setPromptText("Affective");
+        final TextField addInstinctual = new TextField();
+        addInstinctual.setMaxWidth(cognitiveCol.getPrefWidth());
+        addInstinctual.setPromptText("Instinctual");
+        final TextField addMiscellaneous = new TextField();
+        addMiscellaneous.setMaxWidth(affectiveCol.getPrefWidth());
+        addMiscellaneous.setPromptText("Miscellaneous");
  
         final Button addButton = new Button("Add");
         addButton.setOnAction((ActionEvent e) -> {
             data.add(new Viewpoint(
-                    addFirstName.getText(),
-                    addLastName.getText(),
-                    addEmail.getText()));
-            addFirstName.clear();
-            addLastName.clear();
-            addEmail.clear();
+                addFactor.getText(),
+                addCognitive.getText(),
+                addAffective.getText(),
+                addInstinctual.getText(),
+                addMiscellaneous.getText()
+            ));
+            addFactor.clear();
+            addCognitive.clear();
+            addAffective.clear();
+            addInstinctual.clear();
+            addMiscellaneous.clear();
         });
  
-        hb.getChildren().addAll(addFirstName, addLastName, addEmail, addButton);
+        hb.getChildren().addAll(addFactor, addCognitive, addAffective, addInstinctual, addMiscellaneous, addButton);
         hb.setSpacing(3);
  
         final VBox vbox = new VBox();
@@ -114,38 +173,69 @@ public class Main extends Application {
  
     public static class Viewpoint {
  
-        private final SimpleStringProperty firstName;
-        private final SimpleStringProperty lastName;
-        private final SimpleStringProperty email;
+        protected final SimpleStringProperty factor;
+        protected final SimpleStringProperty congitive;
+        protected final SimpleStringProperty affective;
+        protected final SimpleStringProperty instinctual;
+        protected final SimpleStringProperty miscellaneous;
  
-        private Viewpoint(String fName, String lName, String email) {
-            this.firstName = new SimpleStringProperty(fName);
-            this.lastName = new SimpleStringProperty(lName);
-            this.email = new SimpleStringProperty(email);
+        public Viewpoint(String factor, String cognitive, String affective, String instinctual, String miscellaneous) {
+            this.factor = new SimpleStringProperty(factor);
+            this.congitive = new SimpleStringProperty(cognitive);
+            this.affective = new SimpleStringProperty(affective);
+            this.instinctual = new SimpleStringProperty(instinctual);
+            this.miscellaneous = new SimpleStringProperty(miscellaneous);
         }
  
-        public String getFirstName() {
-            return firstName.get();
+        public String getFactor() {
+            return factor.get();
         }
  
-        public void setFirstName(String fName) {
-            firstName.set(fName);
+        public void setFactor(String factor) {
+            //factor.set(factor);
         }
  
-        public String getLastName() {
-            return lastName.get();
+        public String getCognitive() {
+            return congitive.get();
         }
  
-        public void setLastName(String fName) {
-            lastName.set(fName);
+        public void setCognitive(String cognitive) {
+            congitive.set(cognitive);
         }
  
-        public String getEmail() {
-            return email.get();
+        public String getAffective() {
+            return affective.get();
         }
  
-        public void setEmail(String fName) {
-            email.set(fName);
+        public void setAffective(String affective) {
+            //affective.set(affective);
+        }
+
+        public String getInstinctual() {
+            return instinctual.get();
+        }
+ 
+        public void setInstinctual(String instinctual) {
+            //instinctual.set(instinctual);
+        }
+
+        public String getMiscellaneous() {
+            return miscellaneous.get();
+        }
+ 
+        public void setMiscellaneous(String miscellaneous) {
+            //miscellaneous.set(miscellaneous);
+        }
+
+        public void ANN() {
+            Viewpoint viewpoint = new Viewpoint("", "", "", "", "");
+            List<List<String>> arrayList = new ArrayList<>();
+
+            for(int i=0; i<table.getItems().size(); i++) {
+                viewpoint = table.getItems().get(i);
+                arrayList.add(new ArrayList<>());
+                arrayList.get(i).add(viewpoint.congitive.get());
+            }
         }
     }
 }
