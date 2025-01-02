@@ -26,33 +26,33 @@ public class Main extends Application {
  
     private static final TableView<Viewpoint> table = new TableView<>();
     private final ObservableList<Viewpoint> data = FXCollections.observableArrayList(
-        new Viewpoint("honesty", "5", "5", "5", "5"),
-        new Viewpoint("honesty/integrity/transparency", "5", "5", "5", "5"),
-        new Viewpoint("compassion/respect", "5", "5", "5", "5"),
-        new Viewpoint("responsibility/accountability", "5", "5", "5", "5"),
-        new Viewpoint("loyalty/trustworthiness", "5", "5", "5", "5"),
-        new Viewpoint("law-abiding", "5", "5", "5", "5"),
-        new Viewpoint("fairness", "5", "5", "5", "5"),
-        new Viewpoint("leadership", "5", "5", "5", "5"),
-        new Viewpoint("anti-discrimination", "5", "5", "5", "5"),
-        new Viewpoint("workplace health/safety/security", "5", "5", "5", "5"),
-        new Viewpoint("employee code of conduct & anti-harassment", "5", "5", "5", "5"),
-        new Viewpoint("attendance & vacation & time-off", "5", "5", "5", "5"),
-        new Viewpoint("employee complaint", "5", "5", "5", "5"),
-        new Viewpoint("work schedule & rest period", "5", "5", "5", "5"),
-        new Viewpoint("substance abuse", "5", "5", "5", "5"),
-        new Viewpoint("mobile device management", "5", "5", "5", "5"),
-        new Viewpoint("compensation and benefits", "5", "5", "5", "5"),
-        new Viewpoint("travel", "5", "5", "5", "5"),
-        new Viewpoint("inclement weather", "5", "5", "5", "5"),
-        new Viewpoint("remote work", "5", "5", "5", "5"),
-        new Viewpoint("conflict of interest", "5", "5", "5", "5"),
-        new Viewpoint("acceptable use", "5", "5", "5", "5"),
-        new Viewpoint("compensation", "5", "5", "5", "5"),
-        new Viewpoint("safety", "5", "5", "5", "5"),
-        new Viewpoint("relationships", "5", "5", "5", "5"),
-        new Viewpoint("skill discretion", "5", "5", "5", "5"),
-        new Viewpoint("prospects", "5", "5", "5", "5")
+        new Viewpoint("honesty", "5", "5", "5", "5", "0"),
+        new Viewpoint("honesty/integrity/transparency", "5", "5", "5", "5", "0"),
+        new Viewpoint("compassion/respect", "5", "5", "5", "5", "0"),
+        new Viewpoint("responsibility/accountability", "5", "5", "5", "5", "0"),
+        new Viewpoint("loyalty/trustworthiness", "5", "5", "5", "5", "0"),
+        new Viewpoint("law-abiding", "5", "5", "5", "5", "0"),
+        new Viewpoint("fairness", "5", "5", "5", "5", "0"),
+        new Viewpoint("leadership", "5", "5", "5", "5", "0"),
+        new Viewpoint("anti-discrimination", "5", "5", "5", "5", "0"),
+        new Viewpoint("workplace health/safety/security", "5", "5", "5", "5", "0"),
+        new Viewpoint("employee code of conduct & anti-harassment", "5", "5", "5", "5", "0"),
+        new Viewpoint("attendance & vacation & time-off", "5", "5", "5", "5", "0"),
+        new Viewpoint("employee complaint", "5", "5", "5", "5", "0"),
+        new Viewpoint("work schedule & rest period", "5", "5", "5", "5", "0"),
+        new Viewpoint("substance abuse", "5", "5", "5", "5", "0"),
+        new Viewpoint("mobile device management", "5", "5", "5", "5", "0"),
+        new Viewpoint("compensation and benefits", "5", "5", "5", "5", "0"),
+        new Viewpoint("travel", "5", "5", "5", "5", "0"),
+        new Viewpoint("inclement weather", "5", "5", "5", "5", "0"),
+        new Viewpoint("remote work", "5", "5", "5", "5", "0"),
+        new Viewpoint("conflict of interest", "5", "5", "5", "5", "0"),
+        new Viewpoint("acceptable use", "5", "5", "5", "5", "0"),
+        new Viewpoint("compensation", "5", "5", "5", "5", "0"),
+        new Viewpoint("safety", "5", "5", "5", "5", "0"),
+        new Viewpoint("relationships", "5", "5", "5", "5", "0"),
+        new Viewpoint("skill discretion", "5", "5", "5", "5", "0"),
+        new Viewpoint("prospects", "5", "5", "5", "5", "0")
     );
     final HBox hb = new HBox();
  
@@ -121,9 +121,19 @@ public class Main extends Application {
                 ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setMiscellaneous(t.getNewValue());
             }
         );
+
+        TableColumn<Viewpoint, String> valueCol = new TableColumn<>("Weight");
+        valueCol.setMinWidth(100);
+        valueCol.setCellValueFactory(new PropertyValueFactory<>("value"));
+        valueCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        valueCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setValue(t.getNewValue());
+            }
+        );
  
         table.setItems(data);
-        table.getColumns().addAll(factorCol, cognitiveCol, affectiveCol, instinctualCol, miscellaneousCol);
+        table.getColumns().addAll(factorCol, cognitiveCol, affectiveCol, instinctualCol, miscellaneousCol, valueCol);
  
         final TextField addFactor = new TextField();
         addFactor.setPromptText("Factor");
@@ -140,6 +150,9 @@ public class Main extends Application {
         final TextField addMiscellaneous = new TextField();
         addMiscellaneous.setMaxWidth(affectiveCol.getPrefWidth());
         addMiscellaneous.setPromptText("Miscellaneous");
+        final TextField addValue = new TextField();
+        addValue.setMaxWidth(affectiveCol.getPrefWidth());
+        addValue.setPromptText("Value");
  
         final Button addButton = new Button("Add");
         addButton.setOnAction((ActionEvent e) -> {
@@ -148,16 +161,38 @@ public class Main extends Application {
                 addCognitive.getText(),
                 addAffective.getText(),
                 addInstinctual.getText(),
-                addMiscellaneous.getText()
+                addMiscellaneous.getText(),
+                addValue.getText()
             ));
             addFactor.clear();
             addCognitive.clear();
             addAffective.clear();
             addInstinctual.clear();
             addMiscellaneous.clear();
+            addValue.clear();
+        });
+
+        final Button calculateButton = new Button("Calculate");
+        calculateButton.setOnAction((ActionEvent e) -> {
+            Viewpoint viewpoint = new Viewpoint("", "", "", "", "", "");
+            for(int i=0; i<table.getItems().size(); i++) {
+                viewpoint = table.getItems().get(i);
+                Integer weight = Integer.parseInt(viewpoint.congitive.get())+Integer.parseInt(viewpoint.affective.get());
+                weight += Integer.parseInt(viewpoint.instinctual.get())+Integer.parseInt(viewpoint.miscellaneous.get())-20;
+                Viewpoint row = new Viewpoint(
+                    viewpoint.factor.get(), 
+                    viewpoint.congitive.get(), 
+                    viewpoint.affective.get(), 
+                    viewpoint.instinctual.get(),
+                    viewpoint.miscellaneous.get(),
+                    weight.toString()
+                );
+                
+                table.getItems().set(i, row);
+            }
         });
  
-        hb.getChildren().addAll(addFactor, addCognitive, addAffective, addInstinctual, addMiscellaneous, addButton);
+        hb.getChildren().addAll(addFactor, addCognitive, addAffective, addInstinctual, addMiscellaneous, addValue, addButton);
         hb.setSpacing(3);
  
         final VBox vbox = new VBox();
@@ -178,13 +213,15 @@ public class Main extends Application {
         protected final SimpleStringProperty affective;
         protected final SimpleStringProperty instinctual;
         protected final SimpleStringProperty miscellaneous;
+        protected final SimpleStringProperty value;
  
-        public Viewpoint(String factor, String cognitive, String affective, String instinctual, String miscellaneous) {
+        public Viewpoint(String factor, String cognitive, String affective, String instinctual, String miscellaneous, String value) {
             this.factor = new SimpleStringProperty(factor);
             this.congitive = new SimpleStringProperty(cognitive);
             this.affective = new SimpleStringProperty(affective);
             this.instinctual = new SimpleStringProperty(instinctual);
             this.miscellaneous = new SimpleStringProperty(miscellaneous);
+            this.value = new SimpleStringProperty(value);
         }
  
         public String getFactor() {
@@ -227,15 +264,12 @@ public class Main extends Application {
             //miscellaneous.set(miscellaneous);
         }
 
-        public void ANN() {
-            Viewpoint viewpoint = new Viewpoint("", "", "", "", "");
-            List<List<String>> arrayList = new ArrayList<>();
-
-            for(int i=0; i<table.getItems().size(); i++) {
-                viewpoint = table.getItems().get(i);
-                arrayList.add(new ArrayList<>());
-                arrayList.get(i).add(viewpoint.congitive.get());
-            }
+        public String getValue() {
+            return value.get();
+        }
+ 
+        public void setValue(String value) {
+            //value.set(value);
         }
     }
 }
