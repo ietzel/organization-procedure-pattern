@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -237,7 +238,7 @@ public class Main extends Application {
         }
  
         public void setFactor(String factor) {
-            factor.set(factor);
+            this.factor.set(factor);
         }
  
         public String getCognitive() {
@@ -245,7 +246,7 @@ public class Main extends Application {
         }
  
         public void setCognitive(String cognitive) {
-            congitive.set(cognitive);
+            this.congitive.set(cognitive);
         }
  
         public String getAffective() {
@@ -253,7 +254,7 @@ public class Main extends Application {
         }
  
         public void setAffective(String affective) {
-            affective.set(affective);
+            this.affective.set(affective);
         }
 
         public String getInstinctual() {
@@ -261,7 +262,7 @@ public class Main extends Application {
         }
  
         public void setInstinctual(String instinctual) {
-            instinctual.set(instinctual);
+            this.instinctual.set(instinctual);
         }
 
         public String getMiscellaneous() {
@@ -269,7 +270,7 @@ public class Main extends Application {
         }
  
         public void setMiscellaneous(String miscellaneous) {
-            miscellaneous.set(miscellaneous);
+            this.miscellaneous.set(miscellaneous);
         }
 
         public String getValue() {
@@ -277,7 +278,7 @@ public class Main extends Application {
         }
  
         public void setValue(String value) {
-            value.set(value);
+            this.value.set(value);
         }
     }
 }
