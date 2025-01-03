@@ -237,7 +237,7 @@ public class Main extends Application {
         }
  
         public void setFactor(String factor) {
-            //factor.set(factor);
+            factor.set(factor);
         }
  
         public String getCognitive() {
@@ -253,7 +253,7 @@ public class Main extends Application {
         }
  
         public void setAffective(String affective) {
-            //affective.set(affective);
+            affective.set(affective);
         }
 
         public String getInstinctual() {
@@ -261,7 +261,7 @@ public class Main extends Application {
         }
  
         public void setInstinctual(String instinctual) {
-            //instinctual.set(instinctual);
+            instinctual.set(instinctual);
         }
 
         public String getMiscellaneous() {
@@ -269,7 +269,7 @@ public class Main extends Application {
         }
  
         public void setMiscellaneous(String miscellaneous) {
-            //miscellaneous.set(miscellaneous);
+            miscellaneous.set(miscellaneous);
         }
 
         public String getValue() {
@@ -277,7 +277,7 @@ public class Main extends Application {
         }
  
         public void setValue(String value) {
-            //value.set(value);
+            value.set(value);
         }
     }
 }
