@@ -14,6 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
@@ -191,14 +192,16 @@ public class Main extends Application {
                 table.getItems().set(i, row);
             }
         });
- 
+
+        TextArea paragraph = new TextArea("Habits are unconscious/subconscious, while goals are conscious: the first is good to work out before the second. ");
+     
         hb.getChildren().addAll(addFactor, addCognitive, addAffective, addInstinctual, addMiscellaneous, addValue, addButton);
         hb.setSpacing(3);
  
         final VBox vbox = new VBox();
         vbox.setSpacing(5);
         vbox.setPadding(new Insets(10, 0, 0, 10));
-        vbox.getChildren().addAll(label, table, hb);
+        vbox.getChildren().addAll(label, table, paragraph, hb);
  
         ((Group) scene.getRoot()).getChildren().addAll(vbox);
  
