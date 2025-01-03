@@ -65,8 +65,8 @@ public class Main extends Application {
     public void start(Stage stage) {
         Scene scene = new Scene(new Group());
         stage.setTitle("Organizations Habit Guider");
-        stage.setWidth(500);
-        stage.setHeight(900);
+        stage.setWidth(900);
+        stage.setHeight(800);
  
         final Label label = new Label("Cognitive-Affective-Instinctual-Miscellaneous Empathy Matrix");
         label.setFont(new Font("Arial", 20));
@@ -74,7 +74,7 @@ public class Main extends Application {
         table.setEditable(true);
  
         TableColumn<Viewpoint, String> factorCol = new TableColumn<>("Factor");
-        factorCol.setMinWidth(100);
+        factorCol.setMinWidth(200);
         factorCol.setCellValueFactory(new PropertyValueFactory<>("factor"));
         factorCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         factorCol.setOnEditCommit(
@@ -175,27 +175,32 @@ public class Main extends Application {
 
         final Button calculateButton = new Button("Calculate");
         calculateButton.setOnAction((ActionEvent e) -> {
+            Double[] weights = new Double[27];
+            Double total = 0.00;
             Viewpoint viewpoint = new Viewpoint("", "", "", "", "", "");
             for(int i=0; i<table.getItems().size(); i++) {
                 viewpoint = table.getItems().get(i);
-                Integer weight = Integer.parseInt(viewpoint.congitive.get())+Integer.parseInt(viewpoint.affective.get());
-                weight += Integer.parseInt(viewpoint.instinctual.get())+Integer.parseInt(viewpoint.miscellaneous.get())-20;
+                Double weight = Double.parseDouble(viewpoint.congitive.get())+Double.parseDouble(viewpoint.affective.get());
+                weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.miscellaneous.get())-20;
+                weights[i] = weight;
+                total += weight;
+            }
+            for(int i=0; i<table.getItems().size(); i++) {
                 Viewpoint row = new Viewpoint(
                     viewpoint.factor.get(), 
                     viewpoint.congitive.get(), 
                     viewpoint.affective.get(), 
                     viewpoint.instinctual.get(),
                     viewpoint.miscellaneous.get(),
-                    weight.toString()
-                );
-                
+                    String.valueOf(100*weights[i]/total)
+                );               
                 table.getItems().set(i, row);
             }
         });
 
         TextArea paragraph = new TextArea("Habits are unconscious/subconscious, while goals are conscious: the first is good to work out before the second. ");
      
-        hb.getChildren().addAll(addFactor, addCognitive, addAffective, addInstinctual, addMiscellaneous, addValue, addButton);
+        hb.getChildren().addAll(addFactor, addCognitive, addAffective, addInstinctual, addMiscellaneous, addValue, addButton, calculateButton);
         hb.setSpacing(3);
  
         final VBox vbox = new VBox();
