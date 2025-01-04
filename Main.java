@@ -189,6 +189,15 @@ public class Main extends Application {
             console.log(weights);
             console.log(total);
             for(int i=0; i<table.getItems().size(); i++) {
+                if(weights[i] == 0.00) {
+                    Viewpoint row = new Viewpoint(
+                    viewpoint.factor.get(), 
+                    viewpoint.congitive.get(), 
+                    viewpoint.affective.get(), 
+                    viewpoint.instinctual.get(),
+                    viewpoint.miscellaneous.get(),
+                    String.valueOf(0.00)
+                } else {
                 Viewpoint row = new Viewpoint(
                     viewpoint.factor.get(), 
                     viewpoint.congitive.get(), 
@@ -196,7 +205,8 @@ public class Main extends Application {
                     viewpoint.instinctual.get(),
                     viewpoint.miscellaneous.get(),
                     String.valueOf(100*weights[i]/total)
-                );               
+                );        
+                }
                 table.getItems().set(i, row);
             }
         });
