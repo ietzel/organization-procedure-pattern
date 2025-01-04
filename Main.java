@@ -182,7 +182,7 @@ public class Main extends Application {
             for(int i=0; i<table.getItems().size(); i++) {
                 viewpoint = table.getItems().get(i);
                 Double weight = Double.parseDouble(viewpoint.congitive.get())+Double.parseDouble(viewpoint.affective.get());
-                weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.miscellaneous.get())-20;
+                weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.miscellaneous.get())-20.00;
                 weights[i] = weight;
                 total += weight;
             }
