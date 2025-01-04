@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -186,19 +185,26 @@ public class Main extends Application {
                 weights[i] = weight;
                 total += weight;
             }
-            console.log(weights);
-            console.log(total);
+            Viewpoint row = new Viewpoint(
+                viewpoint.factor.get(), 
+                viewpoint.congitive.get(), 
+                viewpoint.affective.get(), 
+                viewpoint.instinctual.get(),
+                viewpoint.miscellaneous.get(),
+                String.valueOf(0.00)
+            );
             for(int i=0; i<table.getItems().size(); i++) {
                 if(weights[i] == 0.00) {
-                    Viewpoint row = new Viewpoint(
-                    viewpoint.factor.get(), 
-                    viewpoint.congitive.get(), 
-                    viewpoint.affective.get(), 
-                    viewpoint.instinctual.get(),
-                    viewpoint.miscellaneous.get(),
-                    String.valueOf(0.00)
+                    row = new Viewpoint(
+                        viewpoint.factor.get(), 
+                        viewpoint.congitive.get(), 
+                        viewpoint.affective.get(), 
+                        viewpoint.instinctual.get(),
+                        viewpoint.miscellaneous.get(),
+                        String.valueOf(0.00)
+                    );
                 } else {
-                Viewpoint row = new Viewpoint(
+                row = new Viewpoint(
                     viewpoint.factor.get(), 
                     viewpoint.congitive.get(), 
                     viewpoint.affective.get(), 
