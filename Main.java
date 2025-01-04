@@ -124,7 +124,7 @@ public class Main extends Application {
             }
         );
 
-        TableColumn<Viewpoint, String> valueCol = new TableColumn<>("Weight");
+        TableColumn<Viewpoint, String> valueCol = new TableColumn<>("Portion (%)");
         valueCol.setMinWidth(100);
         valueCol.setCellValueFactory(new PropertyValueFactory<>("value"));
         valueCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
@@ -186,6 +186,8 @@ public class Main extends Application {
                 weights[i] = weight;
                 total += weight;
             }
+            console.log(weights);
+            console.log(total);
             for(int i=0; i<table.getItems().size(); i++) {
                 Viewpoint row = new Viewpoint(
                     viewpoint.factor.get(), 
