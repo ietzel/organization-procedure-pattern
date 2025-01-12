@@ -217,7 +217,7 @@ public class Main extends Application {
             }
         });
 
-        TextArea paragraph = new TextArea("Habits are unconscious/subconscious, while goals are conscious: the first is good to work out before the second. ");
+        TextArea paragraph = new TextArea("Habits are unconscious/subconscious, while goals are conscious: the first is good to work out before the second. The overall allocation of resources could be thought of as a train trolley problem.");
      
         hb.getChildren().addAll(addFactor, addCognitive, addAffective, addInstinctual, addMiscellaneous, addValue, addButton, calculateButton);
         hb.setSpacing(3);
