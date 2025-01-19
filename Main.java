@@ -217,7 +217,7 @@ public class Main extends Application {
             }
         });
 
-        TextArea paragraph = new TextArea("In each business modality, habits are part of the unconscious-subconscious business process, while goals are part of the subconscious-conscious business function. The overall allocation of resources could be thought of as a train trolley problem. Converting this with complex typography may allow for many runs to be understandable similar as an encyclopedia.");
+        TextArea paragraph = new TextArea("In each business modality, habits are part of the unconscious-subconscious abstract business process, while goals are part of the subconscious-conscious detailed business function. The overall allocation of resources could be thought of as a train trolley problem. Converting this with complex typography may allow for many runs to be understandable similar as an encyclopedia.");
      
         hb.getChildren().addAll(addFactor, addCognitive, addAffective, addInstinctual, addMiscellaneous, addValue, addButton, calculateButton);
         hb.setSpacing(3);
