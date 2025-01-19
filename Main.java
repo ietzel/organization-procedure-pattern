@@ -27,7 +27,6 @@ public class Main extends Application {
  
     private static final TableView<Viewpoint> table = new TableView<>();
     private final ObservableList<Viewpoint> data = FXCollections.observableArrayList(
-        new Viewpoint("honesty", "5", "5", "5", "5", "0"),
         new Viewpoint("honesty/integrity/transparency", "5", "5", "5", "5", "0"),
         new Viewpoint("compassion/respect", "5", "5", "5", "5", "0"),
         new Viewpoint("responsibility/accountability", "5", "5", "5", "5", "0"),
@@ -175,7 +174,7 @@ public class Main extends Application {
 
         final Button calculateButton = new Button("Calculate");
         calculateButton.setOnAction((ActionEvent e) -> {
-            Double[] weights = new Double[27];
+            Double[] weights = new Double[26];
             Double total = 0.00;
             Viewpoint viewpoint = new Viewpoint("", "", "", "", "", "");
             for(int i=0; i<table.getItems().size(); i++) {
