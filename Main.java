@@ -27,32 +27,32 @@ public class Main extends Application {
  
     private static final TableView<Viewpoint> table = new TableView<>();
     private final ObservableList<Viewpoint> data = FXCollections.observableArrayList(
-        new Viewpoint("honesty/integrity/transparency", "5", "5", "5", "5", "0"),
-        new Viewpoint("compassion/respect", "5", "5", "5", "5", "0"),
-        new Viewpoint("responsibility/accountability", "5", "5", "5", "5", "0"),
-        new Viewpoint("loyalty/trustworthiness", "5", "5", "5", "5", "0"),
-        new Viewpoint("law-abiding", "5", "5", "5", "5", "0"),
-        new Viewpoint("fairness", "5", "5", "5", "5", "0"),
-        new Viewpoint("leadership", "5", "5", "5", "5", "0"),
-        new Viewpoint("anti-discrimination", "5", "5", "5", "5", "0"),
-        new Viewpoint("workplace health/safety/security", "5", "5", "5", "5", "0"),
-        new Viewpoint("employee code of conduct & anti-harassment", "5", "5", "5", "5", "0"),
-        new Viewpoint("attendance & vacation & time-off", "5", "5", "5", "5", "0"),
-        new Viewpoint("employee complaint", "5", "5", "5", "5", "0"),
-        new Viewpoint("work schedule & rest period", "5", "5", "5", "5", "0"),
-        new Viewpoint("substance abuse", "5", "5", "5", "5", "0"),
-        new Viewpoint("mobile device management", "5", "5", "5", "5", "0"),
-        new Viewpoint("compensation and benefits", "5", "5", "5", "5", "0"),
-        new Viewpoint("travel", "5", "5", "5", "5", "0"),
-        new Viewpoint("inclement weather", "5", "5", "5", "5", "0"),
-        new Viewpoint("remote work", "5", "5", "5", "5", "0"),
-        new Viewpoint("conflict of interest", "5", "5", "5", "5", "0"),
-        new Viewpoint("acceptable use", "5", "5", "5", "5", "0"),
-        new Viewpoint("compensation", "5", "5", "5", "5", "0"),
-        new Viewpoint("safety", "5", "5", "5", "5", "0"),
-        new Viewpoint("relationships", "5", "5", "5", "5", "0"),
-        new Viewpoint("skill discretion", "5", "5", "5", "5", "0"),
-        new Viewpoint("prospects", "5", "5", "5", "5", "0")
+        new Viewpoint("honesty/integrity/transparency", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("compassion/respect", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("responsibility/accountability", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("loyalty/trustworthiness", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("law-abiding", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("fairness", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("leadership", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("anti-discrimination", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("workplace health/safety/security", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("employee code of conduct & anti-harassment", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("attendance & vacation & time-off", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("employee complaint", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("work schedule & rest period", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("substance abuse", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("mobile device management", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("compensation and benefits", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("travel", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("inclement weather", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("remote work", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("conflict of interest", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("acceptable use", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("compensation", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("safety", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("relationships", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("skill discretion", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0"),
+        new Viewpoint("prospects", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0")
     );
     final HBox hb = new HBox();
  
@@ -67,7 +67,7 @@ public class Main extends Application {
         stage.setWidth(900);
         stage.setHeight(800);
  
-        final Label label = new Label("Cognitive-Affective-Instinctual-Miscellaneous Empathy Matrix");
+        final Label label = new Label("Cognitive-Affective-Instinctual-Chemical Empathy Matrix");
         label.setFont(new Font("Arial", 20));
  
         table.setEditable(true);
@@ -112,16 +112,136 @@ public class Main extends Application {
             }
         );
  
-        TableColumn<Viewpoint, String> miscellaneousCol = new TableColumn<>("Miscellaneous");
-        miscellaneousCol.setMinWidth(100);
-        miscellaneousCol.setCellValueFactory(new PropertyValueFactory<>("miscellaneous"));
-        miscellaneousCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        miscellaneousCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> chemicalCol = new TableColumn<>("Chemical");
+        ChemicalCol.setMinWidth(100);
+        ChemicalCol.setCellValueFactory(new PropertyValueFactory<>("Chemical"));
+        ChemicalCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        ChemicalCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setMiscellaneous(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setChemical(t.getNewValue());
             }
         );
 
+        TableColumn<Viewpoint, String> cognitiveCol = new TableColumn<>("Cognitive");
+        cognitiveCol.setMinWidth(100);
+        cognitiveCol.setCellValueFactory(new PropertyValueFactory<>("cognitive"));
+        cognitiveCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        cognitiveCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setCognitive(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> affectiveCol = new TableColumn<>("Affective");
+        affectiveCol.setMinWidth(100);
+        affectiveCol.setCellValueFactory(new PropertyValueFactory<>("affective"));
+        affectiveCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        affectiveCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setAffective(t.getNewValue());
+            }
+        );
+
+        TableColumn<Viewpoint, String> instinctualCol = new TableColumn<>("Instinctual");
+        instinctualCol.setMinWidth(100);
+        instinctualCol.setCellValueFactory(new PropertyValueFactory<>("instinctual"));
+        instinctualCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        instinctualCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setInstinctual(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> chemicalCol = new TableColumn<>("Chemical");
+        ChemicalCol.setMinWidth(100);
+        ChemicalCol.setCellValueFactory(new PropertyValueFactory<>("Chemical"));
+        ChemicalCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        ChemicalCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setChemical(t.getNewValue());
+            }
+        );
+
+                TableColumn<Viewpoint, String> cognitiveCol = new TableColumn<>("Cognitive");
+        cognitiveCol.setMinWidth(100);
+        cognitiveCol.setCellValueFactory(new PropertyValueFactory<>("cognitive"));
+        cognitiveCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        cognitiveCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setCognitive(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> affectiveCol = new TableColumn<>("Affective");
+        affectiveCol.setMinWidth(100);
+        affectiveCol.setCellValueFactory(new PropertyValueFactory<>("affective"));
+        affectiveCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        affectiveCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setAffective(t.getNewValue());
+            }
+        );
+
+        TableColumn<Viewpoint, String> instinctualCol = new TableColumn<>("Instinctual");
+        instinctualCol.setMinWidth(100);
+        instinctualCol.setCellValueFactory(new PropertyValueFactory<>("instinctual"));
+        instinctualCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        instinctualCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setInstinctual(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> chemicalCol = new TableColumn<>("Chemical");
+        ChemicalCol.setMinWidth(100);
+        ChemicalCol.setCellValueFactory(new PropertyValueFactory<>("Chemical"));
+        ChemicalCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        ChemicalCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setChemical(t.getNewValue());
+            }
+        );
+
+        TableColumn<Viewpoint, String> cognitiveCol = new TableColumn<>("Cognitive");
+        cognitiveCol.setMinWidth(100);
+        cognitiveCol.setCellValueFactory(new PropertyValueFactory<>("cognitive"));
+        cognitiveCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        cognitiveCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setCognitive(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> affectiveCol = new TableColumn<>("Affective");
+        affectiveCol.setMinWidth(100);
+        affectiveCol.setCellValueFactory(new PropertyValueFactory<>("affective"));
+        affectiveCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        affectiveCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setAffective(t.getNewValue());
+            }
+        );
+
+        TableColumn<Viewpoint, String> instinctualCol = new TableColumn<>("Instinctual");
+        instinctualCol.setMinWidth(100);
+        instinctualCol.setCellValueFactory(new PropertyValueFactory<>("instinctual"));
+        instinctualCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        instinctualCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setInstinctual(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> chemicalCol = new TableColumn<>("Chemical");
+        ChemicalCol.setMinWidth(100);
+        ChemicalCol.setCellValueFactory(new PropertyValueFactory<>("Chemical"));
+        ChemicalCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        ChemicalCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setChemical(t.getNewValue());
+            }
+        );
+     
         TableColumn<Viewpoint, String> valueCol = new TableColumn<>("Portion (%)");
         valueCol.setMinWidth(100);
         valueCol.setCellValueFactory(new PropertyValueFactory<>("value"));
@@ -133,7 +253,7 @@ public class Main extends Application {
         );
  
         table.setItems(data);
-        table.getColumns().addAll(factorCol, cognitiveCol, affectiveCol, instinctualCol, miscellaneousCol, valueCol);
+        table.getColumns().addAll(factorCol, cognitiveCol, affectiveCol, instinctualCol, chemicalCol, cognitiveCol, affectiveCol, instinctualCol, chemicalCol, cognitiveCol, affectiveCol, instinctualCol, chemicalCol, cognitiveCol, affectiveCol, instinctualCol, chemicalCol, valueCol);
  
         final TextField addFactor = new TextField();
         addFactor.setPromptText("Factor");
@@ -145,11 +265,47 @@ public class Main extends Application {
         addAffective.setMaxWidth(affectiveCol.getPrefWidth());
         addAffective.setPromptText("Affective");
         final TextField addInstinctual = new TextField();
-        addInstinctual.setMaxWidth(cognitiveCol.getPrefWidth());
+        addInstinctual.setMaxWidth(instinctualCol.getPrefWidth());
         addInstinctual.setPromptText("Instinctual");
-        final TextField addMiscellaneous = new TextField();
-        addMiscellaneous.setMaxWidth(affectiveCol.getPrefWidth());
-        addMiscellaneous.setPromptText("Miscellaneous");
+        final TextField addChemical = new TextField();
+        addChemical.setMaxWidth(chemicalCol.getPrefWidth());
+        addChemical.setPromptText("Chemical");
+        final TextField addCognitive = new TextField();
+        addCognitive.setMaxWidth(cognitiveCol.getPrefWidth());
+        addCognitive.setPromptText("Cognitive");
+        final TextField addAffective = new TextField();
+        addAffective.setMaxWidth(affectiveCol.getPrefWidth());
+        addAffective.setPromptText("Affective");
+        final TextField addInstinctual = new TextField();
+        addInstinctual.setMaxWidth(instinctualCol.getPrefWidth());
+        addInstinctual.setPromptText("Instinctual");
+        final TextField addChemical = new TextField();
+        addChemical.setMaxWidth(chemicalCol.getPrefWidth());
+        addChemical.setPromptText("Chemical");
+        final TextField addCognitive = new TextField();
+        addCognitive.setMaxWidth(cognitiveCol.getPrefWidth());
+        addCognitive.setPromptText("Cognitive");
+        final TextField addAffective = new TextField();
+        addAffective.setMaxWidth(affectiveCol.getPrefWidth());
+        addAffective.setPromptText("Affective");
+        final TextField addInstinctual = new TextField();
+        addInstinctual.setMaxWidth(instinctualCol.getPrefWidth());
+        addInstinctual.setPromptText("Instinctual");
+        final TextField addChemical = new TextField();
+        addChemical.setMaxWidth(chemicalCol.getPrefWidth());
+        addChemical.setPromptText("Chemical");
+        final TextField addCognitive = new TextField();
+        addCognitive.setMaxWidth(cognitiveCol.getPrefWidth());
+        addCognitive.setPromptText("Cognitive");
+        final TextField addAffective = new TextField();
+        addAffective.setMaxWidth(affectiveCol.getPrefWidth());
+        addAffective.setPromptText("Affective");
+        final TextField addInstinctual = new TextField();
+        addInstinctual.setMaxWidth(instinctualCol.getPrefWidth());
+        addInstinctual.setPromptText("Instinctual");
+        final TextField addChemical = new TextField();
+        addChemical.setMaxWidth(chemicalCol.getPrefWidth());
+        addChemical.setPromptText("Chemical");
         final TextField addValue = new TextField();
         addValue.setMaxWidth(affectiveCol.getPrefWidth());
         addValue.setPromptText("Value");
@@ -161,14 +317,38 @@ public class Main extends Application {
                 addCognitive.getText(),
                 addAffective.getText(),
                 addInstinctual.getText(),
-                addMiscellaneous.getText(),
+                addChemical.getText(),
+                addCognitive.getText(),
+                addAffective.getText(),
+                addInstinctual.getText(),
+                addChemical.getText(),
+                addCognitive.getText(),
+                addAffective.getText(),
+                addInstinctual.getText(),
+                addChemical.getText(),
+                addCognitive.getText(),
+                addAffective.getText(),
+                addInstinctual.getText(),
+                addChemical.getText(),
                 addValue.getText()
             ));
             addFactor.clear();
             addCognitive.clear();
             addAffective.clear();
             addInstinctual.clear();
-            addMiscellaneous.clear();
+            addChemical.clear();
+            addCognitive.clear();
+            addAffective.clear();
+            addInstinctual.clear();
+            addChemical.clear();
+            addCognitive.clear();
+            addAffective.clear();
+            addInstinctual.clear();
+            addChemical.clear();
+            addCognitive.clear();
+            addAffective.clear();
+            addInstinctual.clear();
+            addChemical.clear();
             addValue.clear();
         });
 
@@ -180,7 +360,13 @@ public class Main extends Application {
             for(int i=0; i<table.getItems().size(); i++) {
                 viewpoint = table.getItems().get(i);
                 Double weight = Double.parseDouble(viewpoint.congitive.get())+Double.parseDouble(viewpoint.affective.get());
-                weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.miscellaneous.get())-20.00;
+                weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.chemical.get());
+                weight += Double.parseDouble(viewpoint.congitive.get())+Double.parseDouble(viewpoint.affective.get());
+                weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.chemical.get());
+                weight += Double.parseDouble(viewpoint.congitive.get())+Double.parseDouble(viewpoint.affective.get());
+                weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.chemical.get());
+                weight += Double.parseDouble(viewpoint.congitive.get())+Double.parseDouble(viewpoint.affective.get());
+                weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.chemical.get())-80.00;
                 weights[i] = weight;
                 total += weight;
             }
@@ -189,7 +375,19 @@ public class Main extends Application {
                 viewpoint.congitive.get(), 
                 viewpoint.affective.get(), 
                 viewpoint.instinctual.get(),
-                viewpoint.miscellaneous.get(),
+                viewpoint.chemical.get(),
+                viewpoint.congitive.get(), 
+                viewpoint.affective.get(), 
+                viewpoint.instinctual.get(),
+                viewpoint.chemical.get(),
+                viewpoint.congitive.get(), 
+                viewpoint.affective.get(), 
+                viewpoint.instinctual.get(),
+                viewpoint.chemical.get(),
+                viewpoint.congitive.get(), 
+                viewpoint.affective.get(), 
+                viewpoint.instinctual.get(),
+                viewpoint.chemical.get(),
                 String.valueOf(0.00)
             );
             for(int i=0; i<table.getItems().size(); i++) {
@@ -199,7 +397,19 @@ public class Main extends Application {
                         viewpoint.congitive.get(), 
                         viewpoint.affective.get(), 
                         viewpoint.instinctual.get(),
-                        viewpoint.miscellaneous.get(),
+                        viewpoint.chemical.get(),
+                        viewpoint.congitive.get(), 
+                        viewpoint.affective.get(), 
+                        viewpoint.instinctual.get(),
+                        viewpoint.chemical.get(),
+                        viewpoint.congitive.get(), 
+                        viewpoint.affective.get(), 
+                        viewpoint.instinctual.get(),
+                        viewpoint.chemical.get(),
+                        viewpoint.congitive.get(), 
+                        viewpoint.affective.get(), 
+                        viewpoint.instinctual.get(),
+                        viewpoint.chemical.get(),
                         String.valueOf(0.00)
                     );
                 } else {
@@ -208,7 +418,19 @@ public class Main extends Application {
                     viewpoint.congitive.get(), 
                     viewpoint.affective.get(), 
                     viewpoint.instinctual.get(),
-                    viewpoint.miscellaneous.get(),
+                    viewpoint.chemical.get(),
+                    viewpoint.congitive.get(), 
+                    viewpoint.affective.get(), 
+                    viewpoint.instinctual.get(),
+                    viewpoint.chemical.get(),
+                    viewpoint.congitive.get(), 
+                    viewpoint.affective.get(), 
+                    viewpoint.instinctual.get(),
+                    viewpoint.chemical.get(),
+                    viewpoint.congitive.get(), 
+                    viewpoint.affective.get(), 
+                    viewpoint.instinctual.get(),
+                    viewpoint.chemical.get(),
                     String.valueOf(100*weights[i]/total)
                 );        
                 }
@@ -217,9 +439,9 @@ public class Main extends Application {
         });
 
         //typeface/hierarchy/contrast/consistency/alignment/blankspace/color
-        TextArea paragraph = new TextArea("Business modalities may be composed of the following business models: servitisation, platform, social, employee, partner, value, innovation, data, savvy, miscellaneous. In each business modality: habits are part of the unconscious-subconscious abstract business process, while goals are part of the subconscious-conscious detailed business function. The overall allocation of resources could be concieved as a long-term survival train trolley problem. Complex typography conversion may allow for many runs to become similar to an encyclopedia.");
+        TextArea paragraph = new TextArea("Business modalities may be composed of the following business models: servitisation, platform, social, employee, partner, value, innovation, data, savvy, Chemical. In each business modality: habits are part of the unconscious-subconscious abstract business process, while goals are part of the subconscious-conscious detailed business function. The overall allocation of resources could be concieved as a long-term survival train trolley problem. Complex typography conversion may allow for many runs to become similar to an encyclopedia.");
      
-        hb.getChildren().addAll(addFactor, addCognitive, addAffective, addInstinctual, addMiscellaneous, addValue, addButton, calculateButton);
+        hb.getChildren().addAll(addFactor, addCognitive, addAffective, addInstinctual, addChemical, addCognitive, addAffective, addInstinctual, addChemical, addCognitive, addAffective, addInstinctual, addChemical, addCognitive, addAffective, addInstinctual, addChemical, addValue, addButton, calculateButton);
         hb.setSpacing(3);
  
         final VBox vbox = new VBox();
@@ -239,15 +461,36 @@ public class Main extends Application {
         protected final SimpleStringProperty congitive;
         protected final SimpleStringProperty affective;
         protected final SimpleStringProperty instinctual;
-        protected final SimpleStringProperty miscellaneous;
+        protected final SimpleStringProperty chemical;
+        protected final SimpleStringProperty congitive;
+        protected final SimpleStringProperty affective;
+        protected final SimpleStringProperty instinctual;
+        protected final SimpleStringProperty chemical;
+        protected final SimpleStringProperty chemical;
+        protected final SimpleStringProperty congitive;
+        protected final SimpleStringProperty affective;
+        protected final SimpleStringProperty instinctual;
+        protected final SimpleStringProperty chemical;
         protected final SimpleStringProperty value;
  
-        public Viewpoint(String factor, String cognitive, String affective, String instinctual, String miscellaneous, String value) {
+        public Viewpoint(String factor, String cognitive, String affective, String instinctual, String chemical, String cognitive, String affective, String instinctual, String chemical, String cognitive, String affective, String instinctual, String chemical, String cognitive, String affective, String instinctual, String chemical, String value) {
             this.factor = new SimpleStringProperty(factor);
             this.congitive = new SimpleStringProperty(cognitive);
             this.affective = new SimpleStringProperty(affective);
             this.instinctual = new SimpleStringProperty(instinctual);
-            this.miscellaneous = new SimpleStringProperty(miscellaneous);
+            this.chemical = new SimpleStringProperty(chemical);
+            this.congitive = new SimpleStringProperty(cognitive);
+            this.affective = new SimpleStringProperty(affective);
+            this.instinctual = new SimpleStringProperty(instinctual);
+            this.chemical = new SimpleStringProperty(chemical);
+            this.congitive = new SimpleStringProperty(cognitive);
+            this.affective = new SimpleStringProperty(affective);
+            this.instinctual = new SimpleStringProperty(instinctual);
+            this.chemical = new SimpleStringProperty(chemical);
+            this.congitive = new SimpleStringProperty(cognitive);
+            this.affective = new SimpleStringProperty(affective);
+            this.instinctual = new SimpleStringProperty(instinctual);
+            this.chemical = new SimpleStringProperty(chemical);
             this.value = new SimpleStringProperty(value);
         }
  
@@ -283,14 +526,110 @@ public class Main extends Application {
             this.instinctual.set(instinctual);
         }
 
-        public String getMiscellaneous() {
-            return miscellaneous.get();
+        public String getChemical() {
+            return chemical.get();
         }
  
-        public void setMiscellaneous(String miscellaneous) {
-            this.miscellaneous.set(miscellaneous);
+        public void setChemical(String Chemical) {
+            this.chemical.set(chemical);
         }
 
+                public String getCognitive() {
+            return congitive.get();
+        }
+ 
+        public void setCognitive(String cognitive) {
+            this.congitive.set(cognitive);
+        }
+ 
+        public String getAffective() {
+            return affective.get();
+        }
+ 
+        public void setAffective(String affective) {
+            this.affective.set(affective);
+        }
+
+        public String getInstinctual() {
+            return instinctual.get();
+        }
+ 
+        public void setInstinctual(String instinctual) {
+            this.instinctual.set(instinctual);
+        }
+
+        public String getChemical() {
+            return chemical.get();
+        }
+ 
+        public void setChemical(String Chemical) {
+            this.chemical.set(chemical);
+        }
+
+                public String getCognitive() {
+            return congitive.get();
+        }
+ 
+        public void setCognitive(String cognitive) {
+            this.congitive.set(cognitive);
+        }
+ 
+        public String getAffective() {
+            return affective.get();
+        }
+ 
+        public void setAffective(String affective) {
+            this.affective.set(affective);
+        }
+
+        public String getInstinctual() {
+            return instinctual.get();
+        }
+ 
+        public void setInstinctual(String instinctual) {
+            this.instinctual.set(instinctual);
+        }
+
+        public String getChemical() {
+            return chemical.get();
+        }
+ 
+        public void setChemical(String Chemical) {
+            this.chemical.set(chemical);
+        }
+
+                public String getCognitive() {
+            return congitive.get();
+        }
+ 
+        public void setCognitive(String cognitive) {
+            this.congitive.set(cognitive);
+        }
+ 
+        public String getAffective() {
+            return affective.get();
+        }
+ 
+        public void setAffective(String affective) {
+            this.affective.set(affective);
+        }
+
+        public String getInstinctual() {
+            return instinctual.get();
+        }
+ 
+        public void setInstinctual(String instinctual) {
+            this.instinctual.set(instinctual);
+        }
+
+        public String getChemical() {
+            return chemical.get();
+        }
+ 
+        public void setChemical(String Chemical) {
+            this.chemical.set(chemical);
+        }
+     
         public String getValue() {
             return value.get();
         }
