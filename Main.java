@@ -82,163 +82,163 @@ public class Main extends Application {
             }
         );
  
-        TableColumn<Viewpoint, String> cognitiveCol = new TableColumn<>("Cognitive");
-        cognitiveCol.setMinWidth(100);
-        cognitiveCol.setCellValueFactory(new PropertyValueFactory<>("cognitive"));
-        cognitiveCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        cognitiveCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> cognitiveSalesCol = new TableColumn<>("Cognitive Sales");
+        cognitiveSalesCol.setMinWidth(100);
+        cognitiveSalesCol.setCellValueFactory(new PropertyValueFactory<>("cognitive sales"));
+        cognitiveSalesCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        cognitiveSalesCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setCognitive(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesCognitive(t.getNewValue());
             }
         );
  
-        TableColumn<Viewpoint, String> affectiveCol = new TableColumn<>("Affective");
-        affectiveCol.setMinWidth(100);
-        affectiveCol.setCellValueFactory(new PropertyValueFactory<>("affective"));
-        affectiveCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        affectiveCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> affectiveSalesCol = new TableColumn<>("Affective Sales");
+        affectiveSalesCol.setMinWidth(100);
+        affectiveSalesCol.setCellValueFactory(new PropertyValueFactory<>("affective sales"));
+        affectiveSalesCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        affectiveSalesCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setAffective(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesAffective(t.getNewValue());
             }
         );
 
-        TableColumn<Viewpoint, String> instinctualCol = new TableColumn<>("Instinctual");
-        instinctualCol.setMinWidth(100);
-        instinctualCol.setCellValueFactory(new PropertyValueFactory<>("instinctual"));
-        instinctualCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        instinctualCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> instinctualSalesCol = new TableColumn<>("Instinctual Sales");
+        instinctualSalesCol.setMinWidth(100);
+        instinctualSalesCol.setCellValueFactory(new PropertyValueFactory<>("instinctual"));
+        instinctualSalesCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        instinctualSalesCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setInstinctual(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesInstinctual(t.getNewValue());
             }
         );
  
-        TableColumn<Viewpoint, String> chemicalCol = new TableColumn<>("Chemical");
-        ChemicalCol.setMinWidth(100);
-        ChemicalCol.setCellValueFactory(new PropertyValueFactory<>("Chemical"));
-        ChemicalCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        ChemicalCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> chemicalSalesCol = new TableColumn<>("Chemical Sales");
+        chemicalCol.setMinWidth(100);
+        chemicalCol.setCellValueFactory(new PropertyValueFactory<>("chemical sales"));
+        chemicalCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        chemicalCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setChemical(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesChemical(t.getNewValue());
             }
         );
 
-        TableColumn<Viewpoint, String> cognitiveCol = new TableColumn<>("Cognitive");
-        cognitiveCol.setMinWidth(100);
-        cognitiveCol.setCellValueFactory(new PropertyValueFactory<>("cognitive"));
-        cognitiveCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        cognitiveCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> cognitiveCol = new TableColumn<>("Cognitive Finance");
+        cognitiveFinanceCol.setMinWidth(100);
+        cognitiveFinanceCol.setCellValueFactory(new PropertyValueFactory<>("cognitive finance"));
+        cognitiveFinanceCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        cognitiveFinanceCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setCognitive(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setFinanceCognitive(t.getNewValue());
             }
         );
  
-        TableColumn<Viewpoint, String> affectiveCol = new TableColumn<>("Affective");
-        affectiveCol.setMinWidth(100);
-        affectiveCol.setCellValueFactory(new PropertyValueFactory<>("affective"));
-        affectiveCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        affectiveCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> affectiveCol = new TableColumn<>("Affective Finance");
+        affectiveFinanceCol.setMinWidth(100);
+        affectiveFinanceCol.setCellValueFactory(new PropertyValueFactory<>("affective finance"));
+        affectiveFinanceCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        affectiveFinanceCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setAffective(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setFinanceAffective(t.getNewValue());
             }
         );
 
-        TableColumn<Viewpoint, String> instinctualCol = new TableColumn<>("Instinctual");
-        instinctualCol.setMinWidth(100);
-        instinctualCol.setCellValueFactory(new PropertyValueFactory<>("instinctual"));
-        instinctualCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        instinctualCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> instinctualCol = new TableColumn<>("Instinctual Finance");
+        instinctualFinanceCol.setMinWidth(100);
+        instinctualFinanceCol.setCellValueFactory(new PropertyValueFactory<>("instinctual finance"));
+        instinctualFinanceCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        instinctualFinanceCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setInstinctual(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setFinanceInstinctual(t.getNewValue());
             }
         );
  
-        TableColumn<Viewpoint, String> chemicalCol = new TableColumn<>("Chemical");
-        ChemicalCol.setMinWidth(100);
-        ChemicalCol.setCellValueFactory(new PropertyValueFactory<>("Chemical"));
-        ChemicalCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        ChemicalCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> chemicalCol = new TableColumn<>("Chemical Finance");
+        chemicalCol.setMinWidth(100);
+        chemicalCol.setCellValueFactory(new PropertyValueFactory<>("chemical finance"));
+        chemicalCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        chemicalCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setChemical(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setFinanceChemical(t.getNewValue());
             }
         );
 
-                TableColumn<Viewpoint, String> cognitiveCol = new TableColumn<>("Cognitive");
-        cognitiveCol.setMinWidth(100);
-        cognitiveCol.setCellValueFactory(new PropertyValueFactory<>("cognitive"));
-        cognitiveCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        cognitiveCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> cognitiveCol = new TableColumn<>("Cognitive Technology");
+        cognitiveTechnologyCol.setMinWidth(100);
+        cognitiveTechnologyCol.setCellValueFactory(new PropertyValueFactory<>("cognitive technology"));
+        cognitiveTechnologyCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        cognitiveTechnologyCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setCognitive(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setTechnologyCognitive(t.getNewValue());
             }
         );
  
-        TableColumn<Viewpoint, String> affectiveCol = new TableColumn<>("Affective");
-        affectiveCol.setMinWidth(100);
-        affectiveCol.setCellValueFactory(new PropertyValueFactory<>("affective"));
-        affectiveCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        affectiveCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> affectiveCol = new TableColumn<>("Affective Technology");
+        affectiveTechnologyCol.setMinWidth(100);
+        affectiveTechnologyCol.setCellValueFactory(new PropertyValueFactory<>("affective technology"));
+        affectiveTechnologyCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        affectiveTechnologyCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setAffective(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setTechnologyAffective(t.getNewValue());
             }
         );
 
-        TableColumn<Viewpoint, String> instinctualCol = new TableColumn<>("Instinctual");
-        instinctualCol.setMinWidth(100);
-        instinctualCol.setCellValueFactory(new PropertyValueFactory<>("instinctual"));
-        instinctualCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        instinctualCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> instinctualCol = new TableColumn<>("Instinctual Technology");
+        instinctualTechnologyCol.setMinWidth(100);
+        instinctualTechnologyCol.setCellValueFactory(new PropertyValueFactory<>("instinctual technology"));
+        instinctualTechnologyCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        instinctualTechnologyCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setInstinctual(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setTechnologyInstinctual(t.getNewValue());
             }
         );
  
-        TableColumn<Viewpoint, String> chemicalCol = new TableColumn<>("Chemical");
-        ChemicalCol.setMinWidth(100);
-        ChemicalCol.setCellValueFactory(new PropertyValueFactory<>("Chemical"));
-        ChemicalCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        ChemicalCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> chemicalCol = new TableColumn<>("Chemical Technology");
+        chemicalCol.setMinWidth(100);
+        chemicalCol.setCellValueFactory(new PropertyValueFactory<>("chemical technology"));
+        chemicalCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        chemicalCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setChemical(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setTechnologyChemical(t.getNewValue());
             }
         );
 
-        TableColumn<Viewpoint, String> cognitiveCol = new TableColumn<>("Cognitive");
-        cognitiveCol.setMinWidth(100);
-        cognitiveCol.setCellValueFactory(new PropertyValueFactory<>("cognitive"));
-        cognitiveCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        cognitiveCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> cognitiveCol = new TableColumn<>("Cognitive Operations");
+        cognitiveOperationsCol.setMinWidth(100);
+        cognitiveOperationsCol.setCellValueFactory(new PropertyValueFactory<>("cognitive operations"));
+        cognitiveOperationsCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        cognitiveOperationsCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setCognitive(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsCognitive(t.getNewValue());
             }
         );
  
-        TableColumn<Viewpoint, String> affectiveCol = new TableColumn<>("Affective");
-        affectiveCol.setMinWidth(100);
-        affectiveCol.setCellValueFactory(new PropertyValueFactory<>("affective"));
-        affectiveCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        affectiveCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> affectiveCol = new TableColumn<>("Affective Operations");
+        affectiveOperationsCol.setMinWidth(100);
+        affectiveOperationsCol.setCellValueFactory(new PropertyValueFactory<>("affective operations"));
+        affectiveOperationsCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        affectiveOperationsCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setAffective(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsAffective(t.getNewValue());
             }
         );
 
-        TableColumn<Viewpoint, String> instinctualCol = new TableColumn<>("Instinctual");
-        instinctualCol.setMinWidth(100);
-        instinctualCol.setCellValueFactory(new PropertyValueFactory<>("instinctual"));
-        instinctualCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        instinctualCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> instinctualCol = new TableColumn<>("Instinctual Operations");
+        instinctualOperationsCol.setMinWidth(100);
+        instinctualOperationsCol.setCellValueFactory(new PropertyValueFactory<>("instinctual operations"));
+        instinctualOperationsCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        instinctualOperationsCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setInstinctual(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsInstinctual(t.getNewValue());
             }
         );
  
-        TableColumn<Viewpoint, String> chemicalCol = new TableColumn<>("Chemical");
-        ChemicalCol.setMinWidth(100);
-        ChemicalCol.setCellValueFactory(new PropertyValueFactory<>("Chemical"));
-        ChemicalCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        ChemicalCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> chemicalCol = new TableColumn<>("Chemical Operations");
+        chemicalOperationsCol.setMinWidth(100);
+        chemicalOperationsCol.setCellValueFactory(new PropertyValueFactory<>("chemical operations"));
+        chemicalOperationsCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        chemicalOperationsCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setChemical(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsChemical(t.getNewValue());
             }
         );
      
@@ -253,102 +253,102 @@ public class Main extends Application {
         );
  
         table.setItems(data);
-        table.getColumns().addAll(factorCol, cognitiveCol, affectiveCol, instinctualCol, chemicalCol, cognitiveCol, affectiveCol, instinctualCol, chemicalCol, cognitiveCol, affectiveCol, instinctualCol, chemicalCol, cognitiveCol, affectiveCol, instinctualCol, chemicalCol, valueCol);
+        table.getColumns().addAll(factorCol, cognitiveSalesCol, affectiveSalesCol, instinctualSalesCol, chemicalSalesCol, cognitiveFinanceCol, affectiveFinanceCol, instinctualFinanceCol, chemicalFinanceCol, cognitiveTechnologyCol, affectiveTechnologyCol, instinctualTechnologyCol, chemicalTechnologyCol, cognitiveOperationsCol, affectiveOperationsCol, instinctualOperationsCol, chemicalOperationsCol, valueCol);
  
         final TextField addFactor = new TextField();
         addFactor.setPromptText("Factor");
         addFactor.setMaxWidth(factorCol.getPrefWidth());
-        final TextField addCognitive = new TextField();
-        addCognitive.setMaxWidth(cognitiveCol.getPrefWidth());
-        addCognitive.setPromptText("Cognitive");
-        final TextField addAffective = new TextField();
-        addAffective.setMaxWidth(affectiveCol.getPrefWidth());
-        addAffective.setPromptText("Affective");
+        final TextField addSalesCognitive = new TextField();
+        addSalesCognitive.setMaxWidth(cognitiveSalesCol.getPrefWidth());
+        addSalesCognitive.setPromptText("Cognitive Sales");
+        final TextField addSalesAffective = new TextField();
+        addSalesAffective.setMaxWidth(affectiveSalesCol.getPrefWidth());
+        addSalesAffective.setPromptText("Affective Sales");
+        final TextField addSalesInstinctual = new TextField();
+        addSalesInstinctual.setMaxWidth(instinctualSalesCol.getPrefWidth());
+        addSalesInstinctual.setPromptText("Instinctual Sales");
+        final TextField addSalesChemical = new TextField();
+        addSalesChemical.setMaxWidth(chemicalSalesCol.getPrefWidth());
+        addSalesChemical.setPromptText("Chemical Sales");
+        final TextField addFinanceCognitive = new TextField();
+        addFinanceCognitive.setMaxWidth(cognitiveFinanceCol.getPrefWidth());
+        addFinanceCognitive.setPromptText("Cognitive Finance");
+        final TextField addFinanceAffective = new TextField();
+        addFinanceAffective.setMaxWidth(affectiveFinanceCol.getPrefWidth());
+        addFinanceAffective.setPromptText("Affective Finance");
+        final TextField addFinanceInstinctual = new TextField();
+        addFinanceInstinctual.setMaxWidth(instinctualFinanceCol.getPrefWidth());
+        addFinanceInstinctual.setPromptText("Instinctual Finance");
+        final TextField addFinanceChemical = new TextField();
+        addFinanceChemical.setMaxWidth(chemicalFinanceCol.getPrefWidth());
+        addFinanceChemical.setPromptText("Chemical Finance");
+        final TextField addTechnologyCognitive = new TextField();
+        addTechnologyCognitive.setMaxWidth(cognitiveTechnologyCol.getPrefWidth());
+        addTechnologyCognitive.setPromptText("Cognitive Technology");
+        final TextField addTechnologyAffective = new TextField();
+        addTechnologyAffective.setMaxWidth(affectiveTechnologyCol.getPrefWidth());
+        addTechnologyAffective.setPromptText("Affective Technology");
         final TextField addInstinctual = new TextField();
-        addInstinctual.setMaxWidth(instinctualCol.getPrefWidth());
-        addInstinctual.setPromptText("Instinctual");
-        final TextField addChemical = new TextField();
-        addChemical.setMaxWidth(chemicalCol.getPrefWidth());
-        addChemical.setPromptText("Chemical");
-        final TextField addCognitive = new TextField();
-        addCognitive.setMaxWidth(cognitiveCol.getPrefWidth());
-        addCognitive.setPromptText("Cognitive");
-        final TextField addAffective = new TextField();
-        addAffective.setMaxWidth(affectiveCol.getPrefWidth());
-        addAffective.setPromptText("Affective");
-        final TextField addInstinctual = new TextField();
-        addInstinctual.setMaxWidth(instinctualCol.getPrefWidth());
-        addInstinctual.setPromptText("Instinctual");
-        final TextField addChemical = new TextField();
-        addChemical.setMaxWidth(chemicalCol.getPrefWidth());
-        addChemical.setPromptText("Chemical");
-        final TextField addCognitive = new TextField();
-        addCognitive.setMaxWidth(cognitiveCol.getPrefWidth());
-        addCognitive.setPromptText("Cognitive");
-        final TextField addAffective = new TextField();
-        addAffective.setMaxWidth(affectiveCol.getPrefWidth());
-        addAffective.setPromptText("Affective");
-        final TextField addInstinctual = new TextField();
-        addInstinctual.setMaxWidth(instinctualCol.getPrefWidth());
-        addInstinctual.setPromptText("Instinctual");
-        final TextField addChemical = new TextField();
-        addChemical.setMaxWidth(chemicalCol.getPrefWidth());
-        addChemical.setPromptText("Chemical");
-        final TextField addCognitive = new TextField();
-        addCognitive.setMaxWidth(cognitiveCol.getPrefWidth());
-        addCognitive.setPromptText("Cognitive");
-        final TextField addAffective = new TextField();
-        addAffective.setMaxWidth(affectiveCol.getPrefWidth());
-        addAffective.setPromptText("Affective");
-        final TextField addInstinctual = new TextField();
-        addInstinctual.setMaxWidth(instinctualCol.getPrefWidth());
-        addInstinctual.setPromptText("Instinctual");
-        final TextField addChemical = new TextField();
-        addChemical.setMaxWidth(chemicalCol.getPrefWidth());
-        addChemical.setPromptText("Chemical");
-        final TextField addValue = new TextField();
-        addValue.setMaxWidth(affectiveCol.getPrefWidth());
-        addValue.setPromptText("Value");
+        addTechnologyInstinctual.setMaxWidth(instinctualTechnologyCol.getPrefWidth());
+        addTechnologyInstinctual.setPromptText("InstinctualTechnology");
+        final TextField addTechnologyChemical = new TextField();
+        addTechnologyChemical.setMaxWidth(chemicalTechnologyCol.getPrefWidth());
+        addTechnologyChemical.setPromptText("Chemical Technology");
+        final TextField addOperationsCognitive = new TextField();
+        addOperationsCognitive.setMaxWidth(cognitiveOperationsCol.getPrefWidth());
+        addOperationsCognitive.setPromptText("Cognitive Operations");
+        final TextField addOperationsAffective = new TextField();
+        addOperationsAffective.setMaxWidth(affectiveOperationsCol.getPrefWidth());
+        addOperationsAffective.setPromptText("Affective Operations");
+        final TextField addOperationsInstinctual = new TextField();
+        addOperationsInstinctual.setMaxWidth(instinctualOperationsCol.getPrefWidth());
+        addOperationsInstinctual.setPromptText("Instinctual Operations");
+        final TextField addOperationsChemical = new TextField();
+        addOperationsChemical.setMaxWidth(chemicalOperationsCol.getPrefWidth());
+        addOperationsChemical.setPromptText("Chemical Operations");
+        final TextField addOperationsValue = new TextField();
+        addOperationsValue.setMaxWidth(affectiveOperationsCol.getPrefWidth());
+        addOperationsValue.setPromptText("Value Operations");
  
         final Button addButton = new Button("Add");
         addButton.setOnAction((ActionEvent e) -> {
             data.add(new Viewpoint(
                 addFactor.getText(),
-                addCognitive.getText(),
-                addAffective.getText(),
-                addInstinctual.getText(),
-                addChemical.getText(),
-                addCognitive.getText(),
-                addAffective.getText(),
-                addInstinctual.getText(),
-                addChemical.getText(),
-                addCognitive.getText(),
-                addAffective.getText(),
-                addInstinctual.getText(),
-                addChemical.getText(),
-                addCognitive.getText(),
-                addAffective.getText(),
-                addInstinctual.getText(),
-                addChemical.getText(),
-                addValue.getText()
+                addSalesCognitive.getText(),
+                addSalesAffective.getText(),
+                addSalesInstinctual.getText(),
+                addSalesChemical.getText(),
+                addFinanceCognitive.getText(),
+                addFinanceAffective.getText(),
+                addFinanceInstinctual.getText(),
+                addFinanceChemical.getText(),
+                addTechnologyCognitive.getText(),
+                addTechnologyAffective.getText(),
+                addTechnologyInstinctual.getText(),
+                addTechnologyChemical.getText(),
+                addOperationsCognitive.getText(),
+                addOperationsAffective.getText(),
+                addOperationsInstinctual.getText(),
+                addOperationsChemical.getText(),
+                addOperationsValue.getText()
             ));
-            addFactor.clear();
-            addCognitive.clear();
-            addAffective.clear();
-            addInstinctual.clear();
-            addChemical.clear();
-            addCognitive.clear();
-            addAffective.clear();
-            addInstinctual.clear();
-            addChemical.clear();
-            addCognitive.clear();
-            addAffective.clear();
-            addInstinctual.clear();
-            addChemical.clear();
-            addCognitive.clear();
-            addAffective.clear();
-            addInstinctual.clear();
-            addChemical.clear();
+            addSalesFactor.clear();
+            addSalesCognitive.clear();
+            addSalesAffective.clear();
+            addSalesInstinctual.clear();
+            addFinanceChemical.clear();
+            addFinanceCognitive.clear();
+            addFinanceAffective.clear();
+            addFinanceInstinctual.clear();
+            addFinanceChemical.clear();
+            addTechnologyCognitive.clear();
+            addTechnologyAffective.clear();
+            addTechnologyInstinctual.clear();
+            addTechnologyChemical.clear();
+            addOperationsCognitive.clear();
+            addOperationsAffective.clear();
+            addOperationsInstinctual.clear();
+            addOperationsChemical.clear();
             addValue.clear();
         });
 
@@ -359,13 +359,13 @@ public class Main extends Application {
             Viewpoint viewpoint = new Viewpoint("", "", "", "", "", "");
             for(int i=0; i<table.getItems().size(); i++) {
                 viewpoint = table.getItems().get(i);
-                Double weight = Double.parseDouble(viewpoint.congitive.get())+Double.parseDouble(viewpoint.affective.get());
+                Double weight = Double.parseDouble(viewpoint.cognitive.get())+Double.parseDouble(viewpoint.affective.get());
                 weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.chemical.get());
-                weight += Double.parseDouble(viewpoint.congitive.get())+Double.parseDouble(viewpoint.affective.get());
+                weight += Double.parseDouble(viewpoint.cognitive.get())+Double.parseDouble(viewpoint.affective.get());
                 weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.chemical.get());
-                weight += Double.parseDouble(viewpoint.congitive.get())+Double.parseDouble(viewpoint.affective.get());
+                weight += Double.parseDouble(viewpoint.cognitive.get())+Double.parseDouble(viewpoint.affective.get());
                 weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.chemical.get());
-                weight += Double.parseDouble(viewpoint.congitive.get())+Double.parseDouble(viewpoint.affective.get());
+                weight += Double.parseDouble(viewpoint.cognitive.get())+Double.parseDouble(viewpoint.affective.get());
                 weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.chemical.get())-80.00;
                 weights[i] = weight;
                 total += weight;
@@ -458,19 +458,22 @@ public class Main extends Application {
     public static class Viewpoint {
  
         protected final SimpleStringProperty factor;
-        protected final SimpleStringProperty congitive;
-        protected final SimpleStringProperty affective;
-        protected final SimpleStringProperty instinctual;
-        protected final SimpleStringProperty chemical;
-        protected final SimpleStringProperty congitive;
-        protected final SimpleStringProperty affective;
-        protected final SimpleStringProperty instinctual;
-        protected final SimpleStringProperty chemical;
-        protected final SimpleStringProperty chemical;
-        protected final SimpleStringProperty congitive;
-        protected final SimpleStringProperty affective;
-        protected final SimpleStringProperty instinctual;
-        protected final SimpleStringProperty chemical;
+        protected final SimpleStringProperty congitiveSales;
+        protected final SimpleStringProperty affectiveSales;
+        protected final SimpleStringProperty instinctualSales;
+        protected final SimpleStringProperty chemicalSales;
+        protected final SimpleStringProperty congitiveFinance;
+        protected final SimpleStringProperty affectiveFinance;
+        protected final SimpleStringProperty instinctualFinance;
+        protected final SimpleStringProperty cognitiveFinance;
+        protected final SimpleStringProperty affectiveTechnology;
+        protected final SimpleStringProperty instinctualTechnology;
+        protected final SimpleStringProperty chemicalTechnology;
+        protected final SimpleStringProperty chemicalTechnology;
+        protected final SimpleStringProperty congitiveOperations;
+        protected final SimpleStringProperty affectiveOperations;
+        protected final SimpleStringProperty instinctualOperations;
+        protected final SimpleStringProperty chemicalOperations;
         protected final SimpleStringProperty value;
  
         public Viewpoint(String factor, String cognitive, String affective, String instinctual, String chemical, String cognitive, String affective, String instinctual, String chemical, String cognitive, String affective, String instinctual, String chemical, String cognitive, String affective, String instinctual, String chemical, String value) {
