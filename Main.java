@@ -67,7 +67,7 @@ public class Main extends Application {
         stage.setWidth(900);
         stage.setHeight(800);
  
-        final Label label = new Label("Cognitive-Affective-Instinctual-Chemical Empathy Matrix");
+        final Label label = new Label("Cognitive-Affective-Instinctual-Miscellaneous Empathy Matrix");
         label.setFont(new Font("Arial", 20));
  
         table.setEditable(true);
@@ -112,13 +112,13 @@ public class Main extends Application {
             }
         );
  
-        TableColumn<Viewpoint, String> chemicalSalesCol = new TableColumn<>("Chemical Sales");
-        chemicalCol.setMinWidth(100);
-        chemicalCol.setCellValueFactory(new PropertyValueFactory<>("chemical sales"));
-        chemicalCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        chemicalCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> miscellaneousSalesCol = new TableColumn<>("Miscellaneous Sales");
+        miscellaneousCol.setMinWidth(100);
+        miscellaneousCol.setCellValueFactory(new PropertyValueFactory<>("miscellaneous sales"));
+        miscellaneousCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        miscellaneousCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesChemical(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesMiscellaneous(t.getNewValue());
             }
         );
 
@@ -152,13 +152,13 @@ public class Main extends Application {
             }
         );
  
-        TableColumn<Viewpoint, String> chemicalCol = new TableColumn<>("Chemical Finance");
-        chemicalCol.setMinWidth(100);
-        chemicalCol.setCellValueFactory(new PropertyValueFactory<>("chemical finance"));
-        chemicalCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        chemicalCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> miscellaneousCol = new TableColumn<>("Miscellaneous Finance");
+        miscellaneousCol.setMinWidth(100);
+        miscellaneousCol.setCellValueFactory(new PropertyValueFactory<>("miscellaneous finance"));
+        miscellaneousCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        miscellaneousCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setFinanceChemical(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setFinanceMiscellaneous(t.getNewValue());
             }
         );
 
@@ -192,13 +192,13 @@ public class Main extends Application {
             }
         );
  
-        TableColumn<Viewpoint, String> chemicalCol = new TableColumn<>("Chemical Technology");
-        chemicalCol.setMinWidth(100);
-        chemicalCol.setCellValueFactory(new PropertyValueFactory<>("chemical technology"));
-        chemicalCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        chemicalCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> miscellaneousCol = new TableColumn<>("Miscellaneous Technology");
+        miscellaneousCol.setMinWidth(100);
+        miscellaneousCol.setCellValueFactory(new PropertyValueFactory<>("miscellaneous technology"));
+        miscellaneousCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        miscellaneousCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setTechnologyChemical(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setTechnologyMiscellaneous(t.getNewValue());
             }
         );
 
@@ -232,13 +232,13 @@ public class Main extends Application {
             }
         );
  
-        TableColumn<Viewpoint, String> chemicalCol = new TableColumn<>("Chemical Operations");
-        chemicalOperationsCol.setMinWidth(100);
-        chemicalOperationsCol.setCellValueFactory(new PropertyValueFactory<>("chemical operations"));
-        chemicalOperationsCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        chemicalOperationsCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> miscellaneousCol = new TableColumn<>("Miscellaneous Operations");
+        miscellaneousOperationsCol.setMinWidth(100);
+        miscellaneousOperationsCol.setCellValueFactory(new PropertyValueFactory<>("miscellaneous operations"));
+        miscellaneousOperationsCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        miscellaneousOperationsCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsChemical(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsMiscellaneous(t.getNewValue());
             }
         );
      
@@ -253,7 +253,7 @@ public class Main extends Application {
         );
  
         table.setItems(data);
-        table.getColumns().addAll(factorCol, cognitiveSalesCol, affectiveSalesCol, instinctualSalesCol, chemicalSalesCol, cognitiveFinanceCol, affectiveFinanceCol, instinctualFinanceCol, chemicalFinanceCol, cognitiveTechnologyCol, affectiveTechnologyCol, instinctualTechnologyCol, chemicalTechnologyCol, cognitiveOperationsCol, affectiveOperationsCol, instinctualOperationsCol, chemicalOperationsCol, valueCol);
+        table.getColumns().addAll(factorCol, cognitiveSalesCol, affectiveSalesCol, instinctualSalesCol, miscellaneousSalesCol, cognitiveFinanceCol, affectiveFinanceCol, instinctualFinanceCol, miscellaneousFinanceCol, cognitiveTechnologyCol, affectiveTechnologyCol, instinctualTechnologyCol, miscellaneousTechnologyCol, cognitiveOperationsCol, affectiveOperationsCol, instinctualOperationsCol, miscellaneousOperationsCol, valueCol);
  
         final TextField addFactor = new TextField();
         addFactor.setPromptText("Factor");
@@ -267,9 +267,9 @@ public class Main extends Application {
         final TextField addSalesInstinctual = new TextField();
         addSalesInstinctual.setMaxWidth(instinctualSalesCol.getPrefWidth());
         addSalesInstinctual.setPromptText("Instinctual Sales");
-        final TextField addSalesChemical = new TextField();
-        addSalesChemical.setMaxWidth(chemicalSalesCol.getPrefWidth());
-        addSalesChemical.setPromptText("Chemical Sales");
+        final TextField addSalesMiscellaneous = new TextField();
+        addSalesMiscellaneous.setMaxWidth(miscellaneousSalesCol.getPrefWidth());
+        addSalesMiscellaneous.setPromptText("Miscellaneous Sales");
         final TextField addFinanceCognitive = new TextField();
         addFinanceCognitive.setMaxWidth(cognitiveFinanceCol.getPrefWidth());
         addFinanceCognitive.setPromptText("Cognitive Finance");
@@ -279,9 +279,9 @@ public class Main extends Application {
         final TextField addFinanceInstinctual = new TextField();
         addFinanceInstinctual.setMaxWidth(instinctualFinanceCol.getPrefWidth());
         addFinanceInstinctual.setPromptText("Instinctual Finance");
-        final TextField addFinanceChemical = new TextField();
-        addFinanceChemical.setMaxWidth(chemicalFinanceCol.getPrefWidth());
-        addFinanceChemical.setPromptText("Chemical Finance");
+        final TextField addFinanceMiscellaneous = new TextField();
+        addFinanceMiscellaneous.setMaxWidth(miscellaneousFinanceCol.getPrefWidth());
+        addFinanceMiscellaneous.setPromptText("Miscellaneous Finance");
         final TextField addTechnologyCognitive = new TextField();
         addTechnologyCognitive.setMaxWidth(cognitiveTechnologyCol.getPrefWidth());
         addTechnologyCognitive.setPromptText("Cognitive Technology");
@@ -291,9 +291,9 @@ public class Main extends Application {
         final TextField addInstinctual = new TextField();
         addTechnologyInstinctual.setMaxWidth(instinctualTechnologyCol.getPrefWidth());
         addTechnologyInstinctual.setPromptText("InstinctualTechnology");
-        final TextField addTechnologyChemical = new TextField();
-        addTechnologyChemical.setMaxWidth(chemicalTechnologyCol.getPrefWidth());
-        addTechnologyChemical.setPromptText("Chemical Technology");
+        final TextField addTechnologyMiscellaneous = new TextField();
+        addTechnologyMiscellaneous.setMaxWidth(miscellaneousTechnologyCol.getPrefWidth());
+        addTechnologyMiscellaneous.setPromptText("Miscellaneous Technology");
         final TextField addOperationsCognitive = new TextField();
         addOperationsCognitive.setMaxWidth(cognitiveOperationsCol.getPrefWidth());
         addOperationsCognitive.setPromptText("Cognitive Operations");
@@ -303,9 +303,9 @@ public class Main extends Application {
         final TextField addOperationsInstinctual = new TextField();
         addOperationsInstinctual.setMaxWidth(instinctualOperationsCol.getPrefWidth());
         addOperationsInstinctual.setPromptText("Instinctual Operations");
-        final TextField addOperationsChemical = new TextField();
-        addOperationsChemical.setMaxWidth(chemicalOperationsCol.getPrefWidth());
-        addOperationsChemical.setPromptText("Chemical Operations");
+        final TextField addOperationsMiscellaneous = new TextField();
+        addOperationsMiscellaneous.setMaxWidth(miscellaneousOperationsCol.getPrefWidth());
+        addOperationsMiscellaneous.setPromptText("Miscellaneous Operations");
         final TextField addOperationsValue = new TextField();
         addOperationsValue.setMaxWidth(affectiveOperationsCol.getPrefWidth());
         addOperationsValue.setPromptText("Value Operations");
@@ -317,38 +317,38 @@ public class Main extends Application {
                 addSalesCognitive.getText(),
                 addSalesAffective.getText(),
                 addSalesInstinctual.getText(),
-                addSalesChemical.getText(),
+                addSalesMiscellaneous.getText(),
                 addFinanceCognitive.getText(),
                 addFinanceAffective.getText(),
                 addFinanceInstinctual.getText(),
-                addFinanceChemical.getText(),
+                addFinanceMiscellaneous.getText(),
                 addTechnologyCognitive.getText(),
                 addTechnologyAffective.getText(),
                 addTechnologyInstinctual.getText(),
-                addTechnologyChemical.getText(),
+                addTechnologyMiscellaneous.getText(),
                 addOperationsCognitive.getText(),
                 addOperationsAffective.getText(),
                 addOperationsInstinctual.getText(),
-                addOperationsChemical.getText(),
+                addOperationsMiscellaneous.getText(),
                 addOperationsValue.getText()
             ));
             addSalesFactor.clear();
             addSalesCognitive.clear();
             addSalesAffective.clear();
             addSalesInstinctual.clear();
-            addFinanceChemical.clear();
+            addFinanceMiscellaneous.clear();
             addFinanceCognitive.clear();
             addFinanceAffective.clear();
             addFinanceInstinctual.clear();
-            addFinanceChemical.clear();
+            addFinanceMiscellaneous.clear();
             addTechnologyCognitive.clear();
             addTechnologyAffective.clear();
             addTechnologyInstinctual.clear();
-            addTechnologyChemical.clear();
+            addTechnologyMiscellaneous.clear();
             addOperationsCognitive.clear();
             addOperationsAffective.clear();
             addOperationsInstinctual.clear();
-            addOperationsChemical.clear();
+            addOperationsMiscellaneous.clear();
             addValue.clear();
         });
 
@@ -360,13 +360,13 @@ public class Main extends Application {
             for(int i=0; i<table.getItems().size(); i++) {
                 viewpoint = table.getItems().get(i);
                 Double weight = Double.parseDouble(viewpoint.cognitive.get())+Double.parseDouble(viewpoint.affective.get());
-                weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.chemical.get());
+                weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.miscellaneous.get());
                 weight += Double.parseDouble(viewpoint.cognitive.get())+Double.parseDouble(viewpoint.affective.get());
-                weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.chemical.get());
+                weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.miscellaneous.get());
                 weight += Double.parseDouble(viewpoint.cognitive.get())+Double.parseDouble(viewpoint.affective.get());
-                weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.chemical.get());
+                weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.miscellaneous.get());
                 weight += Double.parseDouble(viewpoint.cognitive.get())+Double.parseDouble(viewpoint.affective.get());
-                weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.chemical.get())-80.00;
+                weight += Double.parseDouble(viewpoint.instinctual.get())+Double.parseDouble(viewpoint.miscellaneous.get())-80.00;
                 weights[i] = weight;
                 total += weight;
             }
@@ -375,19 +375,19 @@ public class Main extends Application {
                 viewpoint.congitive.get(), 
                 viewpoint.affective.get(), 
                 viewpoint.instinctual.get(),
-                viewpoint.chemical.get(),
+                viewpoint.miscellaneous.get(),
                 viewpoint.congitive.get(), 
                 viewpoint.affective.get(), 
                 viewpoint.instinctual.get(),
-                viewpoint.chemical.get(),
+                viewpoint.miscellaneous.get(),
                 viewpoint.congitive.get(), 
                 viewpoint.affective.get(), 
                 viewpoint.instinctual.get(),
-                viewpoint.chemical.get(),
+                viewpoint.miscellaneous.get(),
                 viewpoint.congitive.get(), 
                 viewpoint.affective.get(), 
                 viewpoint.instinctual.get(),
-                viewpoint.chemical.get(),
+                viewpoint.miscellaneous.get(),
                 String.valueOf(0.00)
             );
             for(int i=0; i<table.getItems().size(); i++) {
@@ -397,19 +397,19 @@ public class Main extends Application {
                         viewpoint.congitive.get(), 
                         viewpoint.affective.get(), 
                         viewpoint.instinctual.get(),
-                        viewpoint.chemical.get(),
+                        viewpoint.miscellaneous.get(),
                         viewpoint.congitive.get(), 
                         viewpoint.affective.get(), 
                         viewpoint.instinctual.get(),
-                        viewpoint.chemical.get(),
+                        viewpoint.miscellaneous.get(),
                         viewpoint.congitive.get(), 
                         viewpoint.affective.get(), 
                         viewpoint.instinctual.get(),
-                        viewpoint.chemical.get(),
+                        viewpoint.miscellaneous.get(),
                         viewpoint.congitive.get(), 
                         viewpoint.affective.get(), 
                         viewpoint.instinctual.get(),
-                        viewpoint.chemical.get(),
+                        viewpoint.miscellaneous.get(),
                         String.valueOf(0.00)
                     );
                 } else {
@@ -418,19 +418,19 @@ public class Main extends Application {
                     viewpoint.congitive.get(), 
                     viewpoint.affective.get(), 
                     viewpoint.instinctual.get(),
-                    viewpoint.chemical.get(),
+                    viewpoint.miscellaneous.get(),
                     viewpoint.congitive.get(), 
                     viewpoint.affective.get(), 
                     viewpoint.instinctual.get(),
-                    viewpoint.chemical.get(),
+                    viewpoint.miscellaneous.get(),
                     viewpoint.congitive.get(), 
                     viewpoint.affective.get(), 
                     viewpoint.instinctual.get(),
-                    viewpoint.chemical.get(),
+                    viewpoint.miscellaneous.get(),
                     viewpoint.congitive.get(), 
                     viewpoint.affective.get(), 
                     viewpoint.instinctual.get(),
-                    viewpoint.chemical.get(),
+                    viewpoint.miscellaneous.get(),
                     String.valueOf(100*weights[i]/total)
                 );        
                 }
@@ -441,7 +441,7 @@ public class Main extends Application {
         //typeface/hierarchy/contrast/consistency/alignment/blankspace/color
         TextArea paragraph = new TextArea("Business modalities may be composed of the following business models: servitisation, platform, social, employee, partner, value, innovation, data, savvy. The overall allocation of resources could be concieved as a long-term survival train trolley problem. In terms of political coring, Ratings of 0-3 are anti (-4 to -1), 4-6 are other (-1 to 1), 7-10 are pro (1 to 4). Complex typography conversion may allow for many runs to become similar to an encyclopedia.");
      
-        hb.getChildren().addAll(addFactor, addCognitive, addAffective, addInstinctual, addChemical, addCognitive, addAffective, addInstinctual, addChemical, addCognitive, addAffective, addInstinctual, addChemical, addCognitive, addAffective, addInstinctual, addChemical, addValue, addButton, calculateButton);
+        hb.getChildren().addAll(addFactor, addCognitive, addAffective, addInstinctual, addMiscellaneous, addCognitive, addAffective, addInstinctual, addMiscellaneous, addCognitive, addAffective, addInstinctual, addMiscellaneous, addCognitive, addAffective, addInstinctual, addMiscellaneous, addValue, addButton, calculateButton);
         hb.setSpacing(3);
  
         final VBox vbox = new VBox();
@@ -461,39 +461,39 @@ public class Main extends Application {
         protected final SimpleStringProperty congitiveSales;
         protected final SimpleStringProperty affectiveSales;
         protected final SimpleStringProperty instinctualSales;
-        protected final SimpleStringProperty chemicalSales;
+        protected final SimpleStringProperty miscellaneousSales;
         protected final SimpleStringProperty congitiveFinance;
         protected final SimpleStringProperty affectiveFinance;
         protected final SimpleStringProperty instinctualFinance;
         protected final SimpleStringProperty cognitiveFinance;
         protected final SimpleStringProperty affectiveTechnology;
         protected final SimpleStringProperty instinctualTechnology;
-        protected final SimpleStringProperty chemicalTechnology;
-        protected final SimpleStringProperty chemicalTechnology;
+        protected final SimpleStringProperty miscellaneousTechnology;
+        protected final SimpleStringProperty miscellaneousTechnology;
         protected final SimpleStringProperty congitiveOperations;
         protected final SimpleStringProperty affectiveOperations;
         protected final SimpleStringProperty instinctualOperations;
-        protected final SimpleStringProperty chemicalOperations;
+        protected final SimpleStringProperty miscellaneousOperations;
         protected final SimpleStringProperty value;
  
-        public Viewpoint(String factor, String cognitive, String affective, String instinctual, String chemical, String cognitive, String affective, String instinctual, String chemical, String cognitive, String affective, String instinctual, String chemical, String cognitive, String affective, String instinctual, String chemical, String value) {
+        public Viewpoint(String factor, String cognitive, String affective, String instinctual, String miscellaneous, String cognitive, String affective, String instinctual, String miscellaneous, String cognitive, String affective, String instinctual, String miscellaneous, String cognitive, String affective, String instinctual, String miscellaneous, String value) {
             this.factor = new SimpleStringProperty(factor);
             this.congitive = new SimpleStringProperty(cognitive);
             this.affective = new SimpleStringProperty(affective);
             this.instinctual = new SimpleStringProperty(instinctual);
-            this.chemical = new SimpleStringProperty(chemical);
+            this.miscellaneous = new SimpleStringProperty(miscellaneous);
             this.congitive = new SimpleStringProperty(cognitive);
             this.affective = new SimpleStringProperty(affective);
             this.instinctual = new SimpleStringProperty(instinctual);
-            this.chemical = new SimpleStringProperty(chemical);
+            this.miscellaneous = new SimpleStringProperty(miscellaneous);
             this.congitive = new SimpleStringProperty(cognitive);
             this.affective = new SimpleStringProperty(affective);
             this.instinctual = new SimpleStringProperty(instinctual);
-            this.chemical = new SimpleStringProperty(chemical);
+            this.miscellaneous = new SimpleStringProperty(miscellaneous);
             this.congitive = new SimpleStringProperty(cognitive);
             this.affective = new SimpleStringProperty(affective);
             this.instinctual = new SimpleStringProperty(instinctual);
-            this.chemical = new SimpleStringProperty(chemical);
+            this.miscellaneous = new SimpleStringProperty(miscellaneous);
             this.value = new SimpleStringProperty(value);
         }
  
@@ -529,12 +529,12 @@ public class Main extends Application {
             this.instinctual.set(instinctual);
         }
 
-        public String getChemical() {
-            return chemical.get();
+        public String getMiscellaneous() {
+            return miscellaneous.get();
         }
  
-        public void setChemical(String Chemical) {
-            this.chemical.set(chemical);
+        public void setMiscellaneous(String Miscellaneous) {
+            this.miscellaneous.set(miscellaneous);
         }
 
                 public String getCognitive() {
@@ -561,12 +561,12 @@ public class Main extends Application {
             this.instinctual.set(instinctual);
         }
 
-        public String getChemical() {
-            return chemical.get();
+        public String getMiscellaneous() {
+            return miscellaneous.get();
         }
  
-        public void setChemical(String Chemical) {
-            this.chemical.set(chemical);
+        public void setMiscellaneous(String Miscellaneous) {
+            this.miscellaneous.set(miscellaneous);
         }
 
                 public String getCognitive() {
@@ -593,12 +593,12 @@ public class Main extends Application {
             this.instinctual.set(instinctual);
         }
 
-        public String getChemical() {
-            return chemical.get();
+        public String getMiscellaneous() {
+            return miscellaneous.get();
         }
  
-        public void setChemical(String Chemical) {
-            this.chemical.set(chemical);
+        public void setMiscellaneous(String Miscellaneous) {
+            this.miscellaneous.set(miscellaneous);
         }
 
                 public String getCognitive() {
@@ -625,12 +625,12 @@ public class Main extends Application {
             this.instinctual.set(instinctual);
         }
 
-        public String getChemical() {
-            return chemical.get();
+        public String getMiscellaneous() {
+            return miscellaneous.get();
         }
  
-        public void setChemical(String Chemical) {
-            this.chemical.set(chemical);
+        public void setMiscellaneous(String Miscellaneous) {
+            this.miscellaneous.set(miscellaneous);
         }
      
         public String getValue() {
