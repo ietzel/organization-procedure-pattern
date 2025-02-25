@@ -52,7 +52,7 @@ public class Main extends Application {
         new Viewpoint("safety", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
         new Viewpoint("relationships", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
         new Viewpoint("skill discretion", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("prospects", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0")
+        new Viewpoint("prospects", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0")
     );
     final HBox hb = new HBox();
  
@@ -356,7 +356,7 @@ public class Main extends Application {
         calculateButton.setOnAction((ActionEvent e) -> {
             Double[] weights = new Double[26];
             Double total = 0.00;
-            Viewpoint viewpoint = new Viewpoint("", "", "", "", "", "");
+            Viewpoint viewpoint = new Viewpoint("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "");
             for(int i=0; i<table.getItems().size(); i++) {
                 viewpoint = table.getItems().get(i);
                 Double weight = Double.parseDouble(viewpoint.cognitive.get())+Double.parseDouble(viewpoint.affective.get());
