@@ -510,10 +510,10 @@ public class Main extends Application {
             Viewpoint viewpointTwo = new Viewpoint("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "");
             for(int i=0; i<table.getItems().size(); i++) {
                 viewpointTwo = table.getItems().get(i);
-                Double[] weightCognitive = [Double.parseDouble(viewpoint.cognitiveSales.get()), Double.parseDouble(viewpoint.cognitiveFinance.get()), Double.parseDouble(viewpoint.instinctualSales.get()), Double.parseDouble(viewpoint.miscellaneousSales.get())];
-                Double[] weightAffective = Double.parseDouble(viewpoint.affectiveFinance.get()), Double.parseDouble(viewpoint.affectiveFinance.get()), Double.parseDouble(viewpoint.affectiveTechnology.get()), Double.parseDouble(viewpoint.affectiveOperations.get())];
-                Double[] weightInstinctual = Double.parseDouble(viewpoint.instinctualTechnology.get())+Double.parseDouble(viewpoint.affectiveTechnology.get()), Double.parseDouble(viewpoint.instinctualTechnology.get()), Double.parseDouble(viewpoint.miscellaneousTechnology.get())];
-                Double[] weightMiscellaneous = Double.parseDouble(viewpoint.cognitiveOperations.get()), Double.parseDouble(viewpoint.affectiveOperations.get()), Double.parseDouble(viewpoint.instinctualOperations.get())+, ouble.parseDouble(viewpoint.miscellaneousOperations.get())];
+                Double[] weightCognitive = [Double.parseDouble(viewointTwo.cognitiveSales.get()), Double.parseDouble(viewointTwo.cognitiveFinance.get()), Double.parseDouble(viewointTwo.instinctualSales.get()), Double.parseDouble(viewointTwo.miscellaneousSales.get())];
+                Double[] weightAffective = Double.parseDouble(viewointTwo.affectiveFinance.get()), Double.parseDouble(viewointTwo.affectiveFinance.get()), Double.parseDouble(viewointTwo.affectiveTechnology.get()), Double.parseDouble(viewointTwo.affectiveOperations.get())];
+                Double[] weightInstinctual = Double.parseDouble(viewointTwo.instinctualTechnology.get())+Double.parseDouble(viewointTwo.affectiveTechnology.get()), Double.parseDouble(viewointTwo.instinctualTechnology.get()), Double.parseDouble(viewointTwo.miscellaneousTechnology.get())];
+                Double[] weightMiscellaneous = Double.parseDouble(viewointTwo.cognitiveOperations.get()), Double.parseDouble(viewointTwo.affectiveOperations.get()), Double.parseDouble(viewointTwo.instinctualOperations.get())+, ouble.parseDouble(viewointTwo.miscellaneousOperations.get())];
                 setCycleCognitive(coefficientOfVariation(weightCognitive, weightCognitive.length));
                 setCycleAffective(coefficientOfVariation(weightAffective, weightAffective.length));
                 setCycleInstinctual(coefficientOfVariation(weightInstinctual, weightInstinctual.length));
