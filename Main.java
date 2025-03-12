@@ -26,6 +26,34 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
  
 public class Main extends Application {
+
+    public static int minIndex(double[] arr) {
+        if (arr == null || arr.length == 0) {
+            return -1;
+        }
+
+        int minIndex = 0;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[minIndex]) {
+                minIndex = i;
+            }
+        }
+        return minIndex;
+    }
+
+    public static int maxIndex(double[] array) {
+        if (array == null || array.length == 0) {
+            return -1;
+        }
+
+        int maxIndex = 0;
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > array[maxIndex]) {
+                maxIndex = i;
+            }
+        }
+        return maxIndex;
+    }
  
     private static final TableView<Viewpoint> table = new TableView<>();
     private final ObservableList<Viewpoint> data = FXCollections.observableArrayList(
@@ -470,11 +498,11 @@ public class Main extends Application {
             Viewpoint viewpointTwo = new Viewpoint("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "");
             for(int i=0; i<table.getItems().size(); i++) {
                 viewpointTwo = table.getItems().get(i);
-                
-                String[] antis = [Double.parseDouble(viewointTwo.cognitiveSales.get())];
-                String[] pros = [Double.parseDouble(viewointTwo.cognitiveSales.get())];
-                setAnti(String.join(", ", antis));
-                setPro(String.join(", ", pros));
+                int anti = findMin(viewpointTwo.cognitiveSales.get(), viewpointTwo.affectiveSales.get(), viewpointTwo.instinctualSales.get(), viewpointTwo.miscellaneousSales.get(), viewpointTwo.cognitiveFinance.get(), viewpointTwo.affectiveFinance.get(), viewpointTwo.instinctualFinance.get(), viewpointTwo.miscellaneousFinance.get(), viewpointTwo.cognitiveTechnology.get(), viewpointTwo.affectiveTechnology.get(), viewpointTwo.instinctualTechnology.get(), viewpointTwo.miscellaneousTechnology.get(), viewpointTwo.cognitiveTechnology.get(), viewpointTwo.affectiveTechnology.get(), viewpointTwo.instinctualTechnology.get(), viewpointTwo.miscellaneousTechnology.get());
+                int pro = findMax(viewpointTwo.cognitiveSales.get(), viewpointTwo.affectiveSales.get(), viewpointTwo.instinctualSales.get(), viewpointTwo.miscellaneousSales.get(), viewpointTwo.cognitiveFinance.get(), viewpointTwo.affectiveFinance.get(), viewpointTwo.instinctualFinance.get(), viewpointTwo.miscellaneousFinance.get(), viewpointTwo.cognitiveTechnology.get(), viewpointTwo.affectiveTechnology.get(), viewpointTwo.instinctualTechnology.get(), viewpointTwo.miscellaneousTechnology.get(), viewpointTwo.cognitiveTechnology.get(), viewpointTwo.affectiveTechnology.get(), viewpointTwo.instinctualTechnology.get(), viewpointTwo.miscellaneousTechnology.get());
+                String[] values = {"Cognitive", "Affective", "Instinctual", "Miscellaneous"};
+                setAnti(values[(anti%4)]);
+                setPro(values[(pro%4)]);
             }           
         });
 
@@ -512,15 +540,13 @@ public class Main extends Application {
         public String getFactor() {
             return factor.get();
         }
- 
         public void setFactor(String factor) {
             this.factor.set(factor);
         }
- 
+
         public String getCognitiveSales() {
             return congitiveSales.get();
         }
- 
         public void setCognitiveSales(String cognitiveSales) {
             this.congitiveSales.set(cognitiveSales);
         }
@@ -528,7 +554,6 @@ public class Main extends Application {
         public String getAffectiveSales() {
             return affectiveSales.get();
         }
- 
         public void setAffectiveSales(String affectiveSales) {
             this.affectiveSales.set(affectiveSales);
         }
@@ -536,7 +561,6 @@ public class Main extends Application {
         public String getInstinctualSales() {
             return instinctualSales.get();
         }
- 
         public void setInstinctualSales(String instinctualSales) {
             this.instinctualSales.set(instinctualSales);
         }
@@ -544,7 +568,6 @@ public class Main extends Application {
         public String getMiscellaneousSales() {
             return miscellaneousSales.get();
         }
- 
         public void setMiscellaneousSales(String MiscellaneousSales) {
             this.miscellaneousSales.set(miscellaneousSales);
         }
@@ -552,7 +575,6 @@ public class Main extends Application {
         public String getCognitiveFinance() {
             return congitiveFinance.get();
         }
- 
         public void setCognitiveFinance(String cognitiveFinance) {
             this.congitiveFinance.set(cognitiveFinance);
         }
@@ -560,7 +582,6 @@ public class Main extends Application {
         public String getAffectiveFinance() {
             return affectiveFinance.get();
         }
- 
         public void setAffectiveFinance(String affectiveFinance) {
             this.affectiveFinance.set(affectiveFinance);
         }
@@ -568,23 +589,20 @@ public class Main extends Application {
         public String getInstinctualFinance() {
             return instinctualFinance.get();
         }
- 
         public void setInstinctualFinance(String instinctualFinance) {
             this.instinctualFinance.set(instinctualFinance);
         }
 
         public String getMiscellaneousFinance() {
             return miscellaneousFinance.get();
-        }
- 
+        } 
         public void setMiscellaneousFinance(String MiscellaneousFinance) {
             this.miscellaneousFinance.set(miscellaneousFinance);
         }
 
         public String getCognitiveTechnology() {
             return congitiveTechnology.get();
-        }
- 
+        } 
         public void setCognitiveTechnology(String cognitiveTechnology) {
             this.congitiveTechnology.set(cognitiveTechnology);
         }
@@ -592,7 +610,6 @@ public class Main extends Application {
         public String getAffectiveTechnology() {
             return affectiveTechnology.get();
         }
- 
         public void setAffectiveTechnology(String affectiveTechnology) {
             this.affectiveTechnology.set(affectiveTechnology);
         }
@@ -600,7 +617,6 @@ public class Main extends Application {
         public String getInstinctualTechnology() {
             return instinctualTechnology.get();
         }
- 
         public void setInstinctualTechnology(String instinctualTechnology) {
             this.instinctualTechnology.set(instinctualTechnology);
         }
@@ -608,7 +624,6 @@ public class Main extends Application {
         public String getMiscellaneousTechnology() {
             return miscellaneousTechnology.get();
         }
- 
         public void setMiscellaneousTechnology(String MiscellaneousTechnology) {
             this.miscellaneousTechnology.set(miscellaneousTechnology);
         }
@@ -616,7 +631,6 @@ public class Main extends Application {
         public String getCognitiveOperations() {
             return congitiveOperations.get();
         }
- 
         public void setCognitiveOperations(String cognitiveOperations) {
             this.congitiveOperations.set(cognitiveOperations);
         }
@@ -624,7 +638,6 @@ public class Main extends Application {
         public String getAffectiveOperations() {
             return affectiveOperations.get();
         }
- 
         public void setAffectiveOperations(String affectiveOperations) {
             this.affectiveOperations.set(affectiveOperations);
         }
@@ -632,7 +645,6 @@ public class Main extends Application {
         public String getInstinctualOperations() {
             return instinctualOperations.get();
         }
- 
         public void setInstinctualOperations(String instinctualOperations) {
             this.instinctualOperations.set(instinctualOperations);
         }
@@ -640,7 +652,6 @@ public class Main extends Application {
         public String getMiscellaneousOperations() {
             return miscellaneousOperations.get();
         }
- 
         public void setMiscellaneousOperations(String miscellaneousOperations) {
             this.miscellaneousOperations.set(miscellaneousOperations);
         }
@@ -648,7 +659,6 @@ public class Main extends Application {
         public String getValue() {
             return value.get();
         }
- 
         public void setValue(String value) {
             this.value.set(value);
         }
@@ -656,7 +666,6 @@ public class Main extends Application {
         public String getAnti() {
             return anti.get();
         }
- 
         public void setAnti(String anti) {
             this.anti.set(anti);
         }
@@ -664,10 +673,8 @@ public class Main extends Application {
         public String getPro() {
             return pro.get();
         }
- 
         public void setPro(String pro) {
             this.pro.set(pro);
-        }
-     
+        }    
     }
 }
