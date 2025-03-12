@@ -26,58 +26,35 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
  
 public class Main extends Application {
-
-        static double mean(double arr[], int n)
-    {
-        double sum = 0;
-         
-        for (int i = 0; i < n; i++)
-            sum = sum + arr[i];
-        return sum / n;
-    }
-     
-
-    static double standardDeviation(double arr[], int n) {
-        double sum = 0;
-         
-        for (int i = 0; i < n; i++)
-            sum = sum + (arr[i] - mean(arr, n)) * (arr[i] - mean(arr, n));
-     
-        return Math.sqrt(sum / (n - 1));
-    }
-     
-    static double coefficientOfVariation(double arr[], int n) {
-    return (standardDeviation(arr, n) / mean(arr, n));
-    }
  
     private static final TableView<Viewpoint> table = new TableView<>();
     private final ObservableList<Viewpoint> data = FXCollections.observableArrayList(
-        new Viewpoint("honesty/integrity/transparency", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("compassion/respect", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("responsibility/accountability", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("loyalty/trustworthiness", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("law-abiding", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("fairness", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("leadership", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("anti-discrimination", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("workplace health/safety/security", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("employee code of conduct & anti-harassment", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("attendance & vacation & time-off", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("employee complaint", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("work schedule & rest period", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("substance abuse", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("mobile device management", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("compensation and benefits", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("travel", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("inclement weather", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("remote work", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("conflict of interest", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("acceptable use", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("compensation", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("safety", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("relationships", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("skill discretion", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0"),
-        new Viewpoint("prospects", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "0", "0", "0", "0")
+        new Viewpoint("honesty/integrity/transparency", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("compassion/respect", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("responsibility/accountability", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("loyalty/trustworthiness", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("law-abiding", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("fairness", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("leadership", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("anti-discrimination", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("workplace health/safety/security", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("employee code of conduct & anti-harassment", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("attendance & vacation & time-off", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("employee complaint", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("work schedule & rest period", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("substance abuse", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("mobile device management", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("compensation and benefits", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("travel", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("inclement weather", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("remote work", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("conflict of interest", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("acceptable use", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("compensation", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("safety", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("relationships", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("skill discretion", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
+        new Viewpoint("prospects", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", "")
     );
     final HBox hb = new HBox();
  
@@ -277,48 +254,28 @@ public class Main extends Application {
             }
         );
 
-        TableColumn<Viewpoint, String> cycleCol = new TableColumn<>("Cycle Sales");
-        cycleSalesCol.setMinWidth(100);
-        cycleSalesCol.setCellValueFactory(new PropertyValueFactory<>("cycle sales"));
+        TableColumn<Viewpoint, String> antiCol = new TableColumn<>("Anti");
+        cycleSalesCol.setMinWidth(400);
+        cycleSalesCol.setCellValueFactory(new PropertyValueFactory<>("anti"));
         cycleSalesCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         cycleSalesCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setCycleSales(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setAnti(t.getNewValue());
             }
         );
  
-        TableColumn<Viewpoint, String> cycleCol = new TableColumn<>("Cycle Finance");
-        cycleFinanceCol.setMinWidth(100);
-        cycleFinanceCol.setCellValueFactory(new PropertyValueFactory<>("finance cycle"));
+        TableColumn<Viewpoint, String> proCol = new TableColumn<>("Pro");
+        cycleFinanceCol.setMinWidth(400);
+        cycleFinanceCol.setCellValueFactory(new PropertyValueFactory<>("pro"));
         cycleFinanceCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         cycleFinanceCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setCycleFinance(t.getNewValue());
-            }
-        );
-
-        TableColumn<Viewpoint, String> cycleCol = new TableColumn<>("Cycle Technology");
-        cycleTechnologyCol.setMinWidth(100);
-        cycleTechnologyCol.setCellValueFactory(new PropertyValueFactory<>("technology cycle"));
-        cycleTechnologyCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        cycleTechnologyCol.setOnEditCommit(
-            (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setCycleTechnology(t.getNewValue());
-            }
-        );
- 
-        TableColumn<Viewpoint, String> cycleCol = new TableColumn<>("Cycle Operations");
-        cycleOperationsCol.setMinWidth(100);
-        cycleOperationsCol.setCellValueFactory(new PropertyValueFactory<>("cycle operations"));
-        cycleOperationsCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        cycleOperationsCol.setOnEditCommit(
-            (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setCycleOperations(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setPro(t.getNewValue());
             }
         );
  
         table.setItems(data);
-        table.getColumns().addAll(factorCol, cognitiveSalesCol, affectiveSalesCol, instinctualSalesCol, miscellaneousSalesCol, cognitiveFinanceCol, affectiveFinanceCol, instinctualFinanceCol, miscellaneousFinanceCol, cognitiveTechnologyCol, affectiveTechnologyCol, instinctualTechnologyCol, miscellaneousTechnologyCol, cognitiveOperationsCol, affectiveOperationsCol, instinctualOperationsCol, miscellaneousOperationsCol, valueCol, cycleSalesCol, cycleFinanceCol, cycleTechnologyCol, cycleOperationsCol);
+        table.getColumns().addAll(factorCol, cognitiveSalesCol, affectiveSalesCol, instinctualSalesCol, miscellaneousSalesCol, cognitiveFinanceCol, affectiveFinanceCol, instinctualFinanceCol, miscellaneousFinanceCol, cognitiveTechnologyCol, affectiveTechnologyCol, instinctualTechnologyCol, miscellaneousTechnologyCol, cognitiveOperationsCol, affectiveOperationsCol, instinctualOperationsCol, miscellaneousOperationsCol, valueCol, antiCol, proCol);
  
         final TextField addFactor = new TextField();
         addFactor.setPromptText("Factor");
@@ -395,7 +352,8 @@ public class Main extends Application {
                 addOperationsAffective.getText(),
                 addOperationsInstinctual.getText(),
                 addOperationsMiscellaneous.getText(),
-                addOperationsValue.getText()
+                addAnti.getText(),
+                addPro.getText()
             ));
             addSalesFactor.clear();
             addSalesCognitive.clear();
@@ -415,6 +373,8 @@ public class Main extends Application {
             addOperationsInstinctual.clear();
             addOperationsMiscellaneous.clear();
             addValue.clear();
+            addAnti.clear();
+            addPro.clear();
         });
 
         final Button calculateButton = new Button("Calculate");
@@ -507,24 +467,21 @@ public class Main extends Application {
                 weights[i] = weight;
                 total += weight;
             }
-            Viewpoint viewpointTwo = new Viewpoint("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "");
+            Viewpoint viewpointTwo = new Viewpoint("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "");
             for(int i=0; i<table.getItems().size(); i++) {
                 viewpointTwo = table.getItems().get(i);
-                Double[] weightCognitive = [Double.parseDouble(viewointTwo.cognitiveSales.get()), Double.parseDouble(viewointTwo.cognitiveFinance.get()), Double.parseDouble(viewointTwo.instinctualSales.get()), Double.parseDouble(viewointTwo.miscellaneousSales.get())];
-                Double[] weightAffective = Double.parseDouble(viewointTwo.affectiveFinance.get()), Double.parseDouble(viewointTwo.affectiveFinance.get()), Double.parseDouble(viewointTwo.affectiveTechnology.get()), Double.parseDouble(viewointTwo.affectiveOperations.get())];
-                Double[] weightInstinctual = Double.parseDouble(viewointTwo.instinctualTechnology.get())+Double.parseDouble(viewointTwo.affectiveTechnology.get()), Double.parseDouble(viewointTwo.instinctualTechnology.get()), Double.parseDouble(viewointTwo.miscellaneousTechnology.get())];
-                Double[] weightMiscellaneous = Double.parseDouble(viewointTwo.cognitiveOperations.get()), Double.parseDouble(viewointTwo.affectiveOperations.get()), Double.parseDouble(viewointTwo.instinctualOperations.get())+, ouble.parseDouble(viewointTwo.miscellaneousOperations.get())];
-                setCycleCognitive(coefficientOfVariation(weightCognitive, weightCognitive.length));
-                setCycleAffective(coefficientOfVariation(weightAffective, weightAffective.length));
-                setCycleInstinctual(coefficientOfVariation(weightInstinctual, weightInstinctual.length));
-                setCycleMiscellaneous(coefficientOfVariation(weightMiscellaneous, weightMiscellaneous.length));
+                
+                String[] antis = [Double.parseDouble(viewointTwo.cognitiveSales.get())];
+                String[] pros = [Double.parseDouble(viewointTwo.cognitiveSales.get())];
+                setAnti(String.join(", ", antis));
+                setPro(String.join(", ", pros));
             }           
         });
 
         //typeface/hierarchy/contrast/consistency/alignment/blankspace/color
-        TextArea paragraph = new TextArea("Business modalities may be composed of the following business models: servitisation, platform, social, employee, partner, value, innovation, data, savvy. The overall allocation of resources could be concieved as a long-term survival train trolley problem. In terms of political coring, Ratings of 0-3 are anti (-4 to -1), 4-6 are other (-1 to 1), 7-10 are pro (1 to 4). The last 4 columns are for coefficients of variation for each business modality. Complex typography conversion may allow for many runs to become similar to an encyclopedia.");
+        TextArea paragraph = new TextArea("Business modalities may be composed of the following business models: servitisation, platform, social, employee, partner, value, innovation, data, savvy. The overall allocation of resources could be concieved as a long-term survival train trolley problem. In terms of chemical coring, this is considered similar to political coring. The last 4 columns are for coefficients of variation for each business modality. Complex typography conversion may allow for many runs to become similar to an encyclopedia.");
      
-        hb.getChildren().addAll(addFactor, addCognitiveSales, addAffectiveSales, addInstinctualSales, addMiscellaneousSales, addCognitiveFinance, addAffectiveFinance, addInstinctualFinance, addMiscellaneousFinance, addCognitiveTechnology, addAffectiveTechnology, addInstinctualTechnology, addMiscellaneousTechnology, addCognitiveOperations, addAffectiveOperations, addInstinctualOperations, addMiscellaneousOperations, addCycleSales, addCycleFinance, addCycleTechnology, addCycleOperations, addValue, addButton, calculateButton);
+        hb.getChildren().addAll(addFactor, addValue, addAnti, addPro, addButton, calculateButton);
         hb.setSpacing(3);
  
         final VBox vbox = new VBox();
@@ -541,47 +498,15 @@ public class Main extends Application {
     public static class Viewpoint {
  
         protected final SimpleStringProperty factor;
-        protected final SimpleStringProperty congitiveSales;
-        protected final SimpleStringProperty affectiveSales;
-        protected final SimpleStringProperty instinctualSales;
-        protected final SimpleStringProperty miscellaneousSales;
-        protected final SimpleStringProperty congitiveFinance;
-        protected final SimpleStringProperty affectiveFinance;
-        protected final SimpleStringProperty instinctualFinance;
-        protected final SimpleStringProperty cognitiveFinance;
-        protected final SimpleStringProperty affectiveTechnology;
-        protected final SimpleStringProperty instinctualTechnology;
-        protected final SimpleStringProperty miscellaneousTechnology;
-        protected final SimpleStringProperty miscellaneousTechnology;
-        protected final SimpleStringProperty congitiveOperations;
-        protected final SimpleStringProperty affectiveOperations;
-        protected final SimpleStringProperty instinctualOperations;
-        protected final SimpleStringProperty miscellaneousOperations;
-        protected final SimpleStringProperty cycleSales;
-        protected final SimpleStringProperty cycleFinance;
-        protected final SimpleStringProperty cycleTechnology;
-        protected final SimpleStringProperty cycleOperations;
         protected final SimpleStringProperty value;
+        protected final SimpleStringProperty anti;
+        protected final SimpleStringProperty pro;
  
-        public Viewpoint(String factor, String cognitiveSales, String affectiveSales, String instinctualSales, String miscellaneousSales, String cognitiveFinance, String affectiveFinance, String instinctualFinance, String miscellaneousFinance, String cognitiveTechnology, String affectiveTechnology, String instinctualTechnology, String miscellaneousTechnology, String cognitiveOperations, String affectiveOperations, String instinctualOperations, String miscellaneousOperations, String cycleSales, String cycleFinance, String cycleTechnology, String cycleOperations, String value) {
+        public Viewpoint(String factor, String value, String anti, String pro) {
             this.factor = new SimpleStringProperty(factor);
-            this.congitiveSales = new SimpleStringProperty(cognitive);
-            this.affectiveSales = new SimpleStringProperty(affective);
-            this.instinctualSales = new SimpleStringProperty(instinctual);
-            this.miscellaneousSales = new SimpleStringProperty(miscellaneous);
-            this.congitiveFinance = new SimpleStringProperty(cognitive);
-            this.affectiveFinance = new SimpleStringProperty(affective);
-            this.instinctualFinance = new SimpleStringProperty(instinctual);
-            this.miscellaneousFinance = new SimpleStringProperty(miscellaneous);
-            this.congitiveTechnology = new SimpleStringProperty(cognitive);
-            this.affectiveTechnology = new SimpleStringProperty(affective);
-            this.instinctualTechnology = new SimpleStringProperty(instinctual);
-            this.miscellaneousTechnology = new SimpleStringProperty(miscellaneous);
-            this.congitiveOperations = new SimpleStringProperty(cognitive);
-            this.affectiveOperations = new SimpleStringProperty(affective);
-            this.instinctualOperations = new SimpleStringProperty(instinctual);
-            this.miscellaneousOperations = new SimpleStringProperty(miscellaneous);
             this.value = new SimpleStringProperty(value);
+            this.anti = new SimpleStringProperty(anti);
+            this.pro = new SimpleStringProperty(pro);
         }
  
         public String getFactor() {
@@ -728,36 +653,20 @@ public class Main extends Application {
             this.value.set(value);
         }
 
-        public String getCycleCognitive() {
-            return cycleCognitive.get();
+        public String getAnti() {
+            return anti.get();
         }
  
-        public void setCycleCognitive(String cycleCognitive) {
-            this.cycleCognitive.set(cycleCognitive);
+        public void setAnti(String anti) {
+            this.anti.set(anti);
         }
 
-        public String getCycleAffective() {
-            return cycleAffective.get();
+        public String getPro() {
+            return pro.get();
         }
  
-        public void setCycleAffective(String cycleAffective) {
-            this.cycleAffective.set(cycleAffective);
-        }
-
-        public String getCycleInstinctual() {
-            return cycleInstinctual.get();
-        }
- 
-        public void setCycleInstinctual(String cycleInstinctual) {
-            this.cycleInstinctual.set(cycleInstinctual);
-        }
-
-        public String getCycleMiscellaneous() {
-            return cycleMiscellaneous.get();
-        }
- 
-        public void setCycleMiscellaneous(String cycleMiscellaneous) {
-            this.cycleMiscellaneous.set(cycleMiscellaneous);
+        public void setPro(String pro) {
+            this.pro.set(pro);
         }
      
     }
