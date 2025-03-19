@@ -27,6 +27,7 @@ import javafx.stage.Stage;
  
 public class Main extends Application {
 
+    /*
     public static int minIndex(double[] arr) {
         if (arr == null || arr.length == 0) {
             return -1;
@@ -54,6 +55,7 @@ public class Main extends Application {
         }
         return maxIndex;
     }
+    */
  
     private static final TableView<Viewpoint> table = new TableView<>();
     private final ObservableList<Viewpoint> data = FXCollections.observableArrayList(
@@ -103,7 +105,7 @@ public class Main extends Application {
         table.setEditable(true);
  
         TableColumn<Viewpoint, String> factorCol = new TableColumn<>("Factor");
-        factorCol.setMinWidth(200);
+        //factorCol.setMinWidth(200);
         factorCol.setCellValueFactory(new PropertyValueFactory<>("factor"));
         factorCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         factorCol.setOnEditCommit(
@@ -113,7 +115,7 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> cognitiveSalesCol = new TableColumn<>("Cognitive Sales");
-        cognitiveSalesCol.setMinWidth(100);
+        //cognitiveSalesCol.setMinWidth(100);
         cognitiveSalesCol.setCellValueFactory(new PropertyValueFactory<>("cognitive sales"));
         cognitiveSalesCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         cognitiveSalesCol.setOnEditCommit(
@@ -123,7 +125,7 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> affectiveSalesCol = new TableColumn<>("Affective Sales");
-        affectiveSalesCol.setMinWidth(100);
+        //affectiveSalesCol.setMinWidth(100);
         affectiveSalesCol.setCellValueFactory(new PropertyValueFactory<>("affective sales"));
         affectiveSalesCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
         affectiveSalesCol.setOnEditCommit(
@@ -133,7 +135,7 @@ public class Main extends Application {
         );
 
         TableColumn<Viewpoint, String> instinctualSalesCol = new TableColumn<>("Instinctual Sales");
-        instinctualSalesCol.setMinWidth(100);
+        //instinctualSalesCol.setMinWidth(100);
         instinctualSalesCol.setCellValueFactory(new PropertyValueFactory<>("instinctual sales"));
         instinctualSalesCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         instinctualSalesCol.setOnEditCommit(
@@ -143,7 +145,7 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> miscellaneousSalesCol = new TableColumn<>("Miscellaneous Sales");
-        miscellaneousSalesCol.setMinWidth(100);
+        //miscellaneousSalesCol.setMinWidth(100);
         miscellaneousSalesCol.setCellValueFactory(new PropertyValueFactory<>("miscellaneous sales"));
         miscellaneousSalesCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
         miscellaneousSalesCol.setOnEditCommit(
@@ -153,7 +155,7 @@ public class Main extends Application {
         );
 
         TableColumn<Viewpoint, String> cognitiveFinanceCol = new TableColumn<>("Cognitive Finance");
-        cognitiveFinanceCol.setMinWidth(100);
+        //cognitiveFinanceCol.setMinWidth(100);
         cognitiveFinanceCol.setCellValueFactory(new PropertyValueFactory<>("cognitive finance"));
         cognitiveFinanceCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         cognitiveFinanceCol.setOnEditCommit(
@@ -163,7 +165,7 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> affectiveFinanceCol = new TableColumn<>("Affective Finance");
-        affectiveFinanceCol.setMinWidth(100);
+        //affectiveFinanceCol.setMinWidth(100);
         affectiveFinanceCol.setCellValueFactory(new PropertyValueFactory<>("affective finance"));
         affectiveFinanceCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
         affectiveFinanceCol.setOnEditCommit(
@@ -173,7 +175,7 @@ public class Main extends Application {
         );
 
         TableColumn<Viewpoint, String> instinctualFinanceCol = new TableColumn<>("Instinctual Finance");
-        instinctualFinanceCol.setMinWidth(100);
+        //instinctualFinanceCol.setMinWidth(100);
         instinctualFinanceCol.setCellValueFactory(new PropertyValueFactory<>("instinctual finance"));
         instinctualFinanceCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         instinctualFinanceCol.setOnEditCommit(
@@ -183,7 +185,7 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> miscellaneousFinanceCol = new TableColumn<>("Miscellaneous Finance");
-        miscellaneousFinanceCol.setMinWidth(100);
+        //miscellaneousFinanceCol.setMinWidth(100);
         miscellaneousFinanceCol.setCellValueFactory(new PropertyValueFactory<>("miscellaneous finance"));
         miscellaneousFinanceCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
         miscellaneousFinanceCol.setOnEditCommit(
@@ -193,7 +195,7 @@ public class Main extends Application {
         );
 
         TableColumn<Viewpoint, String> cognitiveTechnologyCol = new TableColumn<>("Cognitive Technology");
-        cognitiveTechnologyCol.setMinWidth(100);
+        //cognitiveTechnologyCol.setMinWidth(100);
         cognitiveTechnologyCol.setCellValueFactory(new PropertyValueFactory<>("cognitive technology"));
         cognitiveTechnologyCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         cognitiveTechnologyCol.setOnEditCommit(
@@ -203,7 +205,7 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> affectiveTechnologyCol = new TableColumn<>("Affective Technology");
-        affectiveTechnologyCol.setMinWidth(100);
+        //affectiveTechnologyCol.setMinWidth(100);
         affectiveTechnologyCol.setCellValueFactory(new PropertyValueFactory<>("affective technology"));
         affectiveTechnologyCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
         affectiveTechnologyCol.setOnEditCommit(
@@ -213,7 +215,7 @@ public class Main extends Application {
         );
 
         TableColumn<Viewpoint, String> instinctualTechnologyCol = new TableColumn<>("Instinctual Technology");
-        instinctualTechnologyCol.setMinWidth(100);
+        //instinctualTechnologyCol.setMinWidth(100);
         instinctualTechnologyCol.setCellValueFactory(new PropertyValueFactory<>("instinctual technology"));
         instinctualTechnologyCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         instinctualTechnologyCol.setOnEditCommit(
@@ -223,7 +225,7 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> miscellaneousTechnologyCol = new TableColumn<>("Miscellaneous Technology");
-        miscellaneousTechnologyCol.setMinWidth(100);
+        //miscellaneousTechnologyCol.setMinWidth(100);
         miscellaneousTechnologyCol.setCellValueFactory(new PropertyValueFactory<>("miscellaneous technology"));
         miscellaneousTechnologyCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
         miscellaneousTechnologyCol.setOnEditCommit(
@@ -233,7 +235,7 @@ public class Main extends Application {
         );
 
         TableColumn<Viewpoint, String> cognitiveOperationsCol = new TableColumn<>("Cognitive Operations");
-        cognitiveOperationsCol.setMinWidth(100);
+        //cognitiveOperationsCol.setMinWidth(100);
         cognitiveOperationsCol.setCellValueFactory(new PropertyValueFactory<>("cognitive operations"));
         cognitiveOperationsCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         cognitiveOperationsCol.setOnEditCommit(
@@ -243,7 +245,7 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> affectiveOperationsCol = new TableColumn<>("Affective Operations");
-        affectiveOperationsCol.setMinWidth(100);
+        //affectiveOperationsCol.setMinWidth(100);
         affectiveOperationsCol.setCellValueFactory(new PropertyValueFactory<>("affective operations"));
         affectiveOperationsCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
         affectiveOperationsCol.setOnEditCommit(
@@ -253,7 +255,7 @@ public class Main extends Application {
         );
 
         TableColumn<Viewpoint, String> instinctualOperationsCol = new TableColumn<>("Instinctual Operations");
-        instinctualOperationsCol.setMinWidth(100);
+        //instinctualOperationsCol.setMinWidth(100);
         instinctualOperationsCol.setCellValueFactory(new PropertyValueFactory<>("instinctual operations"));
         instinctualOperationsCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         instinctualOperationsCol.setOnEditCommit(
@@ -263,7 +265,7 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> miscellaneousOperationsCol = new TableColumn<>("Miscellaneous Operations");
-        miscellaneousOperationsCol.setMinWidth(100);
+        //miscellaneousOperationsCol.setMinWidth(100);
         miscellaneousOperationsCol.setCellValueFactory(new PropertyValueFactory<>("miscellaneous operations"));
         miscellaneousOperationsCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
         miscellaneousOperationsCol.setOnEditCommit(
@@ -273,7 +275,7 @@ public class Main extends Application {
         );
      
         TableColumn<Viewpoint, String> valueCol = new TableColumn<>("Portion (%)");
-        valueCol.setMinWidth(100);
+        //valueCol.setMinWidth(100);
         valueCol.setCellValueFactory(new PropertyValueFactory<>("value"));
         valueCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
         valueCol.setOnEditCommit(
@@ -283,7 +285,7 @@ public class Main extends Application {
         );
 
         TableColumn<Viewpoint, String> antiCol = new TableColumn<>("Anti");
-        antiCol.setMinWidth(400);
+        //antiCol.setMinWidth(400);
         antiCol.setCellValueFactory(new PropertyValueFactory<>("anti"));
         antiCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         antiCol.setOnEditCommit(
@@ -293,7 +295,7 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> proCol = new TableColumn<>("Pro");
-        proCol.setMinWidth(400);
+        //proCol.setMinWidth(400);
         proCol.setCellValueFactory(new PropertyValueFactory<>("pro"));
         proCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         proCol.setOnEditCommit(
@@ -308,108 +310,32 @@ public class Main extends Application {
         final TextField addFactor = new TextField();
         addFactor.setPromptText("Factor");
         addFactor.setMaxWidth(factorCol.getPrefWidth());
-        final TextField addCognitiveSales = new TextField();
-        addCognitiveSales.setMaxWidth(cognitiveSalesCol.getPrefWidth());
-        addCognitiveSales.setPromptText("Cognitive Sales");
-        final TextField addAffectiveSales = new TextField();
-        addAffectiveSales.setMaxWidth(affectiveSalesCol.getPrefWidth());
-        addAffectiveSales.setPromptText("Affective Sales");
-        final TextField addInstinctualSales = new TextField();
-        addInstinctualSales.setMaxWidth(instinctualSalesCol.getPrefWidth());
-        addInstinctualSales.setPromptText("Instinctual Sales");
-        final TextField addMiscellaneousSales = new TextField();
-        addMiscellaneousSales.setMaxWidth(miscellaneousSalesCol.getPrefWidth());
-        addMiscellaneousSales.setPromptText("Miscellaneous Sales");
-        final TextField addCognitiveFinance = new TextField();
-        addCognitiveFinance.setMaxWidth(cognitiveFinanceCol.getPrefWidth());
-        addCognitiveFinance.setPromptText("Cognitive Finance");
-        final TextField addAffectiveFinance = new TextField();
-        addAffectiveFinance.setMaxWidth(affectiveFinanceCol.getPrefWidth());
-        addAffectiveFinance.setPromptText("Affective Finance");
-        final TextField addInstinctualFinance = new TextField();
-        addInstinctualFinance.setMaxWidth(instinctualFinanceCol.getPrefWidth());
-        addInstinctualFinance.setPromptText("Instinctual Finance");
-        final TextField addMiscellaneousFinance = new TextField();
-        addMiscellaneousFinance.setMaxWidth(miscellaneousFinanceCol.getPrefWidth());
-        addMiscellaneousFinance.setPromptText("Miscellaneous Finance");
-        final TextField addCognitiveTechnology = new TextField();
-        addCognitiveTechnology.setMaxWidth(cognitiveTechnologyCol.getPrefWidth());
-        addCognitiveTechnology.setPromptText("Cognitive Technology");
-        final TextField addAffectiveTechnology = new TextField();
-        addAffectiveTechnology.setMaxWidth(affectiveTechnologyCol.getPrefWidth());
-        addAffectiveTechnology.setPromptText("Affective Technology");
-        final TextField addInstinctualTechnology = new TextField();
-        addInstinctualTechnology.setMaxWidth(instinctualTechnologyCol.getPrefWidth());
-        addInstinctualTechnology.setPromptText("InstinctualTechnology");
-        final TextField addMiscellaneousTechnology = new TextField();
-        addMiscellaneousTechnology.setMaxWidth(miscellaneousTechnologyCol.getPrefWidth());
-        addMiscellaneousTechnology.setPromptText("Miscellaneous Technology");
-        final TextField addCognitiveOperations = new TextField();
-        addCognitiveOperations.setMaxWidth(cognitiveOperationsCol.getPrefWidth());
-        addCognitiveOperations.setPromptText("Cognitive Operations");
-        final TextField addAffectiveOperations = new TextField();
-        addAffectiveOperations.setMaxWidth(affectiveOperationsCol.getPrefWidth());
-        addAffectiveOperations.setPromptText("Affective Operations");
-        final TextField addInstinctualOperations = new TextField();
-        addInstinctualOperations.setMaxWidth(instinctualOperationsCol.getPrefWidth());
-        addInstinctualOperations.setPromptText("Instinctual Operations");
-        final TextField addMiscellaneousOperations = new TextField();
-        addMiscellaneousOperations.setMaxWidth(miscellaneousOperationsCol.getPrefWidth());
-        addMiscellaneousOperations.setPromptText("Miscellaneous Operations");
-        final TextField addAnti = new TextField();
-        addAnti.setMaxWidth(antiCol.getPrefWidth());
-        addAnti.setPromptText("Anti");
-        final TextField addPro = new TextField();
-        addPro.setMaxWidth(proCol.getPrefWidth());
-        addPro.setPromptText("Pro");
-        final TextField addValue = new TextField();
-        addValue.setMaxWidth(affectiveOperationsCol.getPrefWidth());
-        addValue.setPromptText("Value");
  
         final Button addButton = new Button("Add");
         addButton.setOnAction((ActionEvent e) -> {
             data.add(new Viewpoint(
                 addFactor.getText(),
-                addCognitiveSales.getText(),
-                addAffectiveSales.getText(),
-                addInstinctualSales.getText(),
-                addMiscellaneousSales.getText(),
-                addCognitiveFinance.getText(),
-                addAffectiveFinance.getText(),
-                addInstinctualFinance.getText(),
-                addMiscellaneousFinance.getText(),
-                addCognitiveTechnology.getText(),
-                addAffectiveTechnology.getText(),
-                addInstinctualTechnology.getText(),
-                addMiscellaneousTechnology.getText(),
-                addCognitiveOperations.getText(),
-                addAffectiveOperations.getText(),
-                addInstinctualOperations.getText(),
-                addMiscellaneousOperations.getText(),
-                addValue.getText(),
-                addAnti.getText(),
-                addPro.getText()
+                "5",
+                "5",
+                "5",
+                "5",
+                "5",
+                "5",
+                "5",
+                "5",
+                "5",
+                "5",
+                "5",
+                "5",
+                "5",
+                "5",
+                "5",
+                "5",
+                "0",
+                "",
+                ""
             ));
             addFactor.clear();
-            addCognitiveSales.clear();
-            addAffectiveSales.clear();
-            addInstinctualSales.clear();
-            addMiscellaneousFinance.clear();
-            addCognitiveFinance.clear();
-            addAffectiveFinance.clear();
-            addInstinctualFinance.clear();
-            addMiscellaneousFinance.clear();
-            addCognitiveTechnology.clear();
-            addAffectiveTechnology.clear();
-            addInstinctualTechnology.clear();
-            addMiscellaneousTechnology.clear();
-            addCognitiveOperations.clear();
-            addAffectiveOperations.clear();
-            addInstinctualOperations.clear();
-            addMiscellaneousOperations.clear();
-            addValue.clear();
-            addAnti.clear();
-            addPro.clear();
         });
 
         final Button calculateButton = new Button("Calculate");
@@ -419,14 +345,14 @@ public class Main extends Application {
             Viewpoint viewpoint = new Viewpoint("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "");
             for(int i=0; i<table.getItems().size(); i++) {
                 viewpoint = table.getItems().get(i);
-                Double weight = Double.parseDouble(viewpoint.cognitiveSales.get())+Double.parseDouble(viewpoint.affectiveSales.get());
-                weight += Double.parseDouble(viewpoint.instinctualSales.get())+Double.parseDouble(viewpoint.miscellaneousSales.get());
-                weight += Double.parseDouble(viewpoint.cognitiveFinance.get())+Double.parseDouble(viewpoint.affectiveFinance.get());
-                weight += Double.parseDouble(viewpoint.instinctualFinance.get())+Double.parseDouble(viewpoint.miscellaneousFinance.get());
-                weight += Double.parseDouble(viewpoint.cognitiveTechnology.get())+Double.parseDouble(viewpoint.affectiveTechnology.get());
-                weight += Double.parseDouble(viewpoint.instinctualTechnology.get())+Double.parseDouble(viewpoint.miscellaneousTechnology.get());
-                weight += Double.parseDouble(viewpoint.cognitiveOperations.get())+Double.parseDouble(viewpoint.affectiveOperations.get());
-                weight += Double.parseDouble(viewpoint.instinctualOperations.get())+Double.parseDouble(viewpoint.miscellaneousOperations.get());
+                Double weight = (Double.parseDouble(viewpoint.cognitiveSales.get())+Double.parseDouble(viewpoint.affectiveSales.get()));
+                weight += (Double.parseDouble(viewpoint.instinctualSales.get())+Double.parseDouble(viewpoint.miscellaneousSales.get()));
+                weight += (Double.parseDouble(viewpoint.cognitiveFinance.get())+Double.parseDouble(viewpoint.affectiveFinance.get()));
+                weight += (Double.parseDouble(viewpoint.instinctualFinance.get())+Double.parseDouble(viewpoint.miscellaneousFinance.get()));
+                weight += (Double.parseDouble(viewpoint.cognitiveTechnology.get())+Double.parseDouble(viewpoint.affectiveTechnology.get()));
+                weight += (Double.parseDouble(viewpoint.instinctualTechnology.get())+Double.parseDouble(viewpoint.miscellaneousTechnology.get()));
+                weight += (Double.parseDouble(viewpoint.cognitiveOperations.get())+Double.parseDouble(viewpoint.affectiveOperations.get()));
+                weight += (Double.parseDouble(viewpoint.instinctualOperations.get())+Double.parseDouble(viewpoint.miscellaneousOperations.get()));
                 weights[i] = weight;
                 total += weight;
             }
@@ -453,31 +379,7 @@ public class Main extends Application {
                 viewpoint.pro.get()
             );
             for(int i=0; i<table.getItems().size(); i++) {
-                if(weights[i] == 0.00) {
-                    row = new Viewpoint(
-                        viewpoint.factor.get(), 
-                        viewpoint.cognitiveSales.get(), 
-                        viewpoint.affectiveSales.get(), 
-                        viewpoint.instinctualSales.get(),
-                        viewpoint.miscellaneousSales.get(),
-                        viewpoint.cognitiveFinance.get(), 
-                        viewpoint.affectiveFinance.get(), 
-                        viewpoint.instinctualFinance.get(),
-                        viewpoint.miscellaneousFinance.get(),
-                        viewpoint.cognitiveTechnology.get(), 
-                        viewpoint.affectiveTechnology.get(), 
-                        viewpoint.instinctualTechnology.get(),
-                        viewpoint.miscellaneousTechnology.get(),
-                        viewpoint.cognitiveOperations.get(), 
-                        viewpoint.affectiveOperations.get(), 
-                        viewpoint.instinctualOperations.get(),
-                        viewpoint.miscellaneousOperations.get(),
-                        String.valueOf(0.00), 
-                        viewpoint.anti.get(),
-                        viewpoint.pro.get()
-                    );
-                } else {
-                row = new Viewpoint(
+                 row = new Viewpoint(
                     viewpoint.factor.get(), 
                     viewpoint.cognitiveSales.get(), 
                     viewpoint.affectiveSales.get(), 
@@ -498,18 +400,10 @@ public class Main extends Application {
                     String.valueOf(100*weights[i]/total), 
                     viewpoint.anti.get(),
                     viewpoint.pro.get()
-                );        
-                }
+                );
                 table.getItems().set(i, row);
             }
-            /*
-            for(int i=0; i<table.getItems().size(); i++) {
-                viewpoint = table.getItems().get(i);
-
-                weights[i] = weight;
-                total += weight;
-            }
-            */
+            
             Viewpoint viewpointTwo = new Viewpoint("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "");
             for(int i=0; i<table.getItems().size(); i++) {
                 viewpointTwo = table.getItems().get(i);
@@ -522,9 +416,10 @@ public class Main extends Application {
         });
 
         //typeface/hierarchy/contrast/consistency/alignment/blankspace/color
-        TextArea paragraph = new TextArea("Business modalities may be composed of the following business models: servitisation, platform, social, employee, partner, value, innovation, data, savvy. The overall allocation of resources could be concieved as a long-term survival train trolley problem. In terms of chemical coring, this is considered similar to political coring. The last 4 columns are for coefficients of variation for each business modality. Complex typography conversion may allow for many runs to become similar to an encyclopedia.");
-     
-        hb.getChildren().addAll(addFactor, addValue, addCognitiveSales, addAffectiveSales, addInstinctualSales, addMiscellaneousSales, addCognitiveFinance, addAffectiveFinance, addInstinctualFinance, addMiscellaneousFinance, addCognitiveTechnology, addAffectiveTechnology, addInstinctualTechnology, addMiscellaneousTechnology, addCognitiveOperations, addAffectiveOperations, addInstinctualOperations, addMiscellaneousOperations, addAnti, addPro, addButton, calculateButton);
+        TextArea paragraph = new TextArea("Business modalities may be composed of the following business models: servitisation, platform, social, employee, partner, value, innovation, data, savvy. The overall allocation of resources could be conceived as a long-term survival train trolley problem. In terms of chemical coring, this is considered similar to political coring; the last 2 columns are for coring. Complex typography conversion may allow for many runs to become similar to an encyclopedia.");
+        paragraph.setWrapText(true);
+
+        hb.getChildren().addAll(addFactor, addButton, calculateButton);
         hb.setSpacing(3);
  
         final VBox vbox = new VBox();
