@@ -99,7 +99,7 @@ public class Main extends Application {
         stage.setWidth(960);
         stage.setHeight(720);
  
-        final Label label = new Label("Cognitive-Affective-Instinctual-Miscellaneous Empathy Matrix");
+        final Label label = new Label("10Core Morality Matrix");
         label.setFont(new Font("Arial", 20));
  
         table.setEditable(true);
