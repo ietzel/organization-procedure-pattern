@@ -124,9 +124,9 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> executiveInstinctCol = new TableColumn<>("Executive Instinct");
-        executiveInstinct.setCellValueFactory(new PropertyValueFactory<>("executive instinct"));
-        executiveInstinct.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        executiveInstinct.setOnEditCommit(
+        executiveInstinctCol.setCellValueFactory(new PropertyValueFactory<>("executive instinct"));
+        executiveInstinctCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        executiveInstinctCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
                 ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setExecutiveInstinct(t.getNewValue());
             }
@@ -151,9 +151,9 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> executiveSacralCol = new TableColumn<>("Executive Sacral");
-        executiveSacral.setCellValueFactory(new PropertyValueFactory<>("executive sacral"));
-        executiveSacral.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        executiveSacral.setOnEditCommit(
+        executiveSacralCol.setCellValueFactory(new PropertyValueFactory<>("executive sacral"));
+        executiveSacralCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        executiveSacralCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
                 ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setExecutiveInstinct(t.getNewValue());
             }
@@ -169,9 +169,9 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> executiveHeartCol = new TableColumn<>("Executive Heart");
-        executiveHeart.setCellValueFactory(new PropertyValueFactory<>("executive heart"));
-        executiveHeart.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        executiveHeart.setOnEditCommit(
+        executiveHeartCol.setCellValueFactory(new PropertyValueFactory<>("executive heart"));
+        executiveHeartCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        executiveHeartCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
                 ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setExecutiveHeart(t.getNewValue());
             }
@@ -187,7 +187,7 @@ public class Main extends Application {
         );
 
         TableColumn<Viewpoint, String> executiveThirdEyeCol = new TableColumn<>("Executive Third Eye");
-        executiveThirdEyeCol.setCellValueFactory(new PropertyValueFactory<>("executive cognition"));
+        executiveThirdEyeCol.setCellValueFactory(new PropertyValueFactory<>("executive third eye"));
         executiveThirdEyeCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         executiveThirdEyeCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
@@ -196,16 +196,16 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> executiveCrownCol = new TableColumn<>("Executive Crown");
-        executiveCrown.setCellValueFactory(new PropertyValueFactory<>("executive crown"));
-        executiveCrown.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        executiveCrown.setOnEditCommit(
+        executiveCrownCol.setCellValueFactory(new PropertyValueFactory<>("executive crown"));
+        executiveCrownCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        executiveCrownCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
                 ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setExecutiveCrown(t.getNewValue());
             }
         );
  
         TableColumn<Viewpoint, String> salesFinanceCognitionCol = new TableColumn<>("Sales & Finance Cognition");
-        salesFinanceCognitionCol.setCellValueFactory(new PropertyValueFactory<>("sales finance cognition"));
+        salesFinanceCognitionCol.setCellValueFactory(new PropertyValueFactory<>("sales & finance cognition"));
         salesFinanceCognitionCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         salesFinanceCognitionCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
@@ -214,16 +214,16 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> salesFinanceInstinctCol = new TableColumn<>("Sales & Finance Instinct");
-        salesFinanceInstinct.setCellValueFactory(new PropertyValueFactory<>("executive instinct"));
-        salesFinanceInstinct.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        salesFinanceInstinct.setOnEditCommit(
+        salesFinanceInstinctCol.setCellValueFactory(new PropertyValueFactory<>("executive & instinct"));
+        salesFinanceInstinctCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        salesFinanceInstinctCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
                 ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesFinanceInstinct(t.getNewValue());
             }
         );
 
         TableColumn<Viewpoint, String> salesFinanceAffectationCol = new TableColumn<>("Sales & Finance Affectation");
-        salesFinanceAffectationCol.setCellValueFactory(new PropertyValueFactory<>("sales finance affectation"));
+        salesFinanceAffectationCol.setCellValueFactory(new PropertyValueFactory<>("sales & finance affectation"));
         salesFinanceAffectationCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         salesFinanceAffectationCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
@@ -232,25 +232,25 @@ public class Main extends Application {
         );
 
         TableColumn<Viewpoint, String> salesFinanceRootCol = new TableColumn<>("Sales & Finance Root");
-        salesFinanceCol.setCellValueFactory(new PropertyValueFactory<>("sales finance root"));
-        salesFinanceCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        salesFinanceCol.setOnEditCommit(
+        salesFinanceRootCol.setCellValueFactory(new PropertyValueFactory<>("sales & finance root"));
+        salesFinanceRootCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        salesFinanceRootCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
                 ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesFinanceRoot(t.getNewValue());
             }
         );
  
         TableColumn<Viewpoint, String> salesFinanceSacralCol = new TableColumn<>("Sales & Finance Sacral");
-        salesFinanceSacral.setCellValueFactory(new PropertyValueFactory<>("executive sacral"));
-        salesFinanceSacral.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        salesFinanceSacral.setOnEditCommit(
+        salesFinanceSacralCol.setCellValueFactory(new PropertyValueFactory<>("sales & finance sacral"));
+        salesFinanceSacralCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        salesFinanceSacralCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
                 ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesFinanceInstinct(t.getNewValue());
             }
         );
  
         TableColumn<Viewpoint, String> salesFinanceSolarPlexusCol = new TableColumn<>("Sales & Finance Solar Plexus");
-        salesFinanceSolarPlexusCol.setCellValueFactory(new PropertyValueFactory<>("executive solar plexus"));
+        salesFinanceSolarPlexusCol.setCellValueFactory(new PropertyValueFactory<>("sales & finance solar plexus"));
         salesFinanceSolarPlexusCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         salesFinanceSolarPlexusCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
@@ -259,25 +259,25 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> salesFinanceHeartCol = new TableColumn<>("Sales & Finance Heart");
-        salesFinanceHeart.setCellValueFactory(new PropertyValueFactory<>("executive heart"));
-        salesFinanceHeart.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        salesFinanceHeart.setOnEditCommit(
+        salesFinanceHeartCol.setCellValueFactory(new PropertyValueFactory<>("sales & finance heart"));
+        salesFinanceHeartCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        salesFinanceHeartCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
                 ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesFinanceHeart(t.getNewValue());
             }
         );
 
         TableColumn<Viewpoint, String> salesFinanceThroatCol = new TableColumn<>("Sales & Finance Throat");
-        salesFinanceThroatCol.setCellValueFactory(new PropertyValueFactory<>("Sales & Finance throat"));
+        salesFinanceThroatCol.setCellValueFactory(new PropertyValueFactory<>("sales & finance throat"));
         salesFinanceThroatCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         salesFinanceThroatCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setsalesFinanceThroat(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesFinanceThroat(t.getNewValue());
             }
         );
 
         TableColumn<Viewpoint, String> salesFinanceThirdEyeCol = new TableColumn<>("Sales & Finance Third Eye");
-        executiveThirdEyeCol.setCellValueFactory(new PropertyValueFactory<>("sales finance third eye"));
+        executiveThirdEyeCol.setCellValueFactory(new PropertyValueFactory<>("sales & finance third eye"));
         executiveThirdEyeCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         executiveThirdEyeCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
@@ -286,16 +286,16 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> salesFinanceCrownCol = new TableColumn<>("Sales & Finance Crown");
-        salesFinanceCrown.setCellValueFactory(new PropertyValueFactory<>("executive crown"));
-        salesFinanceCrown.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        salesFinanceCrown.setOnEditCommit(
+        salesFinanceCrownCol.setCellValueFactory(new PropertyValueFactory<>("sales & finance crown"));
+        salesFinanceCrownCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        salesFinanceCrownCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setsalesFinanceCrown(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesFinanceCrown(t.getNewValue());
             }
         );
 
         TableColumn<Viewpoint, String> operationsTechnologyCognitionCol = new TableColumn<>("Operations & Technology Cognition");
-        operationsTechnologyCognitionCol.setCellValueFactory(new PropertyValueFactory<>("operations technology cognition"));
+        operationsTechnologyCognitionCol.setCellValueFactory(new PropertyValueFactory<>("operations & technology cognition"));
         operationsTechnologyCognitionCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         operationsTechnologyCognitionCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
@@ -304,25 +304,25 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> operationsTechnologyInstinctCol = new TableColumn<>("Operations & Technology Instinct");
-        operationsTechnologyInstinct.setCellValueFactory(new PropertyValueFactory<>("operations technology instinct"));
-        operationsTechnologyInstinct.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        operationsTechnologyInstinct.setOnEditCommit(
+        operationsTechnologyInstinctCol.setCellValueFactory(new PropertyValueFactory<>("operations & technology instinct"));
+        operationsTechnologyInstinctCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        operationsTechnologyInstinctCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
                 ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsTechnologyInstinct(t.getNewValue());
             }
         );
 
         TableColumn<Viewpoint, String> operationsTechnologyAffectationCol = new TableColumn<>("Operations & Technology Affectation");
-        operationsTechnologyCol.setCellValueFactory(new PropertyValueFactory<>("executive affectation"));
-        operationsTechnologyCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        operationsTechnologyCol.setOnEditCommit(
+        operationsTechnologyAffectationCol.setCellValueFactory(new PropertyValueFactory<>("operations & technology affectation"));
+        operationsTechnologyAffectationCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        operationsTechnologyAffectationCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
                 ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsTechnologyAffectation(t.getNewValue());
             }
         );
 
         TableColumn<Viewpoint, String> operationsTechnologyRootCol = new TableColumn<>("Operations & Technology Root");
-        operationsTechnologyRootCol.setCellValueFactory(new PropertyValueFactory<>("executive root"));
+        operationsTechnologyRootCol.setCellValueFactory(new PropertyValueFactory<>("operations & technology root"));
         operationsTechnologyRootCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         operationsTechnologyRootCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
@@ -331,16 +331,16 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> operationsTechnologySacralCol = new TableColumn<>("Operations & Technology Sacral");
-        operationsTechnologySacral.setCellValueFactory(new PropertyValueFactory<>("operations technology sacral"));
-        operationsTechnologySacral.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        operationsTechnologySacral.setOnEditCommit(
+        operationsTechnologySacralCol.setCellValueFactory(new PropertyValueFactory<>("operations & technology sacral"));
+        operationsTechnologySacralCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        operationsTechnologySacralCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
                 ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsTechnologyInstinct(t.getNewValue());
             }
         );
  
         TableColumn<Viewpoint, String> operationsTechnologySolarPlexusCol = new TableColumn<>("Operations & Technology Solar Plexus");
-        operationsTechnologySolarPlexusCol.setCellValueFactory(new PropertyValueFactory<>("operations technology solar plexus"));
+        operationsTechnologySolarPlexusCol.setCellValueFactory(new PropertyValueFactory<>("operations & technology solar plexus"));
         operationsTechnologySolarPlexusCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         operationsTechnologySolarPlexusCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
@@ -349,16 +349,16 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> operationsTechnologyHeartCol = new TableColumn<>("Operations & Technology Heart");
-        operationsTechnologyHeart.setCellValueFactory(new PropertyValueFactory<>("operations technology heart"));
-        operationsTechnologyHeart.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        operationsTechnologyHeart.setOnEditCommit(
+        operationsTechnologyHeartCol.setCellValueFactory(new PropertyValueFactory<>("operations & technology heart"));
+        operationsTechnologyHeartCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        operationsTechnologyHeartCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
                 ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsTechnologyHeart(t.getNewValue());
             }
         );
 
         TableColumn<Viewpoint, String> operationsTechnologyThroatCol = new TableColumn<>("Operations & Technology Throat");
-        operationsTechnologyThroatCol.setCellValueFactory(new PropertyValueFactory<>("operations technology throat"));
+        operationsTechnologyThroatCol.setCellValueFactory(new PropertyValueFactory<>("operations & technology throat"));
         operationsTechnologyThroatCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         operationsTechnologyThroatCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
@@ -367,7 +367,7 @@ public class Main extends Application {
         );
 
         TableColumn<Viewpoint, String> operationsTechnologyThirdEyeCol = new TableColumn<>("Operations & Technology Third Eye");
-        operationsTechnologyThirdEyeCol.setCellValueFactory(new PropertyValueFactory<>("operations technology cognition"));
+        operationsTechnologyThirdEyeCol.setCellValueFactory(new PropertyValueFactory<>("operations & technology cognition"));
         operationsTechnologyThirdEyeCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         operationsTechnologyThirdEyeCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
@@ -376,9 +376,9 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> operationsTechnologyCrownCol = new TableColumn<>("Operations & Technology Crown");
-        operationsTechnologyCrown.setCellValueFactory(new PropertyValueFactory<>("operations technology crown"));
-        operationsTechnologyCrown.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        operationsTechnologyCrown.setOnEditCommit(
+        operationsTechnologyCrownCol.setCellValueFactory(new PropertyValueFactory<>("operations & technology crown"));
+        operationsTechnologyCrownCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        operationsTechnologyCrownCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
                 ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsTechnologyCrown(t.getNewValue());
             }
@@ -394,7 +394,6 @@ public class Main extends Application {
         );
 
         TableColumn<Viewpoint, String> antiCol = new TableColumn<>("Anti");
-        //antiCol.setMinWidth(400);
         antiCol.setCellValueFactory(new PropertyValueFactory<>("anti"));
         antiCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         antiCol.setOnEditCommit(
@@ -404,7 +403,6 @@ public class Main extends Application {
         );
  
         TableColumn<Viewpoint, String> proCol = new TableColumn<>("Pro");
-        //proCol.setMinWidth(400);
         proCol.setCellValueFactory(new PropertyValueFactory<>("pro"));
         proCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         proCol.setOnEditCommit(
@@ -580,213 +578,213 @@ public class Main extends Application {
             this.factor.set(factor);
         }
             
-        public String getExecutiveCognitionCol() {
+        public String getExecutiveCognition() {
             return executiveCognitionCol.get();
         }
-        public void setExecutiveCognitionCol(String executiveCognitionCol) {
+        public void setExecutiveCognition(String executiveCognitionCol) {
             this.executiveCognitionCol.set(executiveCognitionCol);
         }
 
-        public String getExecutiveInstinctCol() {
+        public String getExecutiveInstinct() {
             return executiveInstinctCol.get();
         }
-        public void setExecutiveInstinctCol(String executiveInstinctCol) {
+        public void setExecutiveInstinct(String executiveInstinctCol) {
             this.executiveInstinctCol.set(executiveInstinctCol);
         }
 
-        public String getExecutiveAffectationCol() {
-            return executiveAffectationCol.get(executiveAffectationCol);
+        public String getExecutiveAffectation() {
+            return executiveAffectationCol.get();
         }
-        public void setExecutiveAffectationCol(String executiveAffectationCol) {
+        public void setExecutiveAffectation(String executiveAffectationCol) {
             this.executiveAffectationCol.set(executiveAffectationCol);
         }
 
-        public String getExecutiveRootCol() {
+        public String getExecutiveRoot() {
             return executiveRootCol.get();
         }
-        public void setExecutiveRootCol(String executiveRootCol) {
+        public void setExecutiveRoot(String executiveRootCol) {
             this.executiveRootCol.set(executiveRootCol);
         }
 
-        public String getExecutiveSacralCol() {
+        public String getExecutiveSacral() {
             return executiveSacralCol.get();
         }
-        public void setExecutiveSacralCol(String executiveSacralCol) {
+        public void setExecutiveSacral(String executiveSacralCol) {
             this.executiveSacralCol.set(executiveSacralCol);
         }
 
-        public String getExecutiveSolarPlexusCol() {
+        public String getExecutiveSolarPlexus() {
             return executiveSolarPlexusCol.get();
         }
-        public void setExecutiveSolarPlexusCol(String executiveSolarPlexusCol) {
+        public void setExecutiveSolarPlexus(String executiveSolarPlexusCol) {
             this.executiveSolarPlexusCol.set(executiveSolarPlexusCol);
         }
 
-        public String getExecutiveHeartCol() {
+        public String getExecutiveHeart() {
             return executiveHeartCol.get();
         }
-        public void setExecutiveHeartCol(String executiveHeartCol) {
+        public void setExecutiveHeart(String executiveHeartCol) {
             this.executiveHeartCol.set(executiveHeartCol);
         }
 
-        public String getExecutiveThroatCol() {
+        public String getExecutiveThroat() {
             return executiveThroatCol.get();
         }
-        public void setExecutiveThroatCol(String executiveThroatCol) {
-            this.executiveThroatCol.set();
+        public void setExecutiveThroat(String executiveThroatCol) {
+            this.executiveThroatCol.set(executiveThroatCol);
         }
 
-        public String getExecutiveThirdEyeCol() {
+        public String getExecutiveThirdEye() {
             return executiveThirdEyeCol.get();
         }
-        public void setExecutiveThirdEyeCol(String executiveThirdEyeCol) {
+        public void setExecutiveThirdEye(String executiveThirdEyeCol) {
             this.executiveThirdEyeCol.set(executiveThirdEyeCol);
         }
 
-        public String getExecutiveCrownCol() {
+        public String getExecutiveCrown() {
             return executiveCrownCol.get();
         }
-        public void setExecutiveCrownCol(String executiveCrownCol) {
+        public void setExecutiveCrown(String executiveCrownCol) {
             this.executiveCrownCol.set(executiveCrownCol);
         }
 
-        public String getSalesFinanceCognitionCol() {
+        public String getSalesFinanceCognition() {
             return salesFinanceCognitionCol.get();
         }
-        public void setSalesFinanceCognitionCol(String salesFinanceCognitionCol) {
+        public void setSalesFinanceCognition(String salesFinanceCognitionCol) {
             this.salesFinanceCognitionCol.set(salesFinanceCognitionCol);
         }
 
-        public String getSalesFinanceInstinctCol() {
+        public String getSalesFinanceInstinct() {
             return salesFinanceInstinctCol.get();
         }
-        public void setSalesFinanceInstinctCol(String salesFinanceInstinctCol) {
+        public void setSalesFinanceInstinct(String salesFinanceInstinctCol) {
             this.salesFinanceInstinctCol.set(salesFinanceInstinctCol);
         }
 
-        public String getSalesFinanceAffectationCol() {
+        public String getSalesFinanceAffectation() {
             return salesFinanceAffectationCol.get();
         }
-        public void setSalesFinanceAffectationCol(String salesFinanceAffectationCol) {
+        public void setSalesFinanceAffectation(String salesFinanceAffectationCol) {
             this.salesFinanceAffectationCol.set(salesFinanceAffectationCol);
         }
 
-        public String getSalesFinanceRootCol() {
+        public String getSalesFinanceRoot() {
             return salesFinanceRootCol.get();
         }
-        public void setSalesFinanceRootCol(String salesFinanceRootCol) {
-            this.salesFinanceRootCol.set();
+        public void setSalesFinanceRoot(String salesFinanceRootCol) {
+            this.salesFinanceRootCol.set(salesFinanceRootCol);
         }
 
-        public String getSalesFinanceSacralCol() {
+        public String getSalesFinanceSacral() {
             return salesFinanceSacralCol.get();
         }
-        public void setSalesFinanceSacralCol(String salesFinanceSacralCol) {
+        public void setSalesFinanceSacral(String salesFinanceSacralCol) {
             this.salesFinanceSacralCol.set(salesFinanceSacralCol);
         }
 
-        public String getSalesFinanceSolarPlexusCol() {
+        public String getSalesFinanceSolarPlexus() {
             return salesFinanceSolarPlexusCol.get();
         }
-        public void setSalesFinanceSolarPlexusCol(String salesFinanceSolarPlexusCol) {
+        public void setSalesFinanceSolarPlexus(String salesFinanceSolarPlexusCol) {
             this.salesFinanceSolarPlexusCol.set(salesFinanceSolarPlexusCol);
         }
 
-        public String getSalesFinanceHeartCol() {
+        public String getSalesFinanceHeart() {
             return salesFinanceHeartCol.get();
         }
-        public void setSalesFinanceHeartCol(String salesFinanceHeartCol) {
+        public void setSalesFinanceHeart(String salesFinanceHeartCol) {
             this.salesFinanceHeartCol.set(salesFinanceHeartCol);
         }
 
-        public String getSalesFinanceThroatCol() {
+        public String getSalesFinanceThroat() {
             return salesFinanceThroatCol.get();
         }
-        public void setSalesFinanceThroatCol(String salesFinanceThroatCol) {
+        public void setSalesFinanceThroat(String salesFinanceThroatCol) {
             this.salesFinanceThroatCol.set(salesFinanceThroatCol);
         }
 
-        public String getSalesFinanceThirdEyeCol() {
+        public String getSalesFinanceThirdEye() {
             return salesFinanceThirdEyeCol.get();
         }
-        public void setSalesFinanceThirdEyeCol(String salesFinanceThirdEyeCol) {
+        public void setSalesFinanceThirdEye(String salesFinanceThirdEyeCol) {
             this.salesFinanceThirdEyeCol.set(salesFinanceThirdEyeCol);
         }
 
-        public String getSalesFinanceCrownCol() {
+        public String getSalesFinanceCrown() {
             return salesFinanceCrownCol.get();
         }
-        public void setSalesFinanceCrownCol(String salesFinanceCrownCol) {
+        public void setSalesFinanceCrown(String salesFinanceCrownCol) {
             this.salesFinanceCrownCol.set(salesFinanceCrownCol);
         }
 
-        public String getOperationsTechnologyCognitionCol() {
+        public String getOperationsTechnologyCognition() {
             return operationsTechnologyCognitionCol.get();
         }
-        public void setOperationsTechnologyCognitionCol(String operationsTechnologyCognitionCol) {
-            this.operationsTechnologyCognitionCol.set();
+        public void setOperationsTechnologyCognition(String operationsTechnologyCognitionCol) {
+            this.operationsTechnologyCognitionCol.set(operationsTechnologyCognitionCol);
         }
 
-        public String getOperationsTechnologyInstinctCol() {
+        public String getOperationsTechnologyInstinct() {
             return operationsTechnologyInstinctCol.get();
         }
-        public void setOperationsTechnologyInstinctCol(String operationsTechnologyInstinctCol) {
+        public void setOperationsTechnologyInstinct(String operationsTechnologyInstinctCol) {
             this.operationsTechnologyInstinctCol.set(operationsTechnologyInstinctCol);
         }
 
-        public String getOperationsTechnologyAffectationCol() {
+        public String getOperationsTechnologyAffectation() {
             return operationsTechnologyAffectationCol.get();
         }
-        public void setOperationsTechnologyAffectationCol(String operationsTechnologyAffectationCol) {
-            this.operationsTechnologyAffectationCol.set();
+        public void setOperationsTechnologyAffectation(String operationsTechnologyAffectationCol) {
+            this.operationsTechnologyAffectationCol.set(operationsTechnologyAffectationCol);
         }
 
-        public String getOperationsTechnologyRootCol() {
+        public String getOperationsTechnologyRoot() {
             return operationsTechnologyRootCol.get();
         }
-        public void setOperationsTechnologyRootCol(String operationsTechnologyRootCol) {
-            this.operationsTechnologyRootCol.set();
+        public void setOperationsTechnologyRoot(String operationsTechnologyRootCol) {
+            this.operationsTechnologyRootCol.set(operationsTechnologyRootCol);
         }
 
-        public String getOperationsTechnologySacralCol() {
+        public String getOperationsTechnologySacral() {
             return operationsTechnologySacralCol.get();
         }
-        public void setOperationsTechnologySacralCol(String operationsTechnologySacralCol) {
+        public void setOperationsTechnologySacral(String operationsTechnologySacralCol) {
             this.operationsTechnologySacralCol.set(operationsTechnologySacralCol);
         }
 
-        public String getOperationsTechnologySolarPlexusCol() {
+        public String getOperationsTechnologySolarPlexus() {
             return operationsTechnologySolarPlexusCol.get();
         }
-        public void setOperationsTechnologySolarPlexusCol(String operationsTechnologySolarPlexusCol) {
+        public void setOperationsTechnologySolarPlexus(String operationsTechnologySolarPlexusCol) {
             this.operationsTechnologySolarPlexusCol.set(operationsTechnologySolarPlexusCol);
         }
 
-        public String getOperationsTechnologyHeartCol() {
+        public String getOperationsTechnologyHeart() {
             return operationsTechnologyHeartCol.get();
         }
-        public void setOperationsTechnologyHeartCol(String operationsTechnologyHeartCol) {
-            this.OperationsTechnologyHeartCol.set(OperationsTechnologyHeartCol);
+        public void setOperationsTechnologyHeart(String operationsTechnologyHeartCol) {
+            this.operationsTechnologyHeartCol.set(operationsTechnologyHeartCol);
         }
 
-        public String getOperationsTechnologyThroatCol() {
+        public String getOperationsTechnologyThroat() {
             return operationsTechnologyThroatCol.get();
         }
-        public void setOperationsTechnologyThroatCol(String operationsTechnologyThroatCol) {
+        public void setOperationsTechnologyThroat(String operationsTechnologyThroatCol) {
             this.operationsTechnologyThroatCol.set(operationsTechnologyThroatCol);
         }
 
-        public String getOperationsTechnologyThirdEyeCol() {
+        public String getOperationsTechnologyThirdEye() {
             return operationsTechnologyThirdEyeCol.get();
         }
-        public void setOperationsTechnologyThirdEyeCol(String operationsTechnologyThirdEyeCol) {
+        public void setOperationsTechnologyThirdEye(String operationsTechnologyThirdEyeCol) {
             this.operationsTechnologyThirdEyeCol.set(operationsTechnologyThirdEyeCol);
         }
 
-        public String getOperationsTechnologyCrownCol() {
+        public String getOperationsTechnologyCrown() {
             return operationsTechnologyCrownCol.get();
         }
-        public void setOperationsTechnologyCrownCol(String operationsTechnologyCrownCol) {
+        public void setOperationsTechnologyCrown(String operationsTechnologyCrownCol) {
             this.operationsTechnologyCrownCol.set(operationsTechnologyCrownCol);
         }
      
