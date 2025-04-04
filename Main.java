@@ -59,33 +59,34 @@ public class Main extends Application {
  
     private static final TableView<Viewpoint> table = new TableView<>();
     private final ObservableList<Viewpoint> data = FXCollections.observableArrayList(
-        new Viewpoint("honesty/integrity/transparency", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("compassion/respect", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("responsibility/accountability", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("loyalty/trustworthiness", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("law-abiding", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("fairness", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("leadership", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("anti-discrimination", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("workplace health/safety/security", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("employee code of conduct & anti-harassment", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("attendance & vacation & time-off", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("employee complaint", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("work schedule & rest period", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("substance abuse", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("mobile device management", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("compensation and benefits", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("travel", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("inclement weather", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("remote work", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("conflict of interest", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("acceptable use", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("compensation", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("safety", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("relationships", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("skill discretion", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", ""),
-        new Viewpoint("prospects", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "5", "0", "", "")
+        new Viewpoint("honesty/integrity/transparency", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("compassion/respect", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("responsibility/accountability", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("loyalty/trustworthiness", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("law-abiding", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("fairness", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("leadership", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("anti-discrimination", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("workplace health/safety/security", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("employee code of conduct & anti-harassment", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("attendance & vacation & time-off", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("employee complaint", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("work schedule & rest period", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("substance abuse", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("mobile device management", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("compensation and benefits", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("travel", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("inclement weather", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("remote work", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("conflict of interest", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("acceptable use", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("compensation", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("safety", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("relationships", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("skill discretion", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""),
+        new Viewpoint("prospects", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", "")
     );
+
     final HBox hb = new HBox();
  
     public static void main(String[] args) {
@@ -99,13 +100,12 @@ public class Main extends Application {
         stage.setWidth(960);
         stage.setHeight(720);
  
-        final Label label = new Label("10Core Morality Matrix");
+        final Label label = new Label("10Core Empathy Matrix, Train Trolley Problem Artificial Neural Network, JavaFX Complex Typography");
         label.setFont(new Font("Arial", 20));
  
         table.setEditable(true);
  
         TableColumn<Viewpoint, String> factorCol = new TableColumn<>("Factor");
-        //factorCol.setMinWidth(200);
         factorCol.setCellValueFactory(new PropertyValueFactory<>("factor"));
         factorCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
         factorCol.setOnEditCommit(
@@ -114,168 +114,277 @@ public class Main extends Application {
             }
         );
  
-        TableColumn<Viewpoint, String> cognitiveSalesCol = new TableColumn<>("Cognitive Sales");
-        //cognitiveSalesCol.setMinWidth(100);
-        cognitiveSalesCol.setCellValueFactory(new PropertyValueFactory<>("cognitive sales"));
-        cognitiveSalesCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        cognitiveSalesCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> executiveCognitionCol = new TableColumn<>("Executive Cognition");
+        executiveCognitionCol.setCellValueFactory(new PropertyValueFactory<>("executive cognition"));
+        executiveCognitionCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        executiveCognitionCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setCognitiveSales(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setExecutiveCognition(t.getNewValue());
             }
         );
  
-        TableColumn<Viewpoint, String> affectiveSalesCol = new TableColumn<>("Affective Sales");
-        //affectiveSalesCol.setMinWidth(100);
-        affectiveSalesCol.setCellValueFactory(new PropertyValueFactory<>("affective sales"));
-        affectiveSalesCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        affectiveSalesCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> executiveInstinctCol = new TableColumn<>("Executive Instinct");
+        executiveInstinct.setCellValueFactory(new PropertyValueFactory<>("executive instinct"));
+        executiveInstinct.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        executiveInstinct.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setAffectiveSales(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setExecutiveInstinct(t.getNewValue());
             }
         );
 
-        TableColumn<Viewpoint, String> instinctualSalesCol = new TableColumn<>("Instinctual Sales");
-        //instinctualSalesCol.setMinWidth(100);
-        instinctualSalesCol.setCellValueFactory(new PropertyValueFactory<>("instinctual sales"));
-        instinctualSalesCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        instinctualSalesCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> executiveAffectationCol = new TableColumn<>("Executive Affectation");
+        executiveAffectationCol.setCellValueFactory(new PropertyValueFactory<>("executive affectation"));
+        executiveAffectationCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        executiveAffectationCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setInstinctualSales(t.getNewValue());
-            }
-        );
- 
-        TableColumn<Viewpoint, String> miscellaneousSalesCol = new TableColumn<>("Miscellaneous Sales");
-        //miscellaneousSalesCol.setMinWidth(100);
-        miscellaneousSalesCol.setCellValueFactory(new PropertyValueFactory<>("miscellaneous sales"));
-        miscellaneousSalesCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        miscellaneousSalesCol.setOnEditCommit(
-            (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setMiscellaneousSales(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setExecutiveAffectation(t.getNewValue());
             }
         );
 
-        TableColumn<Viewpoint, String> cognitiveFinanceCol = new TableColumn<>("Cognitive Finance");
-        //cognitiveFinanceCol.setMinWidth(100);
-        cognitiveFinanceCol.setCellValueFactory(new PropertyValueFactory<>("cognitive finance"));
-        cognitiveFinanceCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        cognitiveFinanceCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> executiveRootCol = new TableColumn<>("Executive Root");
+        executiveRootCol.setCellValueFactory(new PropertyValueFactory<>("executive root"));
+        executiveRootCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        executiveRootCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setCognitiveFinance(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setExecutiveRoot(t.getNewValue());
             }
         );
  
-        TableColumn<Viewpoint, String> affectiveFinanceCol = new TableColumn<>("Affective Finance");
-        //affectiveFinanceCol.setMinWidth(100);
-        affectiveFinanceCol.setCellValueFactory(new PropertyValueFactory<>("affective finance"));
-        affectiveFinanceCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        affectiveFinanceCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> executiveSacralCol = new TableColumn<>("Executive Sacral");
+        executiveSacral.setCellValueFactory(new PropertyValueFactory<>("executive sacral"));
+        executiveSacral.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        executiveSacral.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setAffectiveFinance(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setExecutiveInstinct(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> executiveSolarPlexusCol = new TableColumn<>("Executive Solar Plexus");
+        executiveSolarPlexusCol.setCellValueFactory(new PropertyValueFactory<>("executive solar plexus"));
+        executiveSolarPlexusCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        executiveSolarPlexusCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setExecutiveSolarPlexus(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> executiveHeartCol = new TableColumn<>("Executive Heart");
+        executiveHeart.setCellValueFactory(new PropertyValueFactory<>("executive heart"));
+        executiveHeart.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        executiveHeart.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setExecutiveHeart(t.getNewValue());
             }
         );
 
-        TableColumn<Viewpoint, String> instinctualFinanceCol = new TableColumn<>("Instinctual Finance");
-        //instinctualFinanceCol.setMinWidth(100);
-        instinctualFinanceCol.setCellValueFactory(new PropertyValueFactory<>("instinctual finance"));
-        instinctualFinanceCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        instinctualFinanceCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> executiveThroatCol = new TableColumn<>("Executive Throat");
+        executiveThroatCol.setCellValueFactory(new PropertyValueFactory<>("executive throat"));
+        executiveThroatCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        executiveThroatCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setInstinctualFinance(t.getNewValue());
-            }
-        );
- 
-        TableColumn<Viewpoint, String> miscellaneousFinanceCol = new TableColumn<>("Miscellaneous Finance");
-        //miscellaneousFinanceCol.setMinWidth(100);
-        miscellaneousFinanceCol.setCellValueFactory(new PropertyValueFactory<>("miscellaneous finance"));
-        miscellaneousFinanceCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        miscellaneousFinanceCol.setOnEditCommit(
-            (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setMiscellaneousFinance(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setExecutiveThroat(t.getNewValue());
             }
         );
 
-        TableColumn<Viewpoint, String> cognitiveTechnologyCol = new TableColumn<>("Cognitive Technology");
-        //cognitiveTechnologyCol.setMinWidth(100);
-        cognitiveTechnologyCol.setCellValueFactory(new PropertyValueFactory<>("cognitive technology"));
-        cognitiveTechnologyCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        cognitiveTechnologyCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> executiveThirdEyeCol = new TableColumn<>("Executive Third Eye");
+        executiveThirdEyeCol.setCellValueFactory(new PropertyValueFactory<>("executive cognition"));
+        executiveThirdEyeCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        executiveThirdEyeCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setCognitiveTechnology(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setExecutiveThirdEye(t.getNewValue());
             }
         );
  
-        TableColumn<Viewpoint, String> affectiveTechnologyCol = new TableColumn<>("Affective Technology");
-        //affectiveTechnologyCol.setMinWidth(100);
-        affectiveTechnologyCol.setCellValueFactory(new PropertyValueFactory<>("affective technology"));
-        affectiveTechnologyCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        affectiveTechnologyCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> executiveCrownCol = new TableColumn<>("Executive Crown");
+        executiveCrown.setCellValueFactory(new PropertyValueFactory<>("executive crown"));
+        executiveCrown.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        executiveCrown.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setAffectiveTechnology(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setExecutiveCrown(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> salesFinanceCognitionCol = new TableColumn<>("Sales & Finance Cognition");
+        salesFinanceCognitionCol.setCellValueFactory(new PropertyValueFactory<>("sales finance cognition"));
+        salesFinanceCognitionCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        salesFinanceCognitionCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesFinanceCognition(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> salesFinanceInstinctCol = new TableColumn<>("Sales & Finance Instinct");
+        salesFinanceInstinct.setCellValueFactory(new PropertyValueFactory<>("executive instinct"));
+        salesFinanceInstinct.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        salesFinanceInstinct.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesFinanceInstinct(t.getNewValue());
             }
         );
 
-        TableColumn<Viewpoint, String> instinctualTechnologyCol = new TableColumn<>("Instinctual Technology");
-        //instinctualTechnologyCol.setMinWidth(100);
-        instinctualTechnologyCol.setCellValueFactory(new PropertyValueFactory<>("instinctual technology"));
-        instinctualTechnologyCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        instinctualTechnologyCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> salesFinanceAffectationCol = new TableColumn<>("Sales & Finance Affectation");
+        salesFinanceAffectationCol.setCellValueFactory(new PropertyValueFactory<>("sales finance affectation"));
+        salesFinanceAffectationCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        salesFinanceAffectationCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setInstinctualTechnology(t.getNewValue());
-            }
-        );
- 
-        TableColumn<Viewpoint, String> miscellaneousTechnologyCol = new TableColumn<>("Miscellaneous Technology");
-        //miscellaneousTechnologyCol.setMinWidth(100);
-        miscellaneousTechnologyCol.setCellValueFactory(new PropertyValueFactory<>("miscellaneous technology"));
-        miscellaneousTechnologyCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        miscellaneousTechnologyCol.setOnEditCommit(
-            (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setMiscellaneousTechnology(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesFinanceAffectation(t.getNewValue());
             }
         );
 
-        TableColumn<Viewpoint, String> cognitiveOperationsCol = new TableColumn<>("Cognitive Operations");
-        //cognitiveOperationsCol.setMinWidth(100);
-        cognitiveOperationsCol.setCellValueFactory(new PropertyValueFactory<>("cognitive operations"));
-        cognitiveOperationsCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        cognitiveOperationsCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> salesFinanceRootCol = new TableColumn<>("Sales & Finance Root");
+        salesFinanceCol.setCellValueFactory(new PropertyValueFactory<>("sales finance root"));
+        salesFinanceCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        salesFinanceCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setCognitiveOperations(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesFinanceRoot(t.getNewValue());
             }
         );
  
-        TableColumn<Viewpoint, String> affectiveOperationsCol = new TableColumn<>("Affective Operations");
-        //affectiveOperationsCol.setMinWidth(100);
-        affectiveOperationsCol.setCellValueFactory(new PropertyValueFactory<>("affective operations"));
-        affectiveOperationsCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        affectiveOperationsCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> salesFinanceSacralCol = new TableColumn<>("Sales & Finance Sacral");
+        salesFinanceSacral.setCellValueFactory(new PropertyValueFactory<>("executive sacral"));
+        salesFinanceSacral.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        salesFinanceSacral.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setAffectiveOperations(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesFinanceInstinct(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> salesFinanceSolarPlexusCol = new TableColumn<>("Sales & Finance Solar Plexus");
+        salesFinanceSolarPlexusCol.setCellValueFactory(new PropertyValueFactory<>("executive solar plexus"));
+        salesFinanceSolarPlexusCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        salesFinanceSolarPlexusCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesFinanceSolarPlexus(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> salesFinanceHeartCol = new TableColumn<>("Sales & Finance Heart");
+        salesFinanceHeart.setCellValueFactory(new PropertyValueFactory<>("executive heart"));
+        salesFinanceHeart.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        salesFinanceHeart.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesFinanceHeart(t.getNewValue());
             }
         );
 
-        TableColumn<Viewpoint, String> instinctualOperationsCol = new TableColumn<>("Instinctual Operations");
-        //instinctualOperationsCol.setMinWidth(100);
-        instinctualOperationsCol.setCellValueFactory(new PropertyValueFactory<>("instinctual operations"));
-        instinctualOperationsCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
-        instinctualOperationsCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> salesFinanceThroatCol = new TableColumn<>("Sales & Finance Throat");
+        salesFinanceThroatCol.setCellValueFactory(new PropertyValueFactory<>("Sales & Finance throat"));
+        salesFinanceThroatCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        salesFinanceThroatCol.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setInstinctualOperations(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setsalesFinanceThroat(t.getNewValue());
+            }
+        );
+
+        TableColumn<Viewpoint, String> salesFinanceThirdEyeCol = new TableColumn<>("Sales & Finance Third Eye");
+        executiveThirdEyeCol.setCellValueFactory(new PropertyValueFactory<>("sales finance third eye"));
+        executiveThirdEyeCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        executiveThirdEyeCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setSalesFinanceThirdEye(t.getNewValue());
             }
         );
  
-        TableColumn<Viewpoint, String> miscellaneousOperationsCol = new TableColumn<>("Miscellaneous Operations");
-        //miscellaneousOperationsCol.setMinWidth(100);
-        miscellaneousOperationsCol.setCellValueFactory(new PropertyValueFactory<>("miscellaneous operations"));
-        miscellaneousOperationsCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
-        miscellaneousOperationsCol.setOnEditCommit(
+        TableColumn<Viewpoint, String> salesFinanceCrownCol = new TableColumn<>("Sales & Finance Crown");
+        salesFinanceCrown.setCellValueFactory(new PropertyValueFactory<>("executive crown"));
+        salesFinanceCrown.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        salesFinanceCrown.setOnEditCommit(
             (CellEditEvent<Viewpoint, String> t) -> {
-                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setMiscellaneousOperations(t.getNewValue());
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setsalesFinanceCrown(t.getNewValue());
+            }
+        );
+
+        TableColumn<Viewpoint, String> operationsTechnologyCognitionCol = new TableColumn<>("Operations & Technology Cognition");
+        operationsTechnologyCognitionCol.setCellValueFactory(new PropertyValueFactory<>("operations technology cognition"));
+        operationsTechnologyCognitionCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        operationsTechnologyCognitionCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsTechnologyCognition(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> operationsTechnologyInstinctCol = new TableColumn<>("Operations & Technology Instinct");
+        operationsTechnologyInstinct.setCellValueFactory(new PropertyValueFactory<>("operations technology instinct"));
+        operationsTechnologyInstinct.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        operationsTechnologyInstinct.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsTechnologyInstinct(t.getNewValue());
+            }
+        );
+
+        TableColumn<Viewpoint, String> operationsTechnologyAffectationCol = new TableColumn<>("Operations & Technology Affectation");
+        operationsTechnologyCol.setCellValueFactory(new PropertyValueFactory<>("executive affectation"));
+        operationsTechnologyCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        operationsTechnologyCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsTechnologyAffectation(t.getNewValue());
+            }
+        );
+
+        TableColumn<Viewpoint, String> operationsTechnologyRootCol = new TableColumn<>("Operations & Technology Root");
+        operationsTechnologyRootCol.setCellValueFactory(new PropertyValueFactory<>("executive root"));
+        operationsTechnologyRootCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        operationsTechnologyRootCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setExecutiveRoot(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> operationsTechnologySacralCol = new TableColumn<>("Operations & Technology Sacral");
+        operationsTechnologySacral.setCellValueFactory(new PropertyValueFactory<>("operations technology sacral"));
+        operationsTechnologySacral.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        operationsTechnologySacral.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsTechnologyInstinct(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> operationsTechnologySolarPlexusCol = new TableColumn<>("Operations & Technology Solar Plexus");
+        operationsTechnologySolarPlexusCol.setCellValueFactory(new PropertyValueFactory<>("operations technology solar plexus"));
+        operationsTechnologySolarPlexusCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        operationsTechnologySolarPlexusCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsTechnologySolarPlexus(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> operationsTechnologyHeartCol = new TableColumn<>("Operations & Technology Heart");
+        operationsTechnologyHeart.setCellValueFactory(new PropertyValueFactory<>("operations technology heart"));
+        operationsTechnologyHeart.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        operationsTechnologyHeart.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsTechnologyHeart(t.getNewValue());
+            }
+        );
+
+        TableColumn<Viewpoint, String> operationsTechnologyThroatCol = new TableColumn<>("Operations & Technology Throat");
+        operationsTechnologyThroatCol.setCellValueFactory(new PropertyValueFactory<>("operations technology throat"));
+        operationsTechnologyThroatCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        operationsTechnologyThroatCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsTechnologyThroat(t.getNewValue());
+            }
+        );
+
+        TableColumn<Viewpoint, String> operationsTechnologyThirdEyeCol = new TableColumn<>("Operations & Technology Third Eye");
+        operationsTechnologyThirdEyeCol.setCellValueFactory(new PropertyValueFactory<>("operations technology cognition"));
+        operationsTechnologyThirdEyeCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());
+        operationsTechnologyThirdEyeCol.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsTechnologyThirdEye(t.getNewValue());
+            }
+        );
+ 
+        TableColumn<Viewpoint, String> operationsTechnologyCrownCol = new TableColumn<>("Operations & Technology Crown");
+        operationsTechnologyCrown.setCellValueFactory(new PropertyValueFactory<>("operations technology crown"));
+        operationsTechnologyCrown.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
+        operationsTechnologyCrown.setOnEditCommit(
+            (CellEditEvent<Viewpoint, String> t) -> {
+                ((Viewpoint) t.getTableView().getItems().get(t.getTablePosition().getRow())).setOperationsTechnologyCrown(t.getNewValue());
             }
         );
      
         TableColumn<Viewpoint, String> valueCol = new TableColumn<>("Portion (%)");
-        //valueCol.setMinWidth(100);
         valueCol.setCellValueFactory(new PropertyValueFactory<>("value"));
         valueCol.setCellFactory(TextFieldTableCell.<Viewpoint>forTableColumn());       
         valueCol.setOnEditCommit(
@@ -305,7 +414,13 @@ public class Main extends Application {
         );
  
         table.setItems(data);
-        table.getColumns().addAll(factorCol, cognitiveSalesCol, affectiveSalesCol, instinctualSalesCol, miscellaneousSalesCol, cognitiveFinanceCol, affectiveFinanceCol, instinctualFinanceCol, miscellaneousFinanceCol, cognitiveTechnologyCol, affectiveTechnologyCol, instinctualTechnologyCol, miscellaneousTechnologyCol, cognitiveOperationsCol, affectiveOperationsCol, instinctualOperationsCol, miscellaneousOperationsCol, valueCol, antiCol, proCol);
+        table.getColumns().addAll(
+            factorCol, 
+            executiveCognitionCol, executiveInstinctCol, executiveAffectationCol, executiveRootCol, executiveSacralCol, executiveSolarPlexusCol, executiveHeartCol, executiveThroatCol, executiveThirdEyeCol, executiveCrownCol, 
+            salesFinanceCognitionCol, salesFinanceInstinctCol, salesFinanceAffectationCol, salesFinanceRootCol, salesFinanceSacralCol, salesFinanceSolarPlexusCol, salesFinanceHeartCol, salesFinanceThroatCol, salesFinanceThirdEyeCol, salesFinanceCrownCol, 
+            operationsTechnologyCognitionCol, operationsTechnologyInstinctCol, operationsTechnologyAffectationCol, operationsTechnologyRootCol, operationsTechnologySacralCol, operationsTechnologySolarPlexusCol, operationsTechnologyHeartCol, operationsTechnologyThroatCol, operationsTechnologyThirdEyeCol, operationsTechnologyCrownCol, 
+            valueCol, antiCol, proCol
+        );
  
         final TextField addFactor = new TextField();
         addFactor.setPromptText("Factor");
@@ -314,26 +429,7 @@ public class Main extends Application {
         final Button addButton = new Button("Add");
         addButton.setOnAction((ActionEvent e) -> {
             data.add(new Viewpoint(
-                addFactor.getText(),
-                "5",
-                "5",
-                "5",
-                "5",
-                "5",
-                "5",
-                "5",
-                "5",
-                "5",
-                "5",
-                "5",
-                "5",
-                "5",
-                "5",
-                "5",
-                "5",
-                "0",
-                "",
-                ""
+                addFactor.getText(), "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "0", "", ""
             ));
             addFactor.clear();
         });
@@ -342,38 +438,21 @@ public class Main extends Application {
         calculateButton.setOnAction((ActionEvent e) -> {
             Double[] weights = new Double[26];
             Double total = 0.00;
-            Viewpoint viewpoint = new Viewpoint("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "");
+            Viewpoint viewpoint = new Viewpoint("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "");
             for(int i=0; i<table.getItems().size(); i++) {
                 viewpoint = table.getItems().get(i);
-                Double weight = (Double.parseDouble(viewpoint.cognitiveSales.get())+Double.parseDouble(viewpoint.affectiveSales.get()));
-                weight += (Double.parseDouble(viewpoint.instinctualSales.get())+Double.parseDouble(viewpoint.miscellaneousSales.get()));
-                weight += (Double.parseDouble(viewpoint.cognitiveFinance.get())+Double.parseDouble(viewpoint.affectiveFinance.get()));
-                weight += (Double.parseDouble(viewpoint.instinctualFinance.get())+Double.parseDouble(viewpoint.miscellaneousFinance.get()));
-                weight += (Double.parseDouble(viewpoint.cognitiveTechnology.get())+Double.parseDouble(viewpoint.affectiveTechnology.get()));
-                weight += (Double.parseDouble(viewpoint.instinctualTechnology.get())+Double.parseDouble(viewpoint.miscellaneousTechnology.get()));
-                weight += (Double.parseDouble(viewpoint.cognitiveOperations.get())+Double.parseDouble(viewpoint.affectiveOperations.get()));
-                weight += (Double.parseDouble(viewpoint.instinctualOperations.get())+Double.parseDouble(viewpoint.miscellaneousOperations.get()));
+
+                Double weight = Double.parseDouble(viewpoint.executiveCognitionCol.get())+Double.parseDouble(viewpoint.executiveInstinctCol.get())+Double.parseDouble(viewpoint.executiveAffectationCol.get())+Double.parseDouble(viewpoint.executiveRootCol.get())+Double.parseDouble(viewpoint.executiveSacralCol.get())+Double.parseDouble(viewpoint.executiveSolarPlexusCol.get())+Double.parseDouble(viewpoint.executiveHeartCol.get())+Double.parseDouble(viewpoint.executiveThroatCol.get())+Double.parseDouble(viewpoint.executiveThirdEyeCol.get())+Double.parseDouble(viewpoint.executiveCrownCol.get());
+                weight += Double.parseDouble(viewpoint.salesFinanceCognitionCol.get())+Double.parseDouble(viewpoint.salesFinanceInstinctCol.get())+Double.parseDouble(viewpoint.salesFinanceAffectationCol.get())+Double.parseDouble(viewpoint.salesFinanceRootCol.get())+Double.parseDouble(viewpoint.salesFinanceSacralCol.get())+Double.parseDouble(viewpoint.salesFinanceSolarPlexusCol.get())+Double.parseDouble(viewpoint.salesFinanceHeartCol.get())+Double.parseDouble(viewpoint.salesFinanceThroatCol.get())+Double.parseDouble(viewpoint.salesFinanceThirdEyeCol.get())+Double.parseDouble(viewpoint.salesFinanceCrownCol.get());
+                weight += Double.parseDouble(viewpoint.operationsTechnologyCognitionCol.get())+Double.parseDouble(viewpoint.operationsTechnologyInstinctCol.get())+Double.parseDouble(viewpoint.operationsTechnologyAffectationCol.get())+Double.parseDouble(viewpoint.operationsTechnologyRootCol.get())+Double.parseDouble(viewpoint.operationsTechnologySacralCol.get())+Double.parseDouble(viewpoint.operationsTechnologySolarPlexusCol.get())+Double.parseDouble(viewpoint.operationsTechnologyHeartCol.get())+Double.parseDouble(viewpoint.operationsTechnologyThroatCol.get())+Double.parseDouble(viewpoint.operationsTechnologyThirdEyeCol.get())+Double.parseDouble(viewpoint.operationsTechnologyCrownCol.get()); 
                 weights[i] = weight;
                 total += weight;
             }
             Viewpoint row = new Viewpoint(
                 viewpoint.factor.get(), 
-                viewpoint.cognitiveSales.get(), 
-                viewpoint.affectiveSales.get(), 
-                viewpoint.instinctualSales.get(),
-                viewpoint.miscellaneousSales.get(),
-                viewpoint.cognitiveFinance.get(), 
-                viewpoint.affectiveFinance.get(), 
-                viewpoint.instinctualFinance.get(),
-                viewpoint.miscellaneousFinance.get(),
-                viewpoint.cognitiveTechnology.get(), 
-                viewpoint.affectiveTechnology.get(), 
-                viewpoint.instinctualTechnology.get(),
-                viewpoint.miscellaneousTechnology.get(),
-                viewpoint.cognitiveOperations.get(), 
-                viewpoint.affectiveOperations.get(), 
-                viewpoint.instinctualOperations.get(),
-                viewpoint.miscellaneousOperations.get(),
+                viewpoint.executiveCognitionCol.get(), viewpoint.executiveInstinctCol.get(), viewpoint.executiveAffectationCol.get(), viewpoint.executiveRootCol.get(), viewpoint.executiveSacralCol.get(), viewpoint.executiveSolarPlexusCol.get(), viewpoint.executiveHeartCol.get(), viewpoint.executiveThroatCol.get(), viewpoint.executiveThirdEyeCol.get(), viewpoint.executiveCrownCol.get(),
+                viewpoint.salesFinanceCognitionCol.get(), viewpoint.salesFinanceInstinctCol.get(), viewpoint.salesFinanceAffectationCol.get(), viewpoint.salesFinanceRootCol.get(), viewpoint.salesFinanceSacralCol.get(), viewpoint.salesFinanceSolarPlexusCol.get(), viewpoint.salesFinanceHeartCol.get(), viewpoint.salesFinanceThroatCol.get(), viewpoint.salesFinanceThirdEyeCol.get(), viewpoint.salesFinanceCrownCol.get(),
+                viewpoint.operationsTechnologyCognitionCol.get(), viewpoint.operationsTechnologyInstinctCol.get(), viewpoint.operationsTechnologyAffectationCol.get(), viewpoint.operationsTechnologyRootCol.get(), viewpoint.operationsTechnologySacralCol.get(), viewpoint.operationsTechnologySolarPlexusCol.get(), viewpoint.operationsTechnologyHeartCol.get(), viewpoint.operationsTechnologyThroatCol.get(), viewpoint.operationsTechnologyThirdEyeCol.get(), viewpoint.operationsTechnologyCrownCol.get(),
                 String.valueOf(0.00), 
                 viewpoint.anti.get(),
                 viewpoint.pro.get()
@@ -381,22 +460,9 @@ public class Main extends Application {
             for(int i=0; i<table.getItems().size(); i++) {
                  row = new Viewpoint(
                     viewpoint.factor.get(), 
-                    viewpoint.cognitiveSales.get(), 
-                    viewpoint.affectiveSales.get(), 
-                    viewpoint.instinctualSales.get(),
-                    viewpoint.miscellaneousSales.get(),
-                    viewpoint.cognitiveFinance.get(), 
-                    viewpoint.affectiveFinance.get(), 
-                    viewpoint.instinctualFinance.get(),
-                    viewpoint.miscellaneousFinance.get(),
-                    viewpoint.cognitiveTechnology.get(), 
-                    viewpoint.affectiveTechnology.get(), 
-                    viewpoint.instinctualTechnology.get(),
-                    viewpoint.miscellaneousTechnology.get(),
-                    viewpoint.cognitiveOperations.get(), 
-                    viewpoint.affectiveOperations.get(), 
-                    viewpoint.instinctualOperations.get(),
-                    viewpoint.miscellaneousOperations.get(),
+                    viewpoint.executiveCognitionCol.get(), viewpoint.executiveInstinctCol.get(), viewpoint.executiveAffectationCol.get(), viewpoint.executiveRootCol.get(), viewpoint.executiveSacralCol.get(), viewpoint.executiveSolarPlexusCol.get(), viewpoint.executiveHeartCol.get(), viewpoint.executiveThroatCol.get(), viewpoint.executiveThirdEyeCol.get(), viewpoint.executiveCrownCol.get(),
+                    viewpoint.salesFinanceCognitionCol.get(), viewpoint.salesFinanceInstinctCol.get(), viewpoint.salesFinanceAffectationCol.get(), viewpoint.salesFinanceRootCol.get(), viewpoint.salesFinanceSacralCol.get(), viewpoint.salesFinanceSolarPlexusCol.get(), viewpoint.salesFinanceHeartCol.get(), viewpoint.salesFinanceThroatCol.get(), viewpoint.salesFinanceThirdEyeCol.get(), viewpoint.salesFinanceCrownCol.get(),
+                    viewpoint.operationsTechnologyCognitionCol.get(), viewpoint.operationsTechnologyInstinctCol.get(), viewpoint.operationsTechnologyAffectationCol.get(), viewpoint.operationsTechnologyRootCol.get(), viewpoint.operationsTechnologySacralCol.get(), viewpoint.operationsTechnologySolarPlexusCol.get(), viewpoint.operationsTechnologyHeartCol.get(), viewpoint.operationsTechnologyThroatCol.get(), viewpoint.operationsTechnologyThirdEyeCol.get(), viewpoint.operationsTechnologyCrownCol.get(),
                     String.valueOf(100*weights[i]/total), 
                     viewpoint.anti.get(),
                     viewpoint.pro.get()
@@ -404,19 +470,19 @@ public class Main extends Application {
                 table.getItems().set(i, row);
             }
             
-            Viewpoint viewpointTwo = new Viewpoint("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "");
+            Viewpoint viewpointTwo = new Viewpoint("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "");
             for(int i=0; i<table.getItems().size(); i++) {
                 viewpointTwo = table.getItems().get(i);
-                //int anti = findMin(viewpointTwo.cognitiveSales.get(), viewpointTwo.affectiveSales.get(), viewpointTwo.instinctualSales.get(), viewpointTwo.miscellaneousSales.get(), viewpointTwo.cognitiveFinance.get(), viewpointTwo.affectiveFinance.get(), viewpointTwo.instinctualFinance.get(), viewpointTwo.miscellaneousFinance.get(), viewpointTwo.cognitiveTechnology.get(), viewpointTwo.affectiveTechnology.get(), viewpointTwo.instinctualTechnology.get(), viewpointTwo.miscellaneousTechnology.get(), viewpointTwo.cognitiveOperations.get(), viewpointTwo.affectiveOperations.get(), viewpointTwo.instinctualOperations.get(), viewpointTwo.miscellaneousOperations.get());
-                //int pro = findMax(viewpointTwo.cognitiveSales.get(), viewpointTwo.affectiveSales.get(), viewpointTwo.instinctualSales.get(), viewpointTwo.miscellaneousSales.get(), viewpointTwo.cognitiveFinance.get(), viewpointTwo.affectiveFinance.get(), viewpointTwo.instinctualFinance.get(), viewpointTwo.miscellaneousFinance.get(), viewpointTwo.cognitiveTechnology.get(), viewpointTwo.affectiveTechnology.get(), viewpointTwo.instinctualTechnology.get(), viewpointTwo.miscellaneousTechnology.get(), viewpointTwo.cognitiveOperations.get(), viewpointTwo.affectiveOperations.get(), viewpointTwo.instinctualOperations.get(), viewpointTwo.miscellaneousOperations.get());
-                String[] values = {"Cognitive", "Affective", "Instinctual", "Miscellaneous"};
+                //int anti = findMin();
+                //int pro = findMax();
+                String[] values = {"Cognition", "Instinct", "Affectation"};
                 viewpointTwo.setAnti(values[(/*anti*/0%4)]);
                 viewpointTwo.setPro(values[(/*pro*/0%4)]);
             }           
         });
 
         //typeface/hierarchy/contrast/consistency/alignment/blankspace/color
-        TextArea paragraph = new TextArea("Business modalities may be composed of the following business models: servitisation, platform, social, employee, partner, value, innovation, data, savvy. The overall allocation of resources could be conceived as a long-term survival train trolley problem. In terms of chemical coring, this is considered similar to political coring; the last 2 columns are for coring. Complex typography conversion may allow for many runs to become similar to an encyclopedia.");
+        TextArea paragraph = new TextArea("The overall allocation of resources could be conceived as a long-term survival train trolley problem. In terms of chemical coring, this is considered similar to political coring; the last 2 columns are for coring. Complex typography conversion may allow for many runs to become similar to an encyclopedia.");
         paragraph.setWrapText(true);
 
         hb.getChildren().addAll(addFactor, addButton, calculateButton);
@@ -436,44 +502,72 @@ public class Main extends Application {
     public static class Viewpoint {
  
         protected final SimpleStringProperty factor;
-        protected final SimpleStringProperty cognitiveSales;
-        protected final SimpleStringProperty affectiveSales;
-        protected final SimpleStringProperty instinctualSales;
-        protected final SimpleStringProperty miscellaneousSales;
-        protected final SimpleStringProperty cognitiveFinance;
-        protected final SimpleStringProperty affectiveFinance;
-        protected final SimpleStringProperty instinctualFinance;
-        protected final SimpleStringProperty miscellaneousFinance;
-        protected final SimpleStringProperty cognitiveTechnology;
-        protected final SimpleStringProperty affectiveTechnology;
-        protected final SimpleStringProperty instinctualTechnology;
-        protected final SimpleStringProperty miscellaneousTechnology;
-        protected final SimpleStringProperty cognitiveOperations;
-        protected final SimpleStringProperty affectiveOperations;
-        protected final SimpleStringProperty instinctualOperations;
-        protected final SimpleStringProperty miscellaneousOperations;
+        protected final SimpleStringProperty executiveCognitionCol;
+        protected final SimpleStringProperty executiveInstinctCol;
+        protected final SimpleStringProperty executiveAffectationCol;
+        protected final SimpleStringProperty executiveRootCol;
+        protected final SimpleStringProperty executiveSacralCol;
+        protected final SimpleStringProperty executiveSolarPlexusCol;
+        protected final SimpleStringProperty executiveHeartCol;
+        protected final SimpleStringProperty executiveThroatCol;
+        protected final SimpleStringProperty executiveThirdEyeCol;
+        protected final SimpleStringProperty executiveCrownCol;
+        protected final SimpleStringProperty salesFinanceCognitionCol;
+        protected final SimpleStringProperty salesFinanceInstinctCol;
+        protected final SimpleStringProperty salesFinanceAffectationCol;
+        protected final SimpleStringProperty salesFinanceRootCol;
+        protected final SimpleStringProperty salesFinanceSacralCol;
+        protected final SimpleStringProperty salesFinanceSolarPlexusCol;
+        protected final SimpleStringProperty salesFinanceHeartCol;
+        protected final SimpleStringProperty salesFinanceThroatCol;
+        protected final SimpleStringProperty salesFinanceThirdEyeCol;
+        protected final SimpleStringProperty salesFinanceCrownCol;
+        protected final SimpleStringProperty operationsTechnologyCognitionCol;
+        protected final SimpleStringProperty operationsTechnologyInstinctCol;
+        protected final SimpleStringProperty operationsTechnologyAffectationCol;
+        protected final SimpleStringProperty operationsTechnologyRootCol;
+        protected final SimpleStringProperty operationsTechnologySacralCol;
+        protected final SimpleStringProperty operationsTechnologySolarPlexusCol;
+        protected final SimpleStringProperty operationsTechnologyHeartCol;
+        protected final SimpleStringProperty operationsTechnologyThroatCol;
+        protected final SimpleStringProperty operationsTechnologyThirdEyeCol;
+        protected final SimpleStringProperty operationsTechnologyCrownCol;
         protected final SimpleStringProperty value;
         protected final SimpleStringProperty anti;
         protected final SimpleStringProperty pro;
  
-        public Viewpoint(String factor, String cognitiveSales, String affectiveSales, String instinctualSales, String miscellaneousSales, String cognitiveFinance, String affectiveFinance, String instinctualFinance, String miscellaneousFinance, String cognitiveTechnology, String affectiveTechnology, String instinctualTechnology, String miscellaneousTechnology, String cognitiveOperations, String affectiveOperations, String instinctualOperations, String miscellaneousOperations, String value, String anti, String pro) {
+        public Viewpoint(String factor, String executiveCognitionCol, String executiveInstinctCol, String executiveAffectationCol, String executiveRootCol, String executiveSacralCol, String executiveSolarPlexusCol, String executiveHeartCol, String executiveThroatCol, String executiveThirdEyeCol, String executiveCrownCol, String salesFinanceCognitionCol, String salesFinanceInstinctCol, String salesFinanceAffectationCol, String salesFinanceRootCol, String salesFinanceSacralCol, String salesFinanceSolarPlexusCol, String salesFinanceHeartCol, String salesFinanceThroatCol, String salesFinanceThirdEyeCol, String salesFinanceCrownCol, String operationsTechnologyCognitionCol, String operationsTechnologyInstinctCol, String operationsTechnologyAffectationCol, String operationsTechnologyRootCol, String operationsTechnologySacralCol, String operationsTechnologySolarPlexusCol, String operationsTechnologyHeartCol, String operationsTechnologyThroatCol, String operationsTechnologyThirdEyeCol, String operationsTechnologyCrownCol, String value, String anti, String pro) {
             this.factor = new SimpleStringProperty(factor);
-            this.cognitiveSales = new SimpleStringProperty(cognitiveSales);
-            this.affectiveSales = new SimpleStringProperty(affectiveSales);
-            this.instinctualSales = new SimpleStringProperty(instinctualSales);
-            this.miscellaneousSales = new SimpleStringProperty(miscellaneousSales);
-            this.cognitiveFinance = new SimpleStringProperty(cognitiveFinance);
-            this.affectiveFinance = new SimpleStringProperty(affectiveFinance);
-            this.instinctualFinance = new SimpleStringProperty(instinctualFinance);
-            this.miscellaneousFinance = new SimpleStringProperty(miscellaneousFinance);
-            this.cognitiveTechnology = new SimpleStringProperty(cognitiveTechnology);
-            this.affectiveTechnology = new SimpleStringProperty(affectiveTechnology);
-            this.instinctualTechnology = new SimpleStringProperty(instinctualTechnology);
-            this.miscellaneousTechnology = new SimpleStringProperty(miscellaneousTechnology);
-            this.cognitiveOperations = new SimpleStringProperty(cognitiveOperations);
-            this.affectiveOperations = new SimpleStringProperty(affectiveOperations);
-            this.instinctualOperations = new SimpleStringProperty(instinctualOperations);
-            this.miscellaneousOperations = new SimpleStringProperty(miscellaneousOperations);
+            this.executiveCognitionCol = new SimpleStringProperty(executiveCognitionCol);
+            this.executiveInstinctCol = new SimpleStringProperty(executiveInstinctCol);
+            this.executiveAffectationCol = new SimpleStringProperty(executiveAffectationCol);
+            this.executiveRootCol = new SimpleStringProperty(executiveRootCol);
+            this.executiveSacralCol = new SimpleStringProperty(executiveSacralCol);
+            this.executiveSolarPlexusCol = new SimpleStringProperty(executiveSolarPlexusCol);
+            this.executiveHeartCol = new SimpleStringProperty(executiveHeartCol);
+            this.executiveThroatCol = new SimpleStringProperty(executiveThroatCol);
+            this.executiveThirdEyeCol = new SimpleStringProperty(executiveThirdEyeCol);
+            this.executiveCrownCol = new SimpleStringProperty(executiveCrownCol);
+            this.salesFinanceCognitionCol = new SimpleStringProperty(salesFinanceCognitionCol);
+            this.salesFinanceInstinctCol = new SimpleStringProperty(salesFinanceInstinctCol);
+            this.salesFinanceAffectationCol = new SimpleStringProperty(salesFinanceAffectationCol);
+            this.salesFinanceRootCol = new SimpleStringProperty(salesFinanceRootCol);
+            this.salesFinanceSacralCol = new SimpleStringProperty(salesFinanceSacralCol);
+            this.salesFinanceSolarPlexusCol = new SimpleStringProperty(salesFinanceSolarPlexusCol);
+            this.salesFinanceHeartCol = new SimpleStringProperty(salesFinanceHeartCol);
+            this.salesFinanceThroatCol = new SimpleStringProperty(salesFinanceThroatCol);
+            this.salesFinanceThirdEyeCol = new SimpleStringProperty(salesFinanceThirdEyeCol);
+            this.salesFinanceCrownCol = new SimpleStringProperty(salesFinanceCrownCol);
+            this.operationsTechnologyCognitionCol = new SimpleStringProperty(operationsTechnologyCognitionCol);
+            this.operationsTechnologyInstinctCol = new SimpleStringProperty(operationsTechnologyInstinctCol);
+            this.operationsTechnologyAffectationCol = new SimpleStringProperty(operationsTechnologyAffectationCol);
+            this.operationsTechnologyRootCol = new SimpleStringProperty(operationsTechnologyRootCol);
+            this.operationsTechnologySacralCol = new SimpleStringProperty(operationsTechnologySacralCol);
+            this.operationsTechnologySolarPlexusCol = new SimpleStringProperty(operationsTechnologySolarPlexusCol);
+            this.operationsTechnologyHeartCol = new SimpleStringProperty(operationsTechnologyHeartCol);
+            this.operationsTechnologyThroatCol = new SimpleStringProperty(operationsTechnologyThroatCol);
+            this.operationsTechnologyThirdEyeCol = new SimpleStringProperty(operationsTechnologyThirdEyeCol);
+            this.operationsTechnologyCrownCol = new SimpleStringProperty(operationsTechnologyCrownCol);
             this.value = new SimpleStringProperty(value);
             this.anti = new SimpleStringProperty(anti);
             this.pro = new SimpleStringProperty(pro);
@@ -485,117 +579,215 @@ public class Main extends Application {
         public void setFactor(String factor) {
             this.factor.set(factor);
         }
-
-        public String getCognitiveSales() {
-            return cognitiveSales.get();
+            
+        public String getExecutiveCognitionCol() {
+            return executiveCognitionCol.get();
         }
-        public void setCognitiveSales(String cognitiveSales) {
-            this.cognitiveSales.set(cognitiveSales);
-        }
- 
-        public String getAffectiveSales() {
-            return affectiveSales.get();
-        }
-        public void setAffectiveSales(String affectiveSales) {
-            this.affectiveSales.set(affectiveSales);
+        public void setExecutiveCognitionCol(String executiveCognitionCol) {
+            this.executiveCognitionCol.set(executiveCognitionCol);
         }
 
-        public String getInstinctualSales() {
-            return instinctualSales.get();
+        public String getExecutiveInstinctCol() {
+            return executiveInstinctCol.get();
         }
-        public void setInstinctualSales(String instinctualSales) {
-            this.instinctualSales.set(instinctualSales);
-        }
-
-        public String getMiscellaneousSales() {
-            return miscellaneousSales.get();
-        }
-        public void setMiscellaneousSales(String miscellaneousSales) {
-            this.miscellaneousSales.set(miscellaneousSales);
+        public void setExecutiveInstinctCol(String executiveInstinctCol) {
+            this.executiveInstinctCol.set(executiveInstinctCol);
         }
 
-        public String getCognitiveFinance() {
-            return cognitiveFinance.get();
+        public String getExecutiveAffectationCol() {
+            return executiveAffectationCol.get(executiveAffectationCol);
         }
-        public void setCognitiveFinance(String cognitiveFinance) {
-            this.cognitiveFinance.set(cognitiveFinance);
-        }
- 
-        public String getAffectiveFinance() {
-            return affectiveFinance.get();
-        }
-        public void setAffectiveFinance(String affectiveFinance) {
-            this.affectiveFinance.set(affectiveFinance);
+        public void setExecutiveAffectationCol(String executiveAffectationCol) {
+            this.executiveAffectationCol.set(executiveAffectationCol);
         }
 
-        public String getInstinctualFinance() {
-            return instinctualFinance.get();
+        public String getExecutiveRootCol() {
+            return executiveRootCol.get();
         }
-        public void setInstinctualFinance(String instinctualFinance) {
-            this.instinctualFinance.set(instinctualFinance);
-        }
-
-        public String getMiscellaneousFinance() {
-            return miscellaneousFinance.get();
-        } 
-        public void setMiscellaneousFinance(String miscellaneousFinance) {
-            this.miscellaneousFinance.set(miscellaneousFinance);
+        public void setExecutiveRootCol(String executiveRootCol) {
+            this.executiveRootCol.set(executiveRootCol);
         }
 
-        public String getCognitiveTechnology() {
-            return cognitiveTechnology.get();
-        } 
-        public void setCognitiveTechnology(String cognitiveTechnology) {
-            this.cognitiveTechnology.set(cognitiveTechnology);
+        public String getExecutiveSacralCol() {
+            return executiveSacralCol.get();
         }
- 
-        public String getAffectiveTechnology() {
-            return affectiveTechnology.get();
-        }
-        public void setAffectiveTechnology(String affectiveTechnology) {
-            this.affectiveTechnology.set(affectiveTechnology);
+        public void setExecutiveSacralCol(String executiveSacralCol) {
+            this.executiveSacralCol.set(executiveSacralCol);
         }
 
-        public String getInstinctualTechnology() {
-            return instinctualTechnology.get();
+        public String getExecutiveSolarPlexusCol() {
+            return executiveSolarPlexusCol.get();
         }
-        public void setInstinctualTechnology(String instinctualTechnology) {
-            this.instinctualTechnology.set(instinctualTechnology);
-        }
-
-        public String getMiscellaneousTechnology() {
-            return miscellaneousTechnology.get();
-        }
-        public void setMiscellaneousTechnology(String miscellaneousTechnology) {
-            this.miscellaneousTechnology.set(miscellaneousTechnology);
+        public void setExecutiveSolarPlexusCol(String executiveSolarPlexusCol) {
+            this.executiveSolarPlexusCol.set(executiveSolarPlexusCol);
         }
 
-        public String getCognitiveOperations() {
-            return cognitiveOperations.get();
+        public String getExecutiveHeartCol() {
+            return executiveHeartCol.get();
         }
-        public void setCognitiveOperations(String cognitiveOperations) {
-            this.cognitiveOperations.set(cognitiveOperations);
-        }
- 
-        public String getAffectiveOperations() {
-            return affectiveOperations.get();
-        }
-        public void setAffectiveOperations(String affectiveOperations) {
-            this.affectiveOperations.set(affectiveOperations);
+        public void setExecutiveHeartCol(String executiveHeartCol) {
+            this.executiveHeartCol.set(executiveHeartCol);
         }
 
-        public String getInstinctualOperations() {
-            return instinctualOperations.get();
+        public String getExecutiveThroatCol() {
+            return executiveThroatCol.get();
         }
-        public void setInstinctualOperations(String instinctualOperations) {
-            this.instinctualOperations.set(instinctualOperations);
+        public void setExecutiveThroatCol(String executiveThroatCol) {
+            this.executiveThroatCol.set();
         }
 
-        public String getMiscellaneousOperations() {
-            return miscellaneousOperations.get();
+        public String getExecutiveThirdEyeCol() {
+            return executiveThirdEyeCol.get();
         }
-        public void setMiscellaneousOperations(String miscellaneousOperations) {
-            this.miscellaneousOperations.set(miscellaneousOperations);
+        public void setExecutiveThirdEyeCol(String executiveThirdEyeCol) {
+            this.executiveThirdEyeCol.set(executiveThirdEyeCol);
+        }
+
+        public String getExecutiveCrownCol() {
+            return executiveCrownCol.get();
+        }
+        public void setExecutiveCrownCol(String executiveCrownCol) {
+            this.executiveCrownCol.set(executiveCrownCol);
+        }
+
+        public String getSalesFinanceCognitionCol() {
+            return salesFinanceCognitionCol.get();
+        }
+        public void setSalesFinanceCognitionCol(String salesFinanceCognitionCol) {
+            this.salesFinanceCognitionCol.set(salesFinanceCognitionCol);
+        }
+
+        public String getSalesFinanceInstinctCol() {
+            return salesFinanceInstinctCol.get();
+        }
+        public void setSalesFinanceInstinctCol(String salesFinanceInstinctCol) {
+            this.salesFinanceInstinctCol.set(salesFinanceInstinctCol);
+        }
+
+        public String getSalesFinanceAffectationCol() {
+            return salesFinanceAffectationCol.get();
+        }
+        public void setSalesFinanceAffectationCol(String salesFinanceAffectationCol) {
+            this.salesFinanceAffectationCol.set(salesFinanceAffectationCol);
+        }
+
+        public String getSalesFinanceRootCol() {
+            return salesFinanceRootCol.get();
+        }
+        public void setSalesFinanceRootCol(String salesFinanceRootCol) {
+            this.salesFinanceRootCol.set();
+        }
+
+        public String getSalesFinanceSacralCol() {
+            return salesFinanceSacralCol.get();
+        }
+        public void setSalesFinanceSacralCol(String salesFinanceSacralCol) {
+            this.salesFinanceSacralCol.set(salesFinanceSacralCol);
+        }
+
+        public String getSalesFinanceSolarPlexusCol() {
+            return salesFinanceSolarPlexusCol.get();
+        }
+        public void setSalesFinanceSolarPlexusCol(String salesFinanceSolarPlexusCol) {
+            this.salesFinanceSolarPlexusCol.set(salesFinanceSolarPlexusCol);
+        }
+
+        public String getSalesFinanceHeartCol() {
+            return salesFinanceHeartCol.get();
+        }
+        public void setSalesFinanceHeartCol(String salesFinanceHeartCol) {
+            this.salesFinanceHeartCol.set(salesFinanceHeartCol);
+        }
+
+        public String getSalesFinanceThroatCol() {
+            return salesFinanceThroatCol.get();
+        }
+        public void setSalesFinanceThroatCol(String salesFinanceThroatCol) {
+            this.salesFinanceThroatCol.set(salesFinanceThroatCol);
+        }
+
+        public String getSalesFinanceThirdEyeCol() {
+            return salesFinanceThirdEyeCol.get();
+        }
+        public void setSalesFinanceThirdEyeCol(String salesFinanceThirdEyeCol) {
+            this.salesFinanceThirdEyeCol.set(salesFinanceThirdEyeCol);
+        }
+
+        public String getSalesFinanceCrownCol() {
+            return salesFinanceCrownCol.get();
+        }
+        public void setSalesFinanceCrownCol(String salesFinanceCrownCol) {
+            this.salesFinanceCrownCol.set(salesFinanceCrownCol);
+        }
+
+        public String getOperationsTechnologyCognitionCol() {
+            return operationsTechnologyCognitionCol.get();
+        }
+        public void setOperationsTechnologyCognitionCol(String operationsTechnologyCognitionCol) {
+            this.operationsTechnologyCognitionCol.set();
+        }
+
+        public String getOperationsTechnologyInstinctCol() {
+            return operationsTechnologyInstinctCol.get();
+        }
+        public void setOperationsTechnologyInstinctCol(String operationsTechnologyInstinctCol) {
+            this.operationsTechnologyInstinctCol.set(operationsTechnologyInstinctCol);
+        }
+
+        public String getOperationsTechnologyAffectationCol() {
+            return operationsTechnologyAffectationCol.get();
+        }
+        public void setOperationsTechnologyAffectationCol(String operationsTechnologyAffectationCol) {
+            this.operationsTechnologyAffectationCol.set();
+        }
+
+        public String getOperationsTechnologyRootCol() {
+            return operationsTechnologyRootCol.get();
+        }
+        public void setOperationsTechnologyRootCol(String operationsTechnologyRootCol) {
+            this.operationsTechnologyRootCol.set();
+        }
+
+        public String getOperationsTechnologySacralCol() {
+            return operationsTechnologySacralCol.get();
+        }
+        public void setOperationsTechnologySacralCol(String operationsTechnologySacralCol) {
+            this.operationsTechnologySacralCol.set(operationsTechnologySacralCol);
+        }
+
+        public String getOperationsTechnologySolarPlexusCol() {
+            return operationsTechnologySolarPlexusCol.get();
+        }
+        public void setOperationsTechnologySolarPlexusCol(String operationsTechnologySolarPlexusCol) {
+            this.operationsTechnologySolarPlexusCol.set(operationsTechnologySolarPlexusCol);
+        }
+
+        public String getOperationsTechnologyHeartCol() {
+            return operationsTechnologyHeartCol.get();
+        }
+        public void setOperationsTechnologyHeartCol(String operationsTechnologyHeartCol) {
+            this.OperationsTechnologyHeartCol.set(OperationsTechnologyHeartCol);
+        }
+
+        public String getOperationsTechnologyThroatCol() {
+            return operationsTechnologyThroatCol.get();
+        }
+        public void setOperationsTechnologyThroatCol(String operationsTechnologyThroatCol) {
+            this.operationsTechnologyThroatCol.set(operationsTechnologyThroatCol);
+        }
+
+        public String getOperationsTechnologyThirdEyeCol() {
+            return operationsTechnologyThirdEyeCol.get();
+        }
+        public void setOperationsTechnologyThirdEyeCol(String operationsTechnologyThirdEyeCol) {
+            this.operationsTechnologyThirdEyeCol.set(operationsTechnologyThirdEyeCol);
+        }
+
+        public String getOperationsTechnologyCrownCol() {
+            return operationsTechnologyCrownCol.get();
+        }
+        public void setOperationsTechnologyCrownCol(String operationsTechnologyCrownCol) {
+            this.operationsTechnologyCrownCol.set(operationsTechnologyCrownCol);
         }
      
         public String getValue() {
