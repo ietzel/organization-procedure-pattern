@@ -471,8 +471,6 @@ public class Main extends Application {
             Viewpoint viewpointTwo = new Viewpoint("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "");
             for(int i=0; i<table.getItems().size(); i++) {
                 viewpointTwo = table.getItems().get(i);
-                //int anti = findMin();
-                //int pro = findMax();
                 String[] values = {"Cognition", "Instinct", "Affectation"};
                 viewpointTwo.setAnti(values[(/*anti*/0%4)]);
                 viewpointTwo.setPro(values[(/*pro*/0%4)]);
